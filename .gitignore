@@ -1,0 +1,25 @@
+# ─── SECRETOS — NUNCA subir ───────────────────────────────
+*token*.json
+telegram_token.json
+telegraph_token.json
+*.env
+.env
+secrets.json
+notify_dashboard.js
+send_telegram.js
+last_telegraph_url.txt
+
+# ─── Material editorial privado ──────────────────────────
+*.docx
+*.pdf
+guiones/
+guiones_text/
+Radar_Guiones_Exportados/
+radar-*.md
+
+# ─── Sistema ─────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+node_modules/
+.claude/
