@@ -165,11 +165,26 @@ function renderVigilar(items) {
 
 // ── INIT ──────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  if (typeof VP_DATA === 'undefined') {
-    document.body.innerHTML = '<p style="color:red;padding:32px">Error: no se encontró el archivo de datos. Abre el dashboard desde la misma carpeta.</p>';
+  // Support both window.RADAR_DATA (v5.0+) and legacy VP_DATA
+  const radarData = window.RADAR_DATA || (typeof VP_DATA !== 'undefined' ? VP_DATA : undefined);
+  if (!radarData) {
+    const scripts = document.querySelectorAll('script[src*="data_"]');
+    const dataFile = scripts.length ? scripts[0].src.split('/').pop() : '(no data script found)';
+    document.body.innerHTML = `<div style="color:#f44;padding:32px;font-family:monospace;background:#111;min-height:100vh">
+      <h2>⚠️ Error de carga del dashboard</h2>
+      <p><strong>Archivo de datos esperado:</strong> ${dataFile}</p>
+      <p><strong>Variable global:</strong> ni window.RADAR_DATA ni VP_DATA están definidas</p>
+      <p>Posibles causas:</p>
+      <ul>
+        <li>Error de sintaxis en el archivo de datos (abrir la consola del navegador F12 → Console)</li>
+        <li>El archivo no se cargó (comprobar pestaña Network)</li>
+        <li>El archivo cargó pero la variable se llama de otra forma</li>
+      </ul>
+      <p style="color:#888;margin-top:16px">Consejo: pulsa F12 → Console para ver el error exacto.</p>
+    </div>`;
     return;
   }
-  const d = VP_DATA;
+  const d = radarData;
   document.title = `Radar Editorial VP · ${d.meta.dateLabel}`;
 
   $('ticker-wrap').innerHTML        = renderTicker(d.ticker);

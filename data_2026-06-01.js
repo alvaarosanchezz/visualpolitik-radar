@@ -2,7 +2,7 @@
    VP RADAR DATA — 2026-06-01
    Edita este archivo para actualizar el contenido del dashboard.
 ══════════════════════════════════════════════════════════════ */
-const VP_DATA = {
+window.RADAR_DATA = {
 
 /* ── META ─────────────────────────────────────────────────── */
 meta: {
@@ -710,7 +710,7 @@ vigilar: [
     sourceText: "Amnesty International",
     sourceUrl: "https://www.amnesty.org"
   }
-]
+],
 
 /* ════════════════════════════════════════════════════════════
    VERIFICACIÓN EDITORIAL DEL DÍA
