@@ -8,23 +8,23 @@ const VP_DATA = {
 meta: {
   date: "2026-06-01",
   dateLabel: "01 JUNIO 2026",
-  brisbane: "07:00 BRISBANE AEST",
-  brent: "~$119",
-  brentChange: "↑70% vs pre-guerra"
+  brisbane: "10:00 BRISBANE AEST",
+  brent: "$89.69",
+  brentChange: "↓17% en mayo · deal Irán acerca la apertura"
 },
 
 /* ── TICKER ───────────────────────────────────────────────── */
 ticker: [
-  { cls:"t-red",    text:"🛢️ BRENT <strong>~$119/bbl</strong> ↑70% vs pre-guerra Irán · Ormuz al 5% tráfico" },
+  { cls:"t-red",    text:"🛢️ BRENT <strong>$89.69</strong> ↓17% en mayo · mercados descuentan deal Irán · Ormuz sin abrir" },
   { cls:"t-red",    text:"🇮🇱 ISRAEL <strong>TOMA CASTILLO BEAUFORT</strong> · Líbano · Mayor avance terrestre en 26 años" },
   { cls:"t-gold",   text:"🇨🇴 COLOMBIA <strong>DE LA ESPRIELLA 43.7%</strong> · 2ª vuelta 21 JUN vs Cepeda 40.9%" },
+  { cls:"t-red",    text:"💥 EEUU <strong>ATACA SITIOS DE DRONES IRANÍES</strong> este fin de semana · Goruk + Qeshm · Kuwait intercepta misiles" },
   { cls:"t-red",    text:"🇪🇹 ETIOPÍA <strong>VOTA HOY</strong> · Abiy Ahmed espera victoria aplastante · 547 escaños" },
   { cls:"t-orange", text:"🇺🇸 EEUU <strong>RETIRA TROPAS DE EUROPA</strong> · Plan acelerado en cumbre OTAN 18 JUN" },
-  { cls:"t-red",    text:"⚓ HORMUZ <strong>cerrado</strong> · 11 barcos/día vs 125 pre-guerra · Baker Hughes: no antes de H2" },
   { cls:"t-gold",   text:"🇷🇺 GNL RUSO <strong>RÉCORD A EUROPA</strong> · €3.880M pagados a Rusia en 4 meses · +17% vs 2025" },
-  { cls:"t-red",    text:"🇺🇸 OP. SOUTHERN SPEAR <strong>200+ MUERTOS</strong> · 61+ ataques a barcos 'narco' sin pruebas" },
+  { cls:"t-red",    text:"🇺🇸 OP. SOUTHERN SPEAR <strong>194+ MUERTOS</strong> · 50+ ataques a barcos 'narco' sin pruebas públicas" },
   { cls:"t-orange", text:"🇺🇸 NEWARK <strong>TOQUE DE QUEDA</strong> · 9 días de protestas anti-ICE · Policía estatal desplegada" },
-  { cls:"t-orange", text:"🇹🇼 TAIWÁN · Bloqueo chino + Trump duda sobre armas · 'Quizás sí, quizás no'" }
+  { cls:"t-orange", text:"🇹🇼 TAIWÁN · Tensión en Pratas · Guardacostas china y taiwanesa en confrontación 33h" }
 ],
 
 /* ── HERO BOXES ───────────────────────────────────────────── */
@@ -35,11 +35,11 @@ hero: [
   },
   {
     label: "🎯 Oportunidad exclusiva",
-    content: "Operación Southern Spear: <span class='hl'>200+ muertos en barcos 'narco' sin pruebas públicas de drogas.</span> Prácticamente NADIE lo cubre en español. Gap editorial enorme para VP."
+    content: "Israel toma el Castillo de Beaufort: <span class='hl'>la ocupación que creó a Hezbollah se repite en el mismo lugar 26 años después.</span> Paradoja histórica perfecta para VP. Gap enorme en español."
   },
   {
     label: "📊 Indicadores clave",
-    content: "Brent <span class='hl'>~$119 ↑70%</span> · Ormuz: <span class='hl-red'>5% tráfico</span> · GNL ruso: <span class='hl-red'>récord</span><br>Israel: <span class='hl-red'>ocupación Líbano</span> · Etiopía: <span class='hl'>vota hoy</span>"
+    content: "Brent <span class='hl'>$89.69 ↓17% mayo</span> · Ormuz: <span class='hl-red'>aún cerrado</span> · GNL ruso: <span class='hl-red'>récord</span><br>Israel: <span class='hl-red'>ocupación Líbano</span> · EEUU: <span class='hl-red'>ataca Irán este fin de semana</span>"
   }
 ],
 
@@ -177,14 +177,14 @@ news: [
   imageFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Strait_of_Hormuz.jpg?width=800",
   imageCredit: "Wikimedia Commons",
   imageSource: "Public Domain",
-  title: "ORMUZ SIGUE BLOQUEADO: 11 barcos cruzan donde pasaban 125 al día — Brent ~$119/bbl",
-  pills: ["5% tráfico normal", "Brent ~$119", "Gas Europa +70%", "Factura UE: €13.000M extra"],
-  why: "La mayor crisis energética desde 1973 continúa. 3 meses con el 20% del petróleo y GNL global cortados. Baker Hughes no espera normalización hasta H2 2026.",
+  title: "ORMUZ SIGUE BLOQUEADO: el tráfico no se recupera — pero el Brent cae a $89.69 al descontar deal",
+  pills: ["Tráfico mínimo", "Brent $89.69 ↓17% mayo", "Mercados descuentan deal", "Baker Hughes: no antes de H2"],
+  why: "Paradoja: Ormuz sigue cerrado pero el crudo se desploma porque el mercado da por hecho el deal con Irán. El petróleo es el verdadero termómetro de la negociación.",
   viralPct: 88, viralCls: "viral-high",
   viralSources: "CNBC · Al Jazeera · Euronews · IEA Oil Market Report",
   detail: {
-    summary: "El estrecho de Ormuz sigue efectivamente cerrado al tráfico comercial. Solo 11 barcos cruzaron en un día reciente, vs 125-140 pre-guerra. El Brent ronda los $119/bbl (+70% vs pre-guerra). La UE paga €13.000M extra en combustibles fósiles. UK ha desplegado drones, cazas y un buque para misión de seguridad marítima.",
-    context: "Irán cerró el estrecho como represalia a los ataques de EEUU/Israel desde febrero. Pese al alto el fuego condicional, el tráfico no se ha recuperado. El 20% del petróleo mundial y 25% del GNL transitan por estos 30 km.",
+    summary: "El estrecho de Ormuz sigue efectivamente cerrado al tráfico comercial, pero el crudo se desplomó un 17% en mayo (Brent de ~$108 a $89.69) al descontar el mercado que el deal EEUU-Irán se firmará. Es la mayor caída mensual desde 2020. UK lidera coalición de 50 países para seguridad marítima. Baker Hughes no espera normalización completa hasta H2 2026.",
+    context: "Irán cerró el estrecho como represalia a los ataques de EEUU/Israel desde febrero. Pese al alto el fuego condicional, el tráfico no se ha recuperado. El 20% del petróleo mundial y 25% del GNL transitan por estos 30 km. La paradoja: los mercados creen en el deal pero EEUU sigue atacando sitios iraníes este mismo fin de semana.",
     vp: "El contexto energético es transversal a múltiples propuestas de vídeo. La paradoja: el cierre de Ormuz benefició a Rusia (GNL Yamal récord) más que a nadie.",
     sources: [
       { headline: "Strait of Hormuz may not fully reopen until second half of 2026", medium: "CNBC", date: "24 ABR 2026", url: "https://www.cnbc.com/2026/04/24/strait-hormuz-baker-hughes-iran-war-oil-lng.html", desc: "Proyección de Baker Hughes sobre timeline de reapertura" },
@@ -285,19 +285,19 @@ news: [
   imageFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Taiwan_NASA_Terra_MODIS_23791.jpg?width=800",
   imageCredit: "NASA",
   imageSource: "Public Domain",
-  title: "TAIWÁN refuerza guardia costera ante ensayos de bloqueo chino — Trump: 'quizás vendo armas, quizás no'",
-  pills: ["China practica bloqueo", "Cooperación con EEUU/Japón/Filipinas", "Trump ambiguo", "Semiconductores en riesgo"],
+  title: "TAIWÁN: confrontación de 33 horas entre guardacostas china y taiwanesa en Pratas — Trump sigue ambiguo sobre armas",
+  pills: ["Standoff Pratas 33h", "China 100+ buques desplegados", "Trump ambiguo sobre armas", "90% chips avanzados en riesgo"],
   why: "Si Ormuz está cerrado y Taiwán se bloquea, el mundo pierde el 20% del petróleo Y el 90% de los semiconductores avanzados al mismo tiempo.",
   viralPct: 75, viralCls: "viral-high",
   viralSources: "Japan Times · CNBC · Asia Times",
   detail: {
-    summary: "China multiplica ejercicios de guardacostas simulando bloqueo de Taiwán. Taiwán intensifica entrenamiento con EEUU, Japón y Filipinas. Trump mantiene ambigüedad sobre $14B en armas pendientes, diciendo 'quizás sí, quizás no'. Alianza de semiconductores Taiwán-EEUU lanzada.",
-    context: "Con Ormuz cerrado, un bloqueo de Taiwán sería catastrófico: 90% de chips avanzados del mundo + crisis energética simultánea. La ambigüedad de Trump debilita la disuasión.",
+    summary: "El 24 de mayo, guardacostas china (CCG-3501, 5.500 toneladas) y taiwanesa (Taichung, 1.000 toneladas) mantuvieron una confrontación de 33 horas cerca de las islas Pratas, con intercambios tensos por radio sobre soberanía. China ha desplegado 100+ buques de armada, guardacostas y flota gris desde la cumbre Trump-Xi. Trump mantiene ambigüedad sobre $14B en armas pendientes.",
+    context: "China usa una 'flota de zona gris': red de buques civiles y paramilitares para hostigar e intimidar a Taiwán sin cruzar el umbral del conflicto armado. Con Ormuz cerrado, un bloqueo de Taiwán sería catastrófico: 90% de chips avanzados del mundo + crisis energética simultánea.",
     vp: "Conexión con la retirada de EEUU de Europa: el patrón de 'EEUU se desentiende de sus aliados' es transversal.",
     sources: [
-      { headline: "As China rehearses a blockade, Taiwan's coast guard prepares to push back", medium: "Japan Times", date: "16 MAR 2026", url: "https://www.japantimes.co.jp/news/2026/03/16/asia-pacific/politics/taiwan-coast-guard-china-blockade/", desc: "Preparativos taiwaneses ante ensayos de bloqueo chino" },
-      { headline: "Why Taiwan became the defining issue in the Trump-Xi talks", medium: "CNBC", date: "16 MAY 2026", url: "https://www.cnbc.com/2026/05/16/trumps-meeting-with-chinas-xi-steers-the-us-away-from-taiwan-again.html", desc: "Taiwán como ficha de negociación en las conversaciones Trump-Xi" },
-      { headline: "A China move now on Taiwan would be an enormous gamble", medium: "Asia Times", date: "MAY 2026", url: "https://asiatimes.com/2026/05/a-china-move-now-on-taiwan-would-be-an-enormous-gamble/", desc: "Análisis de los riesgos de una acción china sobre Taiwán" }
+      { headline: "Taiwan and China coast guards in standoff at top of South China Sea", medium: "CNBC", date: "24 MAY 2026", url: "https://www.cnbc.com/2026/05/24/taiwan-and-china-coast-guards-in-standoff-at-top-of-south-china-sea.html", desc: "Standoff de 33 horas en islas Pratas con intercambios tensos por radio" },
+      { headline: "China's grey-zone fleet is eroding Taiwan's control at sea", medium: "ASPI Strategist", date: "MAY 2026", url: "https://www.aspistrategist.org.au/chinas-grey-zone-fleet-is-eroding-taiwans-control-at-sea/", desc: "Análisis de la flota de zona gris china como herramienta de presión sobre Taiwán" },
+      { headline: "As China rehearses a blockade, Taiwan's coast guard prepares to push back", medium: "Japan Times", date: "16 MAR 2026", url: "https://www.japantimes.co.jp/news/2026/03/16/asia-pacific/politics/taiwan-coast-guard-china-blockade/", desc: "Preparativos taiwaneses ante ensayos de bloqueo chino" }
     ],
     verification: "Ejercicios chinos confirmados por ministerio de Defensa taiwanés."
   }
@@ -356,6 +356,62 @@ news: [
   }
 }
 
+,
+
+/* ── N12: EEUU ATACA SITIOS DE DRONES IRANÍES ESTE FIN DE SEMANA ── */
+{
+  id: "n12",
+  tags: [{ cls:"tag-red", text:"🔴 HOY" }, { cls:"tag-blue", text:"🌍 ORIENTE MEDIO" }],
+  image: "https://commons.wikimedia.org/wiki/Special:FilePath/Iran_relief_location_map.jpg?width=800",
+  imageAlt: "Mapa de relieve de Irán",
+  imageFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Persian_Gulf_map.png?width=800",
+  imageCredit: "Wikimedia Commons",
+  imageSource: "CC BY-SA 3.0",
+  title: "EEUU ataca sitios de drones iraníes en Goruk y Qeshm este fin de semana — Kuwait intercepta misiles",
+  pills: ["Ataques en Goruk + Qeshm", "Respuesta a derribo de dron MQ-1", "Kuwait intercepta misiles", "Deal en negociación activa"],
+  why: "EEUU bombardea Irán mientras negocia el deal de Ormuz. La paradoja: el mismo fin de semana que Trump dice que el acuerdo 'saldrá bien', CENTCOM ataca sitios militares iraníes. Guerra y diplomacia simultáneas.",
+  viralPct: 88, viralCls: "viral-high",
+  viralSources: "Euronews · Bloomberg · NPR · CENTCOM comunicado oficial",
+  detail: {
+    summary: "CENTCOM realizó ataques 'de autodefensa' contra radares y centros de mando de drones iraníes en Goruk y la isla de Qeshm este fin de semana, en respuesta al derribo de un dron MQ-1 estadounidense. Simultáneamente, las defensas aéreas de Kuwait interceptaron misiles y drones hostiles con sirenas antiaéreas sonando en todo el país. Trump aseguró que el deal con Irán 'saldrá bien'.",
+    context: "Las conversaciones para el MOU de 60 días están en fase final: extensión del alto el fuego, reapertura de Ormuz, desmontaje de minas en 30 días, liberación de $12.000M en activos congelados iraníes. Pero la actividad militar simultánea indica que ningún lado confía plenamente en el otro.",
+    vp: "Contexto directo para la propuesta sobre el deal con Irán. La imagen del vídeo: EEUU atacando Irán y negociando con Irán al mismo tiempo. Conexión con la caída del crudo (-17% en mayo) que descuenta un acuerdo que aún no existe.",
+    sources: [
+      { headline: "US launches weekend strikes on Iran as Trump reportedly tightens framework of draft deal", medium: "Euronews", date: "1 JUN 2026", url: "https://www.euronews.com/2026/06/01/us-launches-weekend-strikes-on-iran-as-trump-reportedly-tightens-framework-of-draft-deal", desc: "Cobertura del ataque y contexto diplomático simultáneo" },
+      { headline: "US Strikes Iran Drone Sites as Draft Deal Talks Continue Near Hormuz", medium: "Bloomberg", date: "1 JUN 2026", url: "https://www.bloomberg.com/news/articles/2026-06-01/us-hits-iran-drone-sites-over-weekend-as-two-sides-trade-drafts-on-deals", desc: "Detalles de los objetivos atacados y estado de las negociaciones" },
+      { headline: "Trump ends Iran meeting without announcing final determination on deal", medium: "CNBC", date: "29 MAY 2026", url: "https://www.cnbc.com/2026/05/29/trump-iran-deal-hormuz-nuclear-war.html", desc: "Para el contexto de la reunión del 29 mayo sin determinación final" }
+    ],
+    verification: "Ataques confirmados por CENTCOM. Interceptaciones en Kuwait confirmadas por fuerzas armadas kuwaití. Bloomberg y Euronews como fuentes primarias."
+  }
+},
+
+/* ── N13: SUDÁN HAMBRUNA ── */
+{
+  id: "n13",
+  tags: [{ cls:"tag-orange", text:"🟠 HOY" }, { cls:"tag-blue", text:"🌍 ÁFRICA" }],
+  image: "https://commons.wikimedia.org/wiki/Special:FilePath/Sudanese_Civil_War_Composite_Map_%282025%29.svg?width=800",
+  imageAlt: "Mapa de la guerra civil de Sudán — control territorial",
+  imageFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Sudanese_Civil_War_Composite_Map_%282025%29.svg?width=800",
+  imageCredit: "Wikimedia Commons / Julesdhl",
+  imageSource: "CC BY-SA 4.0",
+  title: "SUDÁN: peor hambruna activa del mundo — 19.5M con hambre aguda, solo 20% del funding recibido",
+  pills: ["19.5M en crisis", "Hambruna oficial en Darfur", "9M desplazados", "40% hospitales inactivos"],
+  why: "Mayor catástrofe alimentaria del planeta. 9M desplazados. El 40% de hospitales no funcionan. Y los medios miran a Irán porque no hay petróleo occidental en juego.",
+  viralPct: 40, viralCls: "viral-med",
+  viralSources: "Hipótesis de viralidad: bajo interés mainstream. Señal preliminar basada en cobertura ONU/UNICEF",
+  detail: {
+    summary: "Sudán es el país con mayor nivel de hambre aguda del mundo. UNICEF y FAO confirmaron hambruna oficial en Al Fasher (Darfur Norte) y Kadugli, con riesgo en 20 áreas adicionales. 19.5M en inseguridad alimentaria aguda. Solo el 20% del plan humanitario ($2.9B) ha sido financiado. 9M desplazados internos — la mayor crisis del mundo. El 40% de instalaciones sanitarias están destruidas o no funcionan.",
+    context: "El conflicto entre las FAS y las RSF lleva más de 3 años activo sin perspectiva de cese. 17M sin agua potable, 24M sin saneamiento. La temporada de escasez (junio-septiembre) empeorará la situación dramáticamente. La invisibilidad mediática se debe a que no hay potencias occidentales directamente implicadas.",
+    vp: "La segunda derivada: Sudán controla las nacientes del Nilo Azul — el 80% del caudal que alimenta a Egipto y 100M de personas. Una Somalia en el nacimiento del Nilo no es solo tragedia humanitaria — es amenaza a la seguridad hídrica de todo el norte de África.",
+    sources: [
+      { headline: "Risk of Famine persists as nearly 19.5 million people face acute food insecurity in Sudan", medium: "FAO", date: "MAY 2026", url: "https://www.fao.org/newsroom/detail/risk-of-famine-persists-as-nearly-19.5-million-people-face-acute-food-insecurity-in-sudan/en", desc: "Datos oficiales FAO/WFP/UNICEF sobre la crisis alimentaria" },
+      { headline: "Sudan hunger crisis deepens as UN warns millions face acute food shortages", medium: "UN News", date: "MAY 2026", url: "https://news.un.org/en/story/2026/05/1167528", desc: "Alerta de la ONU sobre el agravamiento durante temporada de escasez jun-sep" },
+      { headline: "'Humiliated, broken, powerless': Sudan enters fourth year of war", medium: "NPR", date: "15 ABR 2026", url: "https://www.npr.org/2026/04/15/nx-s1-5781032/sudan-darfur-war-genocide-famine", desc: "Contexto narrativo de la guerra civil y la falta de atención internacional" }
+    ],
+    verification: "Declaración de hambruna oficial por UNICEF y FAO. Datos de funding verificados por OCHA FTS."
+  }
+}
+
 ], // end news
 
 /* ════════════════════════════════════════════════════════════
@@ -374,7 +430,7 @@ proposals: [
   potCls: "pot-explosive", potText: "🔴 EXPLOSIVO",
   chips: [
     { cls:"chip-vhigh", text:"🔥 VIRAL · NPR + CNN + Al Jazeera top story" },
-    { cls:"chip-gfull", text:"🟢 GAP: nadie conecta Beaufort 1982 con Beaufort 2026" },
+    { cls:"chip-gfull", text:"🟢 Competencia: no se detectaron videos recientes en español sobre este ángulo (señal preliminar)" },
     { cls:"chip-vpok",  text:"🟢 VP: ángulo completamente nuevo" }
   ],
   banner: "https://commons.wikimedia.org/wiki/Special:FilePath/IDF_in_Beaufort_Castle_Lebanon_31.05.2026_4.png?width=1200",
@@ -407,7 +463,7 @@ proposals: [
   potCls: "pot-veryhigh", potText: "🟠 MUY ALTO",
   chips: [
     { cls:"chip-vhigh", text:"🔥 DATOS ESCANDALOSOS · €3.880M a Rusia en 4 meses" },
-    { cls:"chip-gfull", text:"🟢 GAP TOTAL: nadie conectó Ormuz + Yamal + prohibición" },
+    { cls:"chip-gfull", text:"🟢 Competencia: no se detectaron videos en español conectando Ormuz + Yamal (señal preliminar)" },
     { cls:"chip-vpok",  text:"🟢 VP: ángulo completamente nuevo" }
   ],
   banner: "https://commons.wikimedia.org/wiki/Special:FilePath/LNG_Carrier.jpg?width=800",
@@ -439,7 +495,7 @@ proposals: [
   potCls: "pot-veryhigh", potText: "🟠 MUY ALTO",
   chips: [
     { cls:"chip-vhigh", text:"🔥 VIRAL MASIVO · trending LATAM completo" },
-    { cls:"chip-gpart", text:"🟡 Gap: el ángulo es 'patrón continental', no resultado" },
+    { cls:"chip-gpart", text:"🟡 Competencia: cobertura masiva esperada. El ángulo 'patrón continental' es el diferencial" },
     { cls:"chip-vpwarn", text:"⚠️ VP cubrió grupos armados 3 mayo — ángulo diferente" }
   ],
   banner: "https://commons.wikimedia.org/wiki/Special:FilePath/Colombia_in_South_America.svg?width=800",
@@ -472,7 +528,7 @@ proposals: [
   potCls: "pot-veryhigh", potText: "🟠 MUY ALTO",
   chips: [
     { cls:"chip-vhigh", text:"🔥 DATOS IMPACTANTES · 200+ muertos, 0 pruebas" },
-    { cls:"chip-gfull", text:"🟢 GAP TOTAL EN ESPAÑOL · nadie lo cubre" },
+    { cls:"chip-gfull", text:"🟢 Competencia: no se detectó cobertura en canales castellanoparlantes (señal preliminar)" },
     { cls:"chip-vpok",  text:"🟢 VP: nunca cubierto" }
   ],
   banner: "https://commons.wikimedia.org/wiki/Special:FilePath/Pacific_Ocean_laea_location_map.svg?width=800",
@@ -504,7 +560,7 @@ proposals: [
   potCls: "pot-high", potText: "🟡 ALTO",
   chips: [
     { cls:"chip-vhigh", text:"🔥 TIMING · Cumbre OTAN 18 junio" },
-    { cls:"chip-gpart", text:"🟡 Gap: el ángulo industrial es nuevo" },
+    { cls:"chip-gpart", text:"🟡 Competencia: saturación parcial por cercanía a tema OTAN. Ángulo industrial es diferencial" },
     { cls:"chip-vpwarn", text:"⚠️ VP: 'Trump rompe OTAN' 6 mayo · ángulo diferente" }
   ],
   banner: "https://commons.wikimedia.org/wiki/Special:FilePath/NATO_expansion.png?width=800",
@@ -535,12 +591,12 @@ proposals: [
   potCls: "pot-high", potText: "🟡 ALTO",
   chips: [
     { cls:"chip-vhigh", text:"🔥 TIMING PERFECTO · vota HOY" },
-    { cls:"chip-gfull", text:"🟢 GAP TOTAL EN ESPAÑOL" },
+    { cls:"chip-gfull", text:"🟢 Competencia pendiente de comprobar. Señal preliminar: tema poco cubierto en español" },
     { cls:"chip-vpok",  text:"🟢 VP: cubrió Etiopía tangencialmente, nunca en profundidad" }
   ],
-  banner: "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Ethiopia.svg?width=800",
-  bannerAlt: "Bandera de Etiopía",
-  bannerFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Ethiopia.svg?width=800",
+  banner: "https://commons.wikimedia.org/wiki/Special:FilePath/Prime_Minister_of_Ethiopia_Abiy_Ahmed_Ali.jpg?width=800",
+  bannerAlt: "Primer Ministro Abiy Ahmed Ali — Etiopía",
+  bannerFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopia_in_Africa_%28-mini_map_-rivers%29.svg?width=800",
   tesis: "Abiy Ahmed ganó el Nobel de la Paz en 2019 por acabar con la guerra con Eritrea. Después lanzó una guerra civil que mató a cientos de miles. Hoy celebra elecciones sin oposición real y planea reformar la constitución para perpetuarse. Es la historia de cómo un Nobel construyó una autocracia — en el segundo país más poblado de África, que controla las nacientes del Nilo.",
   fields: [
     { label: "📰 La noticia", value: "Elecciones HOY 1 junio. PP sin oposición en 64/547 distritos. En 2021 ganó 96%. Regiones enteras no votan por violencia. Planes de reforma constitucional para sistema presidencial. <a href='https://www.cnn.com/2026/05/31/africa/ethiopia-election-abiy-division-intl'>CNN</a> · <a href='https://www.aljazeera.com/news/2026/5/29/ethiopia-to-vote-on-june-1-as-abiys-ruling-party-eyes-landslide'>Al Jazeera</a>" },
@@ -566,7 +622,7 @@ proposals: [
   potCls: "pot-high", potText: "🟡 ALTO",
   chips: [
     { cls:"chip-vhigh", text:"🔥 AUDIENCIA VP · Venezuela = eje del canal" },
-    { cls:"chip-gpart", text:"🟡 Gap: nadie hace el balance a 6 meses" },
+    { cls:"chip-gpart", text:"🟡 Competencia: saturación alta en Venezuela. El balance a 6 meses sería fresco pero con riesgo" },
     { cls:"chip-vpwarn", text:"⚠️ VP: 12+ vídeos sobre Venezuela — necesita ángulo fresco" }
   ],
   banner: "https://commons.wikimedia.org/wiki/Special:FilePath/Venezuela_in_South_America.svg?width=800",
@@ -655,5 +711,52 @@ vigilar: [
     sourceUrl: "https://www.amnesty.org"
   }
 ]
+
+/* ════════════════════════════════════════════════════════════
+   VERIFICACIÓN EDITORIAL DEL DÍA
+═════════════════════════════════════════════════════════════ */
+editorial_verification: {
+  date: "2026-06-01",
+  sources_checked: [
+    "Wall Street Journal", "Financial Times", "New York Times", "Reuters", "Bloomberg",
+    "CNBC", "NPR", "CNN", "Al Jazeera", "Euronews", "France 24", "BBC",
+    "Foreign Policy", "CSIS", "CFR", "Atlantic Council", "IISS",
+    "Urgewald", "FAO", "UNICEF", "IEA", "Just Security (NYU Law)",
+    "Tax Foundation", "PIIE", "Journal of Democracy", "ACLED"
+  ],
+  vp_history_reviewed: true,
+  vp_latest_videos: [
+    "Eritrea/Mar Rojo · 26 MAY · 192K v",
+    "Zapatero imputación · ~22 MAY",
+    "Putin economía · 15 MAY · 354K v",
+    "Pax Silica · 13 MAY · 141K v",
+    "Netanyahu/Irán · 12 MAY · 152K v",
+    "Trump OTAN · 6 MAY · 203K v",
+    "Bolivia caos · ~25 MAY",
+    "Grupos armados Colombia · ~3 MAY"
+  ],
+  competition_castellanoparlante: {
+    reviewed: true,
+    channels_checked: "Solo Fonseca, Cosas Militares, canales emergentes del nicho geopolítico en español",
+    method: "Búsqueda web de videos recientes por tema y canal. No se pudo verificar cobertura específica en todos los temas por limitaciones de la búsqueda.",
+    note: "Las señales de competencia están marcadas como 'señal preliminar' o 'pendiente de comprobar' cuando no se pudo verificar directamente."
+  },
+  virality_verification: {
+    method: "WebSearch en medios internacionales, portadas, trending topics. Se buscaron señales reales de viralidad.",
+    claims_unverified: "Ninguna afirmación de viralidad sin base. Las señales sin datos directos están marcadas como 'hipótesis de viralidad' o 'señal preliminar'."
+  },
+  news_freshness: {
+    same_day: 7,
+    yesterday: 2,
+    this_week: 4,
+    percent_fresh: "69% HOY/AYER — por debajo del 80% objetivo. Justificación: varias noticias de la semana son estructuralmente importantes (GNL ruso, aranceles, Sahel)."
+  },
+  image_validation: "Pendiente de ejecutar node validate_images.js 2026-06-01",
+  known_issues: [
+    "Brent actualizado de ~$119 (dato antiguo) a $89.69 (cierre 30 mayo, Trading Economics)",
+    "P6 Etiopía: banner cambiado de bandera a foto de Abiy Ahmed",
+    "Competencia castellanoparlante: verificación parcial, señales marcadas como preliminares donde no se pudo confirmar"
+  ]
+},
 
 }; // end VP_DATA
