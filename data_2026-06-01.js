@@ -64,9 +64,9 @@ news: [
 {
   id: "n1",
   tags: [{ cls:"tag-red", text:"🔴 AYER" }, { cls:"tag-blue", text:"🌍 ORIENTE MEDIO" }],
-  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Beaufort_Castle%2C_Lebanon.jpg/1280px-Beaufort_Castle%2C_Lebanon.jpg",
+  image: "https://commons.wikimedia.org/wiki/Special:FilePath/Beaufort_Castle%2C_Lebanon.jpg?width=1200",
   imageAlt: "Castillo de Beaufort — sur de Líbano",
-  imageFallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Beaufort_Castle%2C_Lebanon.jpg/800px-Beaufort_Castle%2C_Lebanon.jpg",
+  imageFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Beaufort_Castle%2C_Lebanon.jpg?width=800",
   imageCredit: "Wikimedia Commons",
   imageSource: "CC BY-SA 3.0",
   title: "ISRAEL TOMA EL CASTILLO DE BEAUFORT EN LÍBANO — mayor avance terrestre en 26 años, tropas 'permanecerán'",
@@ -91,9 +91,9 @@ news: [
 {
   id: "n2",
   tags: [{ cls:"tag-red", text:"🔴 AYER" }, { cls:"tag-blue", text:"🌎 LATAM" }],
-  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Colombia_in_South_America.svg/800px-Colombia_in_South_America.svg.png",
+  image: "https://commons.wikimedia.org/wiki/Special:FilePath/Colombia_in_South_America.svg?width=800",
   imageAlt: "Colombia en Sudamérica",
-  imageFallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Colombia_in_South_America.svg/800px-Colombia_in_South_America.svg.png",
+  imageFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Colombia_in_South_America.svg?width=800",
   imageCredit: "Wikimedia Commons / TUBS",
   imageSource: "CC BY-SA 3.0",
   title: "COLOMBIA: De la Espriella GANA la primera vuelta con 43.7% — segunda vuelta el 21 de junio vs Cepeda",
@@ -118,9 +118,9 @@ news: [
 {
   id: "n3",
   tags: [{ cls:"tag-red", text:"🔴 HOY" }, { cls:"tag-blue", text:"🌍 ÁFRICA" }],
-  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Ethiopia_in_Africa_%28-mini_map_-rivers%29.svg/800px-Ethiopia_in_Africa_%28-mini_map_-rivers%29.svg.png",
+  image: "https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopia_in_Africa_%28-mini_map_-rivers%29.svg?width=800",
   imageAlt: "Etiopía en África",
-  imageFallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Ethiopia_in_Africa_%28-mini_map_-rivers%29.svg/800px-Ethiopia_in_Africa_%28-mini_map_-rivers%29.svg.png",
+  imageFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopia_in_Africa_%28-mini_map_-rivers%29.svg?width=800",
   imageCredit: "Wikimedia Commons",
   imageSource: "CC BY-SA 3.0",
   title: "ETIOPÍA VOTA HOY: Abiy Ahmed busca consolidar un régimen autocrático — 64 distritos sin oposición",
@@ -145,9 +145,9 @@ news: [
 {
   id: "n4",
   tags: [{ cls:"tag-red", text:"🔴 HOY" }, { cls:"tag-blue", text:"🌐 OTAN" }],
-  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/NATO_expansion.png/800px-NATO_expansion.png",
+  image: "https://commons.wikimedia.org/wiki/Special:FilePath/NATO_expansion.png?width=800",
   imageAlt: "Expansión de la OTAN",
-  imageFallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/NATO_expansion.png/800px-NATO_expansion.png",
+  imageFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/NATO_expansion.png?width=800",
   imageCredit: "Wikimedia Commons",
   imageSource: "CC BY-SA 3.0",
   title: "EEUU ACELERA RETIRADA DE TROPAS DE EUROPA — plan detallado en la cumbre OTAN del 18 de junio",
@@ -172,9 +172,9 @@ news: [
 {
   id: "n5",
   tags: [{ cls:"tag-red", text:"🔴 HOY" }, { cls:"tag-blue", text:"🌐 ENERGÍA" }],
-  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Strait_of_Hormuz.jpg/800px-Strait_of_Hormuz.jpg",
+  image: "https://commons.wikimedia.org/wiki/Special:FilePath/Strait_of_Hormuz.jpg?width=800",
   imageAlt: "Estrecho de Ormuz",
-  imageFallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Strait_of_Hormuz.jpg/800px-Strait_of_Hormuz.jpg",
+  imageFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Strait_of_Hormuz.jpg?width=800",
   imageCredit: "Wikimedia Commons",
   imageSource: "Public Domain",
   title: "ORMUZ SIGUE BLOQUEADO: 11 barcos cruzan donde pasaban 125 al día — Brent ~$119/bbl",
@@ -199,9 +199,9 @@ news: [
 {
   id: "n6",
   tags: [{ cls:"tag-red", text:"🔴 SEMANA" }, { cls:"tag-blue", text:"🌐 ENERGÍA" }],
-  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/LNG_Carrier.jpg/800px-LNG_Carrier.jpg",
+  image: "https://commons.wikimedia.org/wiki/Special:FilePath/LNG_Carrier.jpg?width=800",
   imageAlt: "Buque metanero de GNL",
-  imageFallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/LNG_Carrier.jpg/800px-LNG_Carrier.jpg",
+  imageFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/LNG_Carrier.jpg?width=800",
   imageCredit: "Wikimedia Commons",
   imageSource: "CC BY-SA 3.0",
   title: "EUROPA BATE RÉCORD comprando GNL ruso de Yamal — €3.880M a Rusia en 4 meses — mientras prepara prohibirlo",
@@ -226,9 +226,9 @@ news: [
 {
   id: "n7",
   tags: [{ cls:"tag-red", text:"🔴 AYER" }, { cls:"tag-blue", text:"🇺🇸 EEUU" }],
-  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Pacific_Ocean_laea_location_map.svg/800px-Pacific_Ocean_laea_location_map.svg.png",
+  image: "https://commons.wikimedia.org/wiki/Special:FilePath/Pacific_Ocean_laea_location_map.svg?width=800",
   imageAlt: "Mapa del Pacífico — zona de operaciones",
-  imageFallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Pacific_Ocean_laea_location_map.svg/800px-Pacific_Ocean_laea_location_map.svg.png",
+  imageFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Pacific_Ocean_laea_location_map.svg?width=800",
   imageCredit: "Wikimedia Commons",
   imageSource: "CC BY-SA 3.0",
   title: "OPERACIÓN SOUTHERN SPEAR: 200+ muertos en ataques a barcos 'narco' — sin pruebas públicas de drogas",
@@ -253,9 +253,9 @@ news: [
 {
   id: "n8",
   tags: [{ cls:"tag-red", text:"🔴 HOY" }, { cls:"tag-blue", text:"🇺🇸 EEUU" }],
-  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_United_States_%28DoS_ECA_color_standard%29.svg/800px-Flag_of_the_United_States_%28DoS_ECA_color_standard%29.svg.png",
+  image: "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_United_States_%28DoS_ECA_color_standard%29.svg?width=800",
   imageAlt: "Bandera de EEUU",
-  imageFallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_United_States_%28DoS_ECA_color_standard%29.svg/800px-Flag_of_the_United_States_%28DoS_ECA_color_standard%29.svg.png",
+  imageFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_United_States_%28DoS_ECA_color_standard%29.svg?width=800",
   imageCredit: "Wikimedia Commons",
   imageSource: "Public Domain",
   title: "NEWARK: 9 días de protestas anti-ICE — toque de queda, policía estatal, DHS amenaza con cerrar aeropuerto",
@@ -280,9 +280,9 @@ news: [
 {
   id: "n9",
   tags: [{ cls:"tag-orange", text:"🟠 SEMANA" }, { cls:"tag-blue", text:"🌏 ASIA-PAC" }],
-  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Taiwan_NASA_Terra_MODIS_23791.jpg/800px-Taiwan_NASA_Terra_MODIS_23791.jpg",
+  image: "https://commons.wikimedia.org/wiki/Special:FilePath/Taiwan_NASA_Terra_MODIS_23791.jpg?width=800",
   imageAlt: "Imagen satelital de Taiwán",
-  imageFallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Taiwan_NASA_Terra_MODIS_23791.jpg/800px-Taiwan_NASA_Terra_MODIS_23791.jpg",
+  imageFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Taiwan_NASA_Terra_MODIS_23791.jpg?width=800",
   imageCredit: "NASA",
   imageSource: "Public Domain",
   title: "TAIWÁN refuerza guardia costera ante ensayos de bloqueo chino — Trump: 'quizás vendo armas, quizás no'",
@@ -307,9 +307,9 @@ news: [
 {
   id: "n10",
   tags: [{ cls:"tag-yellow", text:"🟡 SEMANA" }, { cls:"tag-blue", text:"🌐 COMERCIO" }],
-  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_United_States_%28DoS_ECA_color_standard%29.svg/400px-Flag_of_the_United_States_%28DoS_ECA_color_standard%29.svg.png",
+  image: "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_United_States_%28DoS_ECA_color_standard%29.svg?width=800",
   imageAlt: "EEUU-China comercio",
-  imageFallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_United_States_%28DoS_ECA_color_standard%29.svg/400px-Flag_of_the_United_States_%28DoS_ECA_color_standard%29.svg.png",
+  imageFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_United_States_%28DoS_ECA_color_standard%29.svg?width=800",
   imageCredit: "Wikimedia Commons",
   imageSource: "Public Domain",
   title: "TRUMP-CHINA: acuerdo de aranceles al 30% con pausa de 60 días — post-sentencia del Supremo contra IEEPA",
@@ -333,9 +333,9 @@ news: [
 {
   id: "n11",
   tags: [{ cls:"tag-orange", text:"🟠 HOY" }, { cls:"tag-blue", text:"🌍 SAHEL" }],
-  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Mali_-_Location_Map_%282013%29_-_MLI_-_UNOCHA.svg/800px-Mali_-_Location_Map_%282013%29_-_MLI_-_UNOCHA.svg.png",
+  image: "https://commons.wikimedia.org/wiki/Special:FilePath/Mali_-_Location_Map_%282013%29_-_MLI_-_UNOCHA.svg?width=800",
   imageAlt: "Mapa del Sahel",
-  imageFallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Mali_-_Location_Map_%282013%29_-_MLI_-_UNOCHA.svg/800px-Mali_-_Location_Map_%282013%29_-_MLI_-_UNOCHA.svg.png",
+  imageFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Mali_-_Location_Map_%282013%29_-_MLI_-_UNOCHA.svg?width=800",
   imageCredit: "UN OCHA",
   imageSource: "CC BY 3.0",
   title: "SAHEL: 52.8M personas en crisis alimentaria — temporada de hambruna empieza HOY — yihadistas se pelean entre ellos",
@@ -377,9 +377,9 @@ proposals: [
     { cls:"chip-gfull", text:"🟢 GAP: nadie conecta Beaufort 1982 con Beaufort 2026" },
     { cls:"chip-vpok",  text:"🟢 VP: ángulo completamente nuevo" }
   ],
-  banner: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Beaufort_Castle%2C_Lebanon.jpg/1280px-Beaufort_Castle%2C_Lebanon.jpg",
+  banner: "https://commons.wikimedia.org/wiki/Special:FilePath/Beaufort_Castle%2C_Lebanon.jpg?width=1200",
   bannerAlt: "Castillo de Beaufort — Líbano",
-  bannerFallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Beaufort_Castle%2C_Lebanon.jpg/800px-Beaufort_Castle%2C_Lebanon.jpg",
+  bannerFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Beaufort_Castle%2C_Lebanon.jpg?width=800",
   tesis: "Israel no está haciendo una operación temporal. Está reconstruyendo la zona de seguridad de 1982-2000, exactamente en el mismo lugar — el castillo de Beaufort. La paradoja histórica es brutal: esa ocupación fue la que creó a Hezbollah. 26 años después, en el mismo castillo, la historia se repite. La pregunta: ¿creará esto al próximo Hezbollah?",
   fields: [
     { label: "📰 La noticia", value: "IDF tomó el castillo de Beaufort el 31 mayo. Banderas israelíes y Golani izadas. Katz: tropas 'permanecerán como parte de la zona de seguridad'. Mayor avance en 26 años. Alto el fuego de EEUU violado. Francia condena. <a href='https://www.npr.org/2026/05/31/g-s1-125056/israel-seizes-medieval-beaufort-castle-southern-lebanon'>NPR</a> · <a href='https://www.cnn.com/2026/05/31/middleeast/israel-captures-beaufort-castle-lebanon-intl-hnk'>CNN</a>" },
@@ -410,9 +410,9 @@ proposals: [
     { cls:"chip-gfull", text:"🟢 GAP TOTAL: nadie conectó Ormuz + Yamal + prohibición" },
     { cls:"chip-vpok",  text:"🟢 VP: ángulo completamente nuevo" }
   ],
-  banner: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/LNG_Carrier.jpg/800px-LNG_Carrier.jpg",
+  banner: "https://commons.wikimedia.org/wiki/Special:FilePath/LNG_Carrier.jpg?width=800",
   bannerAlt: "Buque de GNL",
-  bannerFallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/LNG_Carrier.jpg/800px-LNG_Carrier.jpg",
+  bannerFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/LNG_Carrier.jpg?width=800",
   tesis: "La guerra de Irán no debilitó a Rusia. La fortaleció. El cierre de Ormuz convirtió a Moscú en el proveedor energético de emergencia de Europa — el continente que lleva 4 años 'desacoplándose'. Europa financia a Putin con cifras récord mientras vota prohibir su gas. La 'diversificación energética' fue una ilusión: en la primera crisis real, Europa vuelve al gas ruso.",
   fields: [
     { label: "📰 La noticia", value: "UE importó más GNL ruso de Yamal que nunca en ene-abr 2026. 91 cargamentos, +17.2% vs 2025. En febrero, 100% de Yamal a Europa. €3.880M pagados. Prohibición total: enero 2027. <a href='https://www.urgewald.org/en/media/europes-russian-arctic-lng-imports-yamal-hit-record-high-first-4-months-2026'>Urgewald</a>" },
@@ -442,9 +442,9 @@ proposals: [
     { cls:"chip-gpart", text:"🟡 Gap: el ángulo es 'patrón continental', no resultado" },
     { cls:"chip-vpwarn", text:"⚠️ VP cubrió grupos armados 3 mayo — ángulo diferente" }
   ],
-  banner: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Colombia_in_South_America.svg/800px-Colombia_in_South_America.svg.png",
+  banner: "https://commons.wikimedia.org/wiki/Special:FilePath/Colombia_in_South_America.svg?width=800",
   bannerAlt: "Colombia en Sudamérica",
-  bannerFallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Colombia_in_South_America.svg/800px-Colombia_in_South_America.svg.png",
+  bannerFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Colombia_in_South_America.svg?width=800",
   tesis: "De la Espriella es abogado mediático, outsider, pro-Trump, sin partido. Ganó sorprendiendo a todas las encuestas con 43.7%. Colombia no elige presidente — elige bando en una guerra ideológica continental. De Bukele a Milei a De la Espriella: el modelo líder autoritario-mediático se replica. La trumpización de Latinoamérica es un patrón, no una coincidencia.",
   fields: [
     { label: "📰 La noticia", value: "De la Espriella ganó 1ª vuelta con 43.73%. Cepeda (izquierda) 40.91%. Valencia (centro-derecha) 6.9%. 23M votantes, 56% participación. 2ª vuelta 21 junio. <a href='https://www.cnn.com/2026/05/31/americas/colombia-runoff-espriella-cepeda-latam-intl'>CNN</a> · <a href='https://www.france24.com/en/americas/20260531-colombia-presidential-election-live-follow-the-first-round'>France24</a>" },
@@ -475,9 +475,9 @@ proposals: [
     { cls:"chip-gfull", text:"🟢 GAP TOTAL EN ESPAÑOL · nadie lo cubre" },
     { cls:"chip-vpok",  text:"🟢 VP: nunca cubierto" }
   ],
-  banner: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Pacific_Ocean_laea_location_map.svg/800px-Pacific_Ocean_laea_location_map.svg.png",
+  banner: "https://commons.wikimedia.org/wiki/Special:FilePath/Pacific_Ocean_laea_location_map.svg?width=800",
   bannerAlt: "Mapa del Pacífico oriental",
-  bannerFallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Pacific_Ocean_laea_location_map.svg/800px-Pacific_Ocean_laea_location_map.svg.png",
+  bannerFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Pacific_Ocean_laea_location_map.svg?width=800",
   tesis: "EEUU lleva a cabo una campaña de asesinatos extrajudiciales en aguas internacionales. 200+ muertos, 62 barcos destruidos, sin un gramo de droga mostrado como evidencia. Trump inventó la categoría de 'conflicto armado contra carteles' para saltarse la legalidad. Es la política antidrogas más letal y menos transparente de la historia moderna de EEUU.",
   fields: [
     { label: "📰 La noticia", value: "Otro ataque el 31 mayo, 3 muertos. 4º de la semana. Desde sept 2025: 61+ ataques, 62 barcos, 200+ muertos. Trump: 'conflicto armado'. 0 pruebas públicas de drogas. <a href='https://www.nbcnews.com/politics/trump-administration/us-military-strike-alleged-drug-boat-kills-3-eastern-pacific-rcna343790'>NBC</a> · <a href='https://www.justsecurity.org/124002/timeline-vessel-strikes-related-actions/'>Just Security</a>" },
@@ -507,9 +507,9 @@ proposals: [
     { cls:"chip-gpart", text:"🟡 Gap: el ángulo industrial es nuevo" },
     { cls:"chip-vpwarn", text:"⚠️ VP: 'Trump rompe OTAN' 6 mayo · ángulo diferente" }
   ],
-  banner: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/NATO_expansion.png/800px-NATO_expansion.png",
+  banner: "https://commons.wikimedia.org/wiki/Special:FilePath/NATO_expansion.png?width=800",
   bannerAlt: "Expansión OTAN",
-  bannerFallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/NATO_expansion.png/800px-NATO_expansion.png",
+  bannerFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/NATO_expansion.png?width=800",
   tesis: "EEUU no se va por castigo. Se va porque decidió que China es el enemigo real. Pero Europa no puede reemplazarlo: no fabrica munición suficiente, no tiene drones propios, no tiene proyección autónoma. El problema no es presupuestario (Alemania sube al 3%), es industrial. Europa gasta más pero produce menos.",
   fields: [
     { label: "📰 La noticia", value: "Plan acelerado de retirada en cumbre OTAN 18 junio (Welt am Sonntag). 5.000 tropas de Alemania. Trump: 'cortaremos mucho más'. España e Italia posibles siguientes. Recortes en cazas, buques, drones. <a href='https://www.defensenews.com/global/europe/2026/05/26/report-us-to-cut-strategic-bombers-and-warships-available-to-nato-in-a-crisis/'>Defense News</a>" },
@@ -538,9 +538,9 @@ proposals: [
     { cls:"chip-gfull", text:"🟢 GAP TOTAL EN ESPAÑOL" },
     { cls:"chip-vpok",  text:"🟢 VP: cubrió Etiopía tangencialmente, nunca en profundidad" }
   ],
-  banner: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_Ethiopia.svg/800px-Flag_of_Ethiopia.svg.png",
+  banner: "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Ethiopia.svg?width=800",
   bannerAlt: "Bandera de Etiopía",
-  bannerFallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_Ethiopia.svg/800px-Flag_of_Ethiopia.svg.png",
+  bannerFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Ethiopia.svg?width=800",
   tesis: "Abiy Ahmed ganó el Nobel de la Paz en 2019 por acabar con la guerra con Eritrea. Después lanzó una guerra civil que mató a cientos de miles. Hoy celebra elecciones sin oposición real y planea reformar la constitución para perpetuarse. Es la historia de cómo un Nobel construyó una autocracia — en el segundo país más poblado de África, que controla las nacientes del Nilo.",
   fields: [
     { label: "📰 La noticia", value: "Elecciones HOY 1 junio. PP sin oposición en 64/547 distritos. En 2021 ganó 96%. Regiones enteras no votan por violencia. Planes de reforma constitucional para sistema presidencial. <a href='https://www.cnn.com/2026/05/31/africa/ethiopia-election-abiy-division-intl'>CNN</a> · <a href='https://www.aljazeera.com/news/2026/5/29/ethiopia-to-vote-on-june-1-as-abiys-ruling-party-eyes-landslide'>Al Jazeera</a>" },
@@ -569,9 +569,9 @@ proposals: [
     { cls:"chip-gpart", text:"🟡 Gap: nadie hace el balance a 6 meses" },
     { cls:"chip-vpwarn", text:"⚠️ VP: 12+ vídeos sobre Venezuela — necesita ángulo fresco" }
   ],
-  banner: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Venezuela_in_South_America.svg/800px-Venezuela_in_South_America.svg.png",
+  banner: "https://commons.wikimedia.org/wiki/Special:FilePath/Venezuela_in_South_America.svg?width=800",
   bannerAlt: "Venezuela en Sudamérica",
-  bannerFallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Venezuela_in_South_America.svg/800px-Venezuela_in_South_America.svg.png",
+  bannerFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Venezuela_in_South_America.svg?width=800",
   tesis: "Hace 6 meses EEUU sacó a Maduro. Trump prometió reconstruir la industria petrolera. La realidad: Venezuela produce menos de un tercio de lo que producía hace 25 años. La reconstrucción llevará una década. Paradoja: con Ormuz cerrado, el mundo necesita desesperadamente el petróleo venezolano, pero Venezuela no puede producirlo.",
   fields: [
     { label: "📰 La noticia", value: "A 6 meses de la extracción de Maduro (3 ene 2026): producción 934K bbl/día vs 3M+ en los 90. Extra a corto plazo: solo 250-300K bbl/día. Reconstrucción: 'trabajo de una década'. <a href='https://www.americasquarterly.org/article/venezuela-the-post-maduro-oil-gas-and-mining-outlook/'>AQ</a> · <a href='https://www.atlanticcouncil.org/dispatches/what-it-takes-to-revive-venezuelas-oil-and-gas-industry/'>Atlantic Council</a>" },
