@@ -1,26 +1,86 @@
 /* ══════════════════════════════════════════════════════════════
-   VP RADAR DASHBOARD — dashboard.js v6.0
+   VP RADAR DASHBOARD — dashboard.js v6.1
    Reads RADAR_DATA from data_YYYY-MM-DD.js and optionally
    TEAM_PROPOSALS from team_proposals.js.
-   Renders all sections into the HTML shell.
+   Renders all sections + collaborative assignment system.
 ══════════════════════════════════════════════════════════════ */
 
 // ── HELPERS ───────────────────────────────────────────────────
 const $ = id => document.getElementById(id);
 
-/* ── localStorage helpers for team interaction ─────────────── */
-function getStorageKey(prefix) {
+/* ── localStorage helpers ──────────────────────────────────── */
+function getRadarDate() {
   const d = (window.RADAR_DATA || {}).meta || {};
-  return `vp_${prefix}_${d.date || 'unknown'}`;
-}
-function loadInterest() {
-  try { return JSON.parse(localStorage.getItem(getStorageKey('interest')) || '{}'); } catch { return {}; }
-}
-function saveInterest(obj) {
-  try { localStorage.setItem(getStorageKey('interest'), JSON.stringify(obj)); } catch {}
+  return d.date || 'unknown';
 }
 
-/* ── Status badge helpers ──────────────────────────────────── */
+function getUserName() {
+  return localStorage.getItem('vp_user_name') || '';
+}
+function setUserName(name) {
+  localStorage.setItem('vp_user_name', name.trim());
+}
+
+// Assignments stored globally (not per-radar) so they persist across days
+function loadAssignments() {
+  try { return JSON.parse(localStorage.getItem('vp_assignments') || '{}'); } catch { return {}; }
+}
+function saveAssignments(obj) {
+  try { localStorage.setItem('vp_assignments', JSON.stringify(obj)); } catch {}
+}
+function getAssignment(proposalId) {
+  const all = loadAssignments();
+  return all[proposalId] || null;
+}
+function setAssignment(proposalId, data) {
+  const all = loadAssignments();
+  all[proposalId] = { ...data, updatedAt: new Date().toISOString() };
+  saveAssignments(all);
+}
+function clearAssignment(proposalId) {
+  const all = loadAssignments();
+  delete all[proposalId];
+  saveAssignments(all);
+}
+
+// Merge: data_*.js assignment (official) < localStorage (instant local override)
+function getEffectiveAssignment(proposal) {
+  const official = proposal.assignment || {};
+  const local = getAssignment(proposal.number);
+  // If official has a non-libre status, it takes precedence (set by radar generator)
+  if (official.status && official.status !== 'libre' && !local) {
+    return official;
+  }
+  // Local override if it exists
+  if (local) {
+    return local;
+  }
+  return official;
+}
+
+/* ── URL params: import assignments from shared links ──────── */
+function importFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  const shared = params.get('assign');
+  if (shared) {
+    try {
+      const decoded = JSON.parse(atob(shared));
+      if (decoded && decoded.id && decoded.status) {
+        const current = getAssignment(decoded.id);
+        // Only import if newer or no local data
+        if (!current || (decoded.updatedAt && (!current.updatedAt || decoded.updatedAt > current.updatedAt))) {
+          setAssignment(decoded.id, decoded);
+        }
+      }
+    } catch {}
+    // Clean URL
+    const url = new URL(window.location);
+    url.searchParams.delete('assign');
+    window.history.replaceState({}, '', url);
+  }
+}
+
+/* ── Status definitions ────────────────────────────────────── */
 const STATUS_MAP = {
   'libre':             { cls: 'st-libre',       label: 'Libre',             icon: '⚪' },
   'interesante':       { cls: 'st-interesante', label: 'Interesante',       icon: '💡' },
@@ -36,7 +96,115 @@ function statusBadge(status) {
   return `<span class="assign-status ${s.cls}">${s.icon} ${s.label}</span>`;
 }
 
-// ── RENDER FUNCTIONS (existing) ──────────────────────────────
+function statusOptions(currentStatus) {
+  return Object.entries(STATUS_MAP).map(([key, val]) =>
+    `<option value="${key}" ${key === currentStatus ? 'selected' : ''}>${val.icon} ${val.label}</option>`
+  ).join('');
+}
+
+/* ── Name modal ────────────────────────────────────────────── */
+function showNameModal() {
+  const existing = getUserName();
+  const overlay = document.createElement('div');
+  overlay.id = 'name-modal-overlay';
+  overlay.className = 'modal-overlay';
+  overlay.innerHTML = `
+    <div class="modal-card">
+      <div class="modal-icon">👤</div>
+      <div class="modal-title">${existing ? 'Cambiar nombre' : 'Bienvenido al Radar VP'}</div>
+      <div class="modal-desc">${existing ? 'Tu nombre actual: <strong>' + existing + '</strong>' : 'Introduce tu nombre para que el equipo sepa quien se asigna cada tema.'}</div>
+      <input type="text" id="modal-name-input" class="modal-input" placeholder="Tu nombre (ej: Carlos, Ana)"
+             value="${existing}" autofocus>
+      <div class="modal-buttons">
+        <button class="modal-btn modal-btn-primary" id="modal-name-save">Guardar</button>
+        ${existing ? '<button class="modal-btn modal-btn-secondary" id="modal-name-cancel">Cancelar</button>' : ''}
+      </div>
+    </div>`;
+  document.body.appendChild(overlay);
+
+  const input = document.getElementById('modal-name-input');
+  const saveBtn = document.getElementById('modal-name-save');
+  const cancelBtn = document.getElementById('modal-name-cancel');
+
+  function save() {
+    const name = input.value.trim();
+    if (!name) { input.style.borderColor = 'var(--red)'; input.focus(); return; }
+    setUserName(name);
+    overlay.remove();
+    updateUserBadge();
+  }
+
+  saveBtn.addEventListener('click', save);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') save(); });
+  if (cancelBtn) cancelBtn.addEventListener('click', () => overlay.remove());
+}
+
+function updateUserBadge() {
+  const el = $('user-badge');
+  const name = getUserName();
+  if (el) {
+    el.innerHTML = name
+      ? `<span class="user-badge-name" title="Clic para cambiar nombre">👤 ${name}</span>`
+      : `<span class="user-badge-login" title="Clic para identificarte">👤 Identificarse</span>`;
+    el.onclick = showNameModal;
+  }
+}
+
+/* ── Telegram message generator ────────────────────────────── */
+function generateTelegramMsg(proposalId, title, status, assignee, notes) {
+  const statusLabel = (STATUS_MAP[status] || STATUS_MAP['libre']).label;
+  const icon = (STATUS_MAP[status] || STATUS_MAP['libre']).icon;
+  const date = getRadarDate();
+  const lines = [
+    `${icon} *ASIGNACION DE TEMA*`,
+    ``,
+    `*Tema:* ${proposalId} — ${title}`,
+    `*Estado:* ${statusLabel}`,
+    `*Guionista:* ${assignee}`,
+  ];
+  if (notes) lines.push(`*Notas:* ${notes}`);
+  lines.push(`*Radar:* ${date}`);
+  lines.push(``);
+  lines.push(`_Actualizado desde el dashboard VP_`);
+  return lines.join('\n');
+}
+
+function showTelegramToast(proposalId, title, status, assignee, notes) {
+  // Remove existing toast
+  const old = document.getElementById('tg-toast');
+  if (old) old.remove();
+
+  const msg = generateTelegramMsg(proposalId, title, status, assignee, notes);
+  const toast = document.createElement('div');
+  toast.id = 'tg-toast';
+  toast.className = 'tg-toast';
+  toast.innerHTML = `
+    <div class="tg-toast-header">
+      <span>📋 Copia y envia al grupo de Telegram:</span>
+      <button class="tg-toast-close" onclick="this.closest('.tg-toast').remove()">✕</button>
+    </div>
+    <pre class="tg-toast-msg">${msg}</pre>
+    <div class="tg-toast-actions">
+      <button class="btn-copy-tg" onclick="copyTgMsg(this)">📋 Copiar mensaje</button>
+      <span class="tg-copy-ok" style="display:none">✓ Copiado</span>
+    </div>`;
+  document.body.appendChild(toast);
+  // Auto-scroll toast into view
+  toast.scrollIntoView({ behavior: 'smooth', block: 'end' });
+  // Auto-dismiss after 15s
+  setTimeout(() => { if (toast.parentNode) toast.remove(); }, 15000);
+}
+
+function copyTgMsg(btn) {
+  const pre = btn.closest('.tg-toast').querySelector('.tg-toast-msg');
+  navigator.clipboard.writeText(pre.textContent).then(() => {
+    const ok = btn.nextElementSibling;
+    ok.style.display = 'inline';
+    setTimeout(() => { ok.style.display = 'none'; }, 2000);
+  });
+}
+
+// ── RENDER FUNCTIONS ─────────────────────────────────────────
 
 function renderTicker(items) {
   const html = items.map(i => `<span class="ticker-item ${i.cls}">${i.text}</span>`).join('');
@@ -49,9 +217,10 @@ function renderHero(meta, hero) {
       <span class="vp-logo">VISUALPOLITIK</span>
       <span class="live-badge">● EN VIVO</span>
       <span class="hero-date">📡 RADAR EDITORIAL · ${meta.dateLabel} · ${meta.brisbane}</span>
+      <span id="user-badge" class="user-badge"></span>
     </div>
     <div class="hero-title">INTELIGENCIA EDITORIAL <span>DIARIA</span></div>
-    <div class="hero-subtitle">Dashboard premium v6.0 — Geopolitica · Economia · Poder · Mesa editorial VPK</div>
+    <div class="hero-subtitle">Dashboard premium v6.1 — Geopolitica · Economia · Poder · Mesa editorial VPK</div>
     <div class="hero-grid">
       ${hero.map(b => `
         <div class="hero-box">
@@ -148,26 +317,12 @@ function renderProposal(p) {
        </div>`
     : '';
 
-  // Assignment info (from data file or default)
-  const assign = p.assignment || {};
-  const status = assign.status || 'libre';
-  const assignee = assign.assignee || '';
-  const targetDate = assign.targetDate || '';
-  const assignNotes = assign.notes || '';
-
-  const assignRow = `
-    <div class="assign-row" data-proposal="${p.number}">
-      ${statusBadge(status)}
-      ${assignee ? `<span class="assign-who">👤 ${assignee}</span>` : ''}
-      ${targetDate ? `<span class="assign-date">📅 ${targetDate}</span>` : ''}
-      ${assignNotes ? `<span class="assign-notes">📝 ${assignNotes}</span>` : ''}
-      <button class="btn-interest" data-id="${p.number}" title="Marcar interes personal (solo tu navegador)">
-        💡 Me interesa
-      </button>
-    </div>`;
+  const a = getEffectiveAssignment(p);
+  const status = a.status || 'libre';
+  const assignee = a.assignee || '';
 
   return `
-    <div class="proposal${p.golden ? ' golden' : ''}">
+    <div class="proposal${p.golden ? ' golden' : ''}" id="prop-${p.number}">
       <img class="prop-banner" src="${p.banner}" alt="${p.bannerAlt}"
            onerror="this.src='${p.bannerFallback}'">
       <div class="prop-header">
@@ -179,7 +334,20 @@ function renderProposal(p) {
         </div>
         <span class="pot-badge ${p.potCls}">${p.potText}</span>
       </div>
-      ${assignRow}
+      <div class="assign-row" data-proposal="${p.number}" data-title="${p.title.replace(/"/g, '&quot;')}">
+        <div class="assign-controls">
+          <select class="assign-select" data-id="${p.number}" title="Cambiar estado">
+            ${statusOptions(status)}
+          </select>
+          ${assignee ? `<span class="assign-who">👤 ${assignee}</span>` : ''}
+        </div>
+        <div class="assign-actions">
+          <button class="btn-interest" data-id="${p.number}" title="Asignarme este tema">
+            ${status !== 'libre' && assignee === getUserName() ? '✅ Asignado a ti' : '🙋 Asignarmelo'}
+          </button>
+          ${status !== 'libre' ? `<button class="btn-free" data-id="${p.number}" title="Liberar tema">↩️ Liberar</button>` : ''}
+        </div>
+      </div>
       <div class="prop-body">
         <div class="tesis-box">${p.tesis}</div>
         <hr class="prop-divider">
@@ -214,15 +382,14 @@ function renderVigilar(items) {
     </div>`).join('');
 }
 
-// ── NEW: Assignment table ────────────────────────────────────
+// ── Assignment table ─────────────────────────────────────────
 
 function renderAssignmentTable(proposals) {
   const rows = proposals.map(p => {
-    const a = p.assignment || {};
+    const a = getEffectiveAssignment(p);
     const status = a.status || 'libre';
-    const s = STATUS_MAP[status] || STATUS_MAP['libre'];
     return `
-      <tr class="assign-table-row ${status === 'libre' ? 'row-libre' : ''}">
+      <tr class="assign-table-row ${status === 'libre' ? 'row-libre' : ''}" data-prop="${p.number}">
         <td>
           <strong>${p.number}</strong>
           ${p.golden ? '<span class="assign-golden-tag">DORADO</span>' : ''}
@@ -242,10 +409,10 @@ function renderAssignmentTable(proposals) {
     <div class="assign-how">
       <div class="assign-how-title">Como funciona</div>
       <div class="assign-how-text">
-        1. Revisa las propuestas y elige un tema.<br>
-        2. Usa el boton "💡 Me interesa" en cada propuesta para marcarlo en tu navegador.<br>
-        3. Comunica tu eleccion por el grupo de Telegram/chat del equipo.<br>
-        4. El estado oficial se actualiza en el proximo radar.
+        1. Identificate con tu nombre (arriba a la derecha, junto a "EN VIVO").<br>
+        2. Pulsa <strong>"🙋 Asignarmelo"</strong> en la propuesta que quieras trabajar.<br>
+        3. Se generara un mensaje para Telegram — copialo y envialo al grupo del equipo.<br>
+        4. La tabla se actualiza al instante en tu navegador. Tus companeros veran el cambio al abrir el dashboard.
       </div>
     </div>
     <div class="assign-table-wrap">
@@ -268,7 +435,7 @@ function renderAssignmentTable(proposals) {
     </div>`;
 }
 
-// ── NEW: Team proposals section ──────────────────────────────
+// ── Team proposals ───────────────────────────────────────────
 
 function renderTeamProposals(proposals) {
   if (!proposals || proposals.length === 0) {
@@ -288,7 +455,6 @@ function renderTeamProposals(proposals) {
       'urgente': { cls: 'urg-urgente', label: 'Urgente' }
     };
     const urg = urgencyMap[tp.urgency] || urgencyMap['media'];
-    const st = STATUS_MAP[tp.status] || STATUS_MAP['pendiente'];
 
     const detailFields = [
       tp.secondDerivative && { label: '🔬 Segunda derivada', value: tp.secondDerivative },
@@ -314,7 +480,7 @@ function renderTeamProposals(proposals) {
             <span class="tp-date">📅 ${tp.date}</span>
             ${tp.region ? `<span class="tp-region">${tp.region}</span>` : ''}
             <span class="tp-urgency ${urg.cls}">⚡ ${urg.label}</span>
-            ${statusBadge(tp.status)}
+            ${statusBadge(tp.status || 'pendiente')}
           </div>
           <div class="tp-title">${tp.flag ? `<img src="https://flagcdn.com/16/${tp.flag}.png" style="height:13px;vertical-align:middle"> ` : ''}${tp.title}</div>
         </div>
@@ -347,9 +513,10 @@ function renderTeamProposals(proposals) {
   }).join('');
 }
 
-// ── NEW: Proposal form (generates JSON for copy-paste) ───────
+// ── Proposal form ────────────────────────────────────────────
 
 function renderProposalForm() {
+  const userName = getUserName();
   return `
     <div class="form-card">
       <div class="form-title">Proponer un tema</div>
@@ -357,7 +524,7 @@ function renderProposalForm() {
       <div class="form-grid">
         <div class="form-group">
           <label>Tu nombre *</label>
-          <input type="text" id="f-author" placeholder="Ej: Ana Garcia">
+          <input type="text" id="f-author" placeholder="Ej: Ana Garcia" value="${userName}">
         </div>
         <div class="form-group">
           <label>Region</label>
@@ -412,13 +579,11 @@ function renderProposalForm() {
       <div id="form-output" class="form-output" style="display:none">
         <div class="form-output-label">Copia este texto y envialo por Telegram:</div>
         <pre id="form-json"></pre>
-        <button class="btn-copy" onclick="copyProposalJSON()">📋 Copiar al portapapeles</button>
-        <div id="copy-confirm" class="copy-confirm" style="display:none">✓ Copiado</div>
+        <button class="btn-copy" onclick="copyFormJSON()">📋 Copiar al portapapeles</button>
+        <span id="copy-confirm" class="copy-confirm" style="display:none">✓ Copiado</span>
       </div>
     </div>`;
 }
-
-// ── Form logic ───────────────────────────────────────────────
 
 function generateProposalJSON() {
   const author = document.getElementById('f-author').value.trim();
@@ -432,42 +597,149 @@ function generateProposalJSON() {
   }
 
   const proposal = {
-    author: author,
-    date: new Date().toISOString().split('T')[0],
+    author, date: new Date().toISOString().split('T')[0],
     region: document.getElementById('f-region').value,
-    title: title,
-    news: news,
-    whyInteresting: why,
+    title, news, whyInteresting: why,
     vpAngle: document.getElementById('f-angle').value.trim(),
     urgency: document.getElementById('f-urgency').value,
-    status: 'pendiente',
-    sources: []
+    status: 'pendiente', sources: []
   };
 
   const srcUrl = document.getElementById('f-source-url').value.trim();
   const srcMed = document.getElementById('f-source-medium').value.trim();
-  if (srcUrl) {
-    proposal.sources.push({ title: title, url: srcUrl, medium: srcMed });
-  }
+  if (srcUrl) proposal.sources.push({ title, url: srcUrl, medium: srcMed });
 
-  const json = JSON.stringify(proposal, null, 2);
-  document.getElementById('form-json').textContent = json;
+  document.getElementById('form-json').textContent = JSON.stringify(proposal, null, 2);
   document.getElementById('form-output').style.display = 'block';
   document.getElementById('form-output').scrollIntoView({ behavior: 'smooth' });
 }
 
-function copyProposalJSON() {
-  const text = document.getElementById('form-json').textContent;
-  navigator.clipboard.writeText(text).then(() => {
+function copyFormJSON() {
+  navigator.clipboard.writeText(document.getElementById('form-json').textContent).then(() => {
     const el = document.getElementById('copy-confirm');
     el.style.display = 'inline';
     setTimeout(() => { el.style.display = 'none'; }, 2000);
   });
 }
 
+// ── Re-render assignment row for a specific proposal ─────────
+function refreshProposalAssignRow(proposalId) {
+  const row = document.querySelector(`.assign-row[data-proposal="${proposalId}"]`);
+  if (!row) return;
+  const a = getAssignment(proposalId) || {};
+  const status = a.status || 'libre';
+  const assignee = a.assignee || '';
+  const userName = getUserName();
+
+  row.querySelector('.assign-select').value = status;
+  const whoEl = row.querySelector('.assign-who');
+  if (whoEl) whoEl.textContent = assignee ? `👤 ${assignee}` : '';
+  else if (assignee) {
+    const span = document.createElement('span');
+    span.className = 'assign-who';
+    span.textContent = `👤 ${assignee}`;
+    row.querySelector('.assign-controls').appendChild(span);
+  }
+
+  const btn = row.querySelector('.btn-interest');
+  if (btn) {
+    if (status !== 'libre' && assignee === userName) {
+      btn.textContent = '✅ Asignado a ti';
+    } else {
+      btn.textContent = '🙋 Asignarmelo';
+    }
+  }
+
+  // Show/hide free button
+  let freeBtn = row.querySelector('.btn-free');
+  if (status !== 'libre' && !freeBtn) {
+    freeBtn = document.createElement('button');
+    freeBtn.className = 'btn-free';
+    freeBtn.dataset.id = proposalId;
+    freeBtn.title = 'Liberar tema';
+    freeBtn.textContent = '↩️ Liberar';
+    freeBtn.addEventListener('click', handleFree);
+    row.querySelector('.assign-actions').appendChild(freeBtn);
+  } else if (status === 'libre' && freeBtn) {
+    freeBtn.remove();
+  }
+
+  // Refresh the assignment table too
+  refreshAssignmentTableRow(proposalId);
+}
+
+function refreshAssignmentTableRow(proposalId) {
+  const tr = document.querySelector(`.assign-table-row[data-prop="${proposalId}"]`);
+  if (!tr) return;
+  const a = getAssignment(proposalId) || {};
+  const status = a.status || 'libre';
+  const cells = tr.querySelectorAll('td');
+  if (cells.length >= 6) {
+    cells[2].innerHTML = statusBadge(status);
+    cells[3].innerHTML = a.assignee || '<span class="assign-empty">—</span>';
+    cells[4].innerHTML = a.targetDate || '<span class="assign-empty">—</span>';
+    cells[5].innerHTML = a.notes || '<span class="assign-empty">—</span>';
+  }
+  tr.className = `assign-table-row ${status === 'libre' ? 'row-libre' : ''}`;
+}
+
+// ── Event handlers ───────────────────────────────────────────
+
+function handleAssignToMe(e) {
+  const id = e.target.dataset.id;
+  const userName = getUserName();
+  if (!userName) { showNameModal(); return; }
+
+  const row = e.target.closest('.assign-row');
+  const title = row.dataset.title;
+
+  setAssignment(id, { status: 'reservado', assignee: userName, targetDate: '', notes: '' });
+  refreshProposalAssignRow(id);
+  showTelegramToast(id, title, 'reservado', userName, '');
+}
+
+function handleFree(e) {
+  const id = e.target.dataset.id;
+  const row = e.target.closest('.assign-row');
+  const title = row.dataset.title;
+  const userName = getUserName() || 'Alguien';
+
+  clearAssignment(id);
+  refreshProposalAssignRow(id);
+  showTelegramToast(id, title, 'libre', userName, 'Tema liberado');
+}
+
+function handleStatusChange(e) {
+  const id = e.target.dataset.id;
+  const newStatus = e.target.value;
+  const row = e.target.closest('.assign-row');
+  const title = row.dataset.title;
+  const userName = getUserName();
+
+  if (newStatus === 'libre') {
+    clearAssignment(id);
+  } else {
+    const current = getAssignment(id) || {};
+    setAssignment(id, {
+      status: newStatus,
+      assignee: current.assignee || userName || '',
+      targetDate: current.targetDate || '',
+      notes: current.notes || ''
+    });
+  }
+  refreshProposalAssignRow(id);
+
+  if (userName) {
+    const assignee = (getAssignment(id) || {}).assignee || userName;
+    showTelegramToast(id, title, newStatus, assignee, '');
+  }
+}
+
 // ── INIT ──────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  // Support both window.RADAR_DATA (v5.0+) and legacy VP_DATA
+  // Import assignments from shared URL
+  importFromURL();
+
   const radarData = window.RADAR_DATA || (typeof VP_DATA !== 'undefined' ? VP_DATA : undefined);
   if (!radarData) {
     const scripts = document.querySelectorAll('script[src*="data_"]');
@@ -475,72 +747,54 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.innerHTML = `<div style="color:#f44;padding:32px;font-family:monospace;background:#111;min-height:100vh">
       <h2>⚠️ Error de carga del dashboard</h2>
       <p><strong>Archivo de datos esperado:</strong> ${dataFile}</p>
-      <p><strong>Variable global:</strong> ni window.RADAR_DATA ni VP_DATA estan definidas</p>
-      <p>Posibles causas:</p>
-      <ul>
-        <li>Error de sintaxis en el archivo de datos (abrir la consola del navegador F12 → Console)</li>
-        <li>El archivo no se cargo (comprobar pestana Network)</li>
-        <li>El archivo cargo pero la variable se llama de otra forma</li>
-      </ul>
-      <p style="color:#888;margin-top:16px">Consejo: pulsa F12 → Console para ver el error exacto.</p>
+      <p>Posibles causas: error de sintaxis, archivo no cargado, variable incorrecta.</p>
+      <p style="color:#888;margin-top:16px">Pulsa F12 → Console para ver el error exacto.</p>
     </div>`;
     return;
   }
   const d = radarData;
   document.title = `Radar Editorial VP · ${d.meta.dateLabel}`;
 
-  // ── Existing sections ──
-  $('ticker-wrap').innerHTML        = renderTicker(d.ticker);
-  $('hero').innerHTML               = renderHero(d.meta, d.hero);
-  $('covered-bar').innerHTML        = renderCoveredBar(d.coveredVideos);
-  $('news-grid').innerHTML          = d.news.map(renderNewsCard).join('');
-  $('proposals').innerHTML          = d.proposals.map(renderProposal).join('');
-  $('ranking-wrap').innerHTML       = renderRanking(d.ranking);
-  $('vigilar-grid').innerHTML       = renderVigilar(d.vigilar);
+  // ── Render sections ──
+  $('ticker-wrap').innerHTML   = renderTicker(d.ticker);
+  $('hero').innerHTML          = renderHero(d.meta, d.hero);
+  $('covered-bar').innerHTML   = renderCoveredBar(d.coveredVideos);
+  $('news-grid').innerHTML     = d.news.map(renderNewsCard).join('');
+  $('proposals').innerHTML     = d.proposals.map(renderProposal).join('');
+  $('ranking-wrap').innerHTML  = renderRanking(d.ranking);
+  $('vigilar-grid').innerHTML  = renderVigilar(d.vigilar);
 
-  // ── NEW: Assignment table ──
   const assignEl = $('assignment-table');
-  if (assignEl) {
-    assignEl.innerHTML = renderAssignmentTable(d.proposals);
-  }
+  if (assignEl) assignEl.innerHTML = renderAssignmentTable(d.proposals);
 
-  // ── NEW: Team proposals ──
   const teamEl = $('team-proposals-grid');
-  if (teamEl) {
-    const teamData = window.TEAM_PROPOSALS || [];
-    teamEl.innerHTML = renderTeamProposals(teamData);
-  }
+  if (teamEl) teamEl.innerHTML = renderTeamProposals(window.TEAM_PROPOSALS || []);
 
-  // ── NEW: Proposal form ──
   const formEl = $('proposal-form');
-  if (formEl) {
-    formEl.innerHTML = renderProposalForm();
+  if (formEl) formEl.innerHTML = renderProposalForm();
+
+  $('footer-date').textContent    = d.meta.dateLabel;
+  $('footer-version').textContent = 'v6.1 · ' + d.news.length + ' noticias · ' + d.proposals.length + ' propuestas · Mesa editorial VPK';
+
+  // ── User badge ──
+  updateUserBadge();
+  if (!getUserName()) {
+    // Prompt for name on first visit (slight delay for page to render)
+    setTimeout(showNameModal, 800);
   }
 
-  // ── Footer ──
-  $('footer-date').textContent      = d.meta.dateLabel;
-  $('footer-version').textContent   = 'v6.0 · ' + d.news.length + ' noticias · ' + d.proposals.length + ' propuestas · Mesa editorial VPK';
-
-  // ── "Me interesa" buttons ──
-  const interest = loadInterest();
+  // ── Event listeners: "Asignarmelo" buttons ──
   document.querySelectorAll('.btn-interest').forEach(btn => {
-    const id = btn.dataset.id;
-    if (interest[id]) {
-      btn.classList.add('interested');
-      btn.textContent = '✅ Te interesa';
-    }
-    btn.addEventListener('click', () => {
-      const curr = loadInterest();
-      if (curr[id]) {
-        delete curr[id];
-        btn.classList.remove('interested');
-        btn.textContent = '💡 Me interesa';
-      } else {
-        curr[id] = true;
-        btn.classList.add('interested');
-        btn.textContent = '✅ Te interesa';
-      }
-      saveInterest(curr);
-    });
+    btn.addEventListener('click', handleAssignToMe);
+  });
+
+  // ── Event listeners: "Liberar" buttons ──
+  document.querySelectorAll('.btn-free').forEach(btn => {
+    btn.addEventListener('click', handleFree);
+  });
+
+  // ── Event listeners: Status dropdowns ──
+  document.querySelectorAll('.assign-select').forEach(sel => {
+    sel.addEventListener('change', handleStatusChange);
   });
 });

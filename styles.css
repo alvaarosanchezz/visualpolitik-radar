@@ -427,6 +427,110 @@ table.assign-table tr:hover td { background: rgba(69,123,157,.06); }
 .btn-copy:hover { background: rgba(39,174,96,.25); }
 .copy-confirm { font-size: 11px; color: var(--green); margin-left: 8px; font-weight: 600; }
 
+/* ── USER BADGE (hero bar) ─────────────────────────────────── */
+.user-badge { margin-left: auto; cursor: pointer; }
+.user-badge-name {
+  font-size: 11px; font-weight: 600; color: var(--green);
+  background: rgba(39,174,96,.1); border: 1px solid rgba(39,174,96,.3);
+  padding: 3px 10px; border-radius: 14px;
+  transition: all .2s;
+}
+.user-badge-name:hover { background: rgba(39,174,96,.2); }
+.user-badge-login {
+  font-size: 11px; font-weight: 600; color: var(--gold);
+  background: rgba(241,196,15,.1); border: 1px solid rgba(241,196,15,.3);
+  padding: 3px 10px; border-radius: 14px;
+  animation: pulse 2s infinite;
+}
+
+/* ── NAME MODAL ────────────────────────────────────────────── */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,.7); backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 16px;
+}
+.modal-card {
+  background: var(--navy-c); border: 1px solid var(--border);
+  border-radius: 14px; padding: 28px 24px; max-width: 380px; width: 100%;
+  box-shadow: 0 20px 60px rgba(0,0,0,.5);
+  text-align: center;
+}
+.modal-icon  { font-size: 36px; margin-bottom: 8px; }
+.modal-title { font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 6px; }
+.modal-desc  { font-size: 12px; color: var(--muted); margin-bottom: 16px; line-height: 1.5; }
+.modal-input {
+  width: 100%; padding: 10px 14px; border-radius: 8px;
+  background: var(--navy-b); border: 2px solid var(--border);
+  color: #fff; font-size: 15px; font-weight: 600;
+  text-align: center; transition: border-color .2s;
+}
+.modal-input:focus { outline: none; border-color: var(--gold); }
+.modal-buttons { display: flex; gap: 8px; margin-top: 14px; justify-content: center; }
+.modal-btn {
+  padding: 8px 20px; border-radius: 8px; font-size: 13px; font-weight: 700;
+  border: none; cursor: pointer; transition: all .2s;
+}
+.modal-btn-primary { background: var(--gold); color: #000; }
+.modal-btn-primary:hover { background: #e8b800; transform: translateY(-1px); }
+.modal-btn-secondary { background: rgba(138,164,190,.15); color: var(--muted); border: 1px solid var(--border); }
+.modal-btn-secondary:hover { background: rgba(138,164,190,.25); }
+
+/* ── TELEGRAM TOAST ────────────────────────────────────────── */
+.tg-toast {
+  position: fixed; bottom: 16px; right: 16px; z-index: 9998;
+  background: var(--navy-c); border: 1px solid rgba(39,174,96,.3);
+  border-radius: 12px; padding: 14px 16px;
+  max-width: 400px; width: calc(100% - 32px);
+  box-shadow: 0 8px 32px rgba(0,0,0,.5);
+  animation: slide-up .3s ease;
+}
+@keyframes slide-up { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+.tg-toast-header {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 11px; font-weight: 700; color: var(--green); margin-bottom: 8px;
+}
+.tg-toast-close {
+  background: none; border: none; color: var(--muted); font-size: 16px;
+  cursor: pointer; padding: 0 4px; line-height: 1;
+}
+.tg-toast-close:hover { color: #fff; }
+.tg-toast-msg {
+  background: var(--navy); padding: 10px; border-radius: 6px;
+  font-size: 11px; color: var(--text); overflow-x: auto;
+  white-space: pre-wrap; word-break: break-word;
+  font-family: 'JetBrains Mono', monospace;
+  max-height: 200px; margin: 0;
+}
+.tg-toast-actions { margin-top: 8px; display: flex; align-items: center; gap: 8px; }
+.btn-copy-tg {
+  padding: 5px 12px; border-radius: 6px;
+  background: rgba(39,174,96,.15); border: 1px solid rgba(39,174,96,.3);
+  color: var(--green); font-size: 11px; font-weight: 600; cursor: pointer;
+}
+.btn-copy-tg:hover { background: rgba(39,174,96,.25); }
+.tg-copy-ok { font-size: 11px; color: var(--green); font-weight: 600; }
+
+/* ── FREE BUTTON ───────────────────────────────────────────── */
+.btn-free {
+  font-size: 10px; font-weight: 600;
+  padding: 4px 10px; border-radius: 12px;
+  background: rgba(230,57,70,.08); border: 1px solid rgba(230,57,70,.25);
+  color: #ff8a8a; cursor: pointer; transition: all .2s;
+}
+.btn-free:hover { background: rgba(230,57,70,.18); border-color: var(--red); }
+
+/* ── ASSIGN ROW — updated layout ───────────────────────────── */
+.assign-controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.assign-actions  { display: flex; align-items: center; gap: 6px; margin-left: auto; }
+.assign-select {
+  font-size: 10px; padding: 3px 6px; border-radius: 6px;
+  background: var(--navy-b); border: 1px solid var(--border);
+  color: var(--text); font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+}
+.assign-select:focus { outline: none; border-color: var(--gold); }
+
 /* ── VERDICT BADGES (ranking) ──────────────────────────────── */
 .verd-go    { background: rgba(39,174,96,.2);  color: var(--green);  border: 1px solid rgba(39,174,96,.4);  padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; white-space: nowrap; }
 .verd-maybe { background: rgba(241,196,15,.15); color: var(--gold);   border: 1px solid rgba(241,196,15,.3); padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; white-space: nowrap; }
