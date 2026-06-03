@@ -18,49 +18,74 @@
 <!-- VP PUBLISHED VIDEOS WARNING -->
 <div class="covered-bar" id="covered-bar"></div>
 
-<!-- SECCIÓN 1: ÚLTIMA HORA -->
+<!-- SECCION 1: ULTIMA HORA -->
 <div class="section">
   <div class="section-header">
     <span class="section-icon">🔴</span>
     <div>
-      <div class="section-title">ÚLTIMA HORA</div>
-      <div class="section-subtitle">15 noticias · 3 junio 2026 · Fuentes verificadas · Toca cada noticia para ver fuentes y análisis</div>
+      <div class="section-title">ULTIMA HORA</div>
+      <div class="section-subtitle">15 noticias · 3 junio 2026 · Fuentes verificadas · Toca cada noticia para ver fuentes y analisis</div>
     </div>
   </div>
   <div class="news-grid" id="news-grid"></div>
 </div>
 
-<!-- SECCIÓN 2: PROPUESTAS -->
+<!-- SECCION 2: PROPUESTAS -->
 <div class="section alt">
   <div class="section-header">
     <span class="section-icon">🎯</span>
     <div>
-      <div class="section-title">TEMAS PROPUESTOS PARA VÍDEOS</div>
-      <div class="section-subtitle">7 propuestas · Filtro editorial VP v6.0 · Sin repetición junio 2026 · Fuentes de investigación clicables</div>
+      <div class="section-title">TEMAS PROPUESTOS PARA VIDEOS</div>
+      <div class="section-subtitle">7 propuestas · Filtro editorial VP v6.0 · Usa "Me interesa" para marcar temas</div>
     </div>
   </div>
   <div class="proposals" id="proposals"></div>
 </div>
 
-<!-- SECCIÓN 3: TABLA COMPARATIVA -->
+<!-- SECCION 3: TABLA COMPARATIVA -->
 <div class="section">
   <div class="section-header">
     <span class="section-icon">📊</span>
     <div>
       <div class="section-title">TABLA COMPARATIVA</div>
-      <div class="section-subtitle">Prioridad editorial · Scroll horizontal en móvil</div>
+      <div class="section-subtitle">Prioridad editorial · Scroll horizontal en movil</div>
     </div>
   </div>
   <div class="ranking-wrap" id="ranking-wrap"></div>
 </div>
 
-<!-- SECCIÓN 4: TEMAS A VIGILAR -->
+<!-- SECCION 4: ASIGNACION SEMANAL -->
+<div class="section alt">
+  <div class="section-header">
+    <span class="section-icon">📋</span>
+    <div>
+      <div class="section-title">ASIGNACION SEMANAL DE TEMAS</div>
+      <div class="section-subtitle">Quien trabaja cada tema · Comunica tu eleccion por Telegram</div>
+    </div>
+  </div>
+  <div id="assignment-table"></div>
+</div>
+
+<!-- SECCION 5: PROPUESTAS DEL EQUIPO VPK -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-icon">💡</span>
+    <div>
+      <div class="section-title">PROPUESTAS DEL EQUIPO VPK</div>
+      <div class="section-subtitle">Temas propuestos por los guionistas · Mesa editorial colaborativa</div>
+    </div>
+  </div>
+  <div id="team-proposals-grid"></div>
+  <div style="margin-top: 20px;" id="proposal-form"></div>
+</div>
+
+<!-- SECCION 6: TEMAS A VIGILAR -->
 <div class="section alt">
   <div class="section-header">
     <span class="section-icon">👀</span>
     <div>
       <div class="section-title">TEMAS A VIGILAR</div>
-      <div class="section-subtitle">No merecen vídeo aún — pero podrían explotar</div>
+      <div class="section-subtitle">No merecen video aun — pero podrian explotar</div>
     </div>
   </div>
   <div class="watch-grid" id="vigilar-grid"></div>
@@ -72,8 +97,9 @@
   <div class="footer-right" id="footer-version"></div>
 </footer>
 
-<!-- DATA (loads RADAR_DATA) then LOGIC -->
+<!-- DATA (loads RADAR_DATA) then TEAM PROPOSALS then LOGIC -->
 <script src="data_2026-06-03.js"></script>
+<script src="team_proposals.js"></script>
 <script src="dashboard.js"></script>
 </body>
 </html>

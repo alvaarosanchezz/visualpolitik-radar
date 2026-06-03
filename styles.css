@@ -281,6 +281,157 @@ table.ranking tr:hover td { background: rgba(69,123,157,.06); }
 .watch-trigger    { margin-top: 7px; font-size: 11px; color: var(--gold); }
 .watch-source     { margin-top: 5px; font-size: 11px; }
 
+/* ── ASSIGNMENT ROW (inside proposals) ─────────────────────── */
+.assign-row {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  padding: 8px 14px;
+  background: rgba(69,123,157,.05);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.assign-status {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 10px; font-weight: 700; padding: 3px 8px;
+  border-radius: 12px; white-space: nowrap;
+  font-family: 'JetBrains Mono', monospace;
+}
+.st-libre       { background: rgba(138,164,190,.15); color: var(--muted);  border: 1px solid rgba(138,164,190,.3); }
+.st-interesante { background: rgba(241,196,15,.12);  color: var(--gold);   border: 1px solid rgba(241,196,15,.3); }
+.st-reservado   { background: rgba(243,156,18,.15);  color: var(--orange); border: 1px solid rgba(243,156,18,.35); }
+.st-invest      { background: rgba(69,123,157,.18);  color: var(--blue);   border: 1px solid rgba(69,123,157,.35); }
+.st-guion       { background: rgba(39,174,96,.15);   color: var(--green);  border: 1px solid rgba(39,174,96,.35); }
+.st-revision    { background: rgba(155,89,182,.15);  color: #bb86fc;       border: 1px solid rgba(155,89,182,.35); }
+.st-descartado  { background: rgba(230,57,70,.1);    color: #ff8a8a;       border: 1px solid rgba(230,57,70,.25); }
+.assign-who   { font-size: 11px; color: var(--text); font-weight: 600; }
+.assign-date  { font-size: 10px; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
+.assign-notes { font-size: 10px; color: var(--muted); font-style: italic; }
+.btn-interest {
+  margin-left: auto;
+  font-size: 10px; font-weight: 600;
+  padding: 4px 10px; border-radius: 12px;
+  background: rgba(241,196,15,.08); border: 1px solid rgba(241,196,15,.25);
+  color: var(--gold); cursor: pointer;
+  transition: all .2s;
+}
+.btn-interest:hover { background: rgba(241,196,15,.18); border-color: var(--gold); }
+.btn-interest.interested {
+  background: rgba(39,174,96,.15); border-color: rgba(39,174,96,.4);
+  color: var(--green);
+}
+
+/* ── ASSIGNMENT TABLE (section) ────────────────────────────── */
+.assign-how {
+  background: rgba(69,123,157,.06); border: 1px solid var(--border);
+  border-radius: 8px; padding: 14px 16px; margin-bottom: 16px;
+}
+.assign-how-title { font-size: 12px; font-weight: 700; color: var(--gold); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .5px; }
+.assign-how-text  { font-size: 12px; color: var(--muted); line-height: 1.7; }
+.assign-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table.assign-table { width: 100%; border-collapse: collapse; min-width: 600px; }
+table.assign-table th {
+  background: var(--navy-b); color: var(--muted);
+  font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .7px;
+  padding: 9px 10px; text-align: left;
+  border-bottom: 2px solid var(--border); white-space: nowrap;
+}
+table.assign-table td { padding: 10px 10px; border-bottom: 1px solid var(--border); vertical-align: middle; font-size: 12px; }
+table.assign-table tr:hover td { background: rgba(69,123,157,.06); }
+.row-libre td { opacity: .7; }
+.assign-golden-tag { background: var(--gold); color: #000; font-size: 8px; font-weight: 800; padding: 1px 5px; border-radius: 3px; margin-left: 4px; vertical-align: middle; }
+.assign-tema-cell { max-width: 280px; }
+.assign-tema-title { font-size: 12px; font-weight: 600; color: #fff; line-height: 1.3; }
+.assign-tema-pot { margin-top: 3px; }
+.pot-badge-sm { padding: 2px 6px; border-radius: 4px; font-size: 9px; font-weight: 700; }
+.assign-empty { color: rgba(138,164,190,.4); }
+.assign-legend { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; padding: 10px 0; }
+.legend-item { font-size: 10px; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
+
+/* ── TEAM PROPOSALS ────────────────────────────────────────── */
+.team-empty { text-align: center; padding: 30px 16px; }
+.team-empty-icon  { font-size: 32px; margin-bottom: 8px; }
+.team-empty-title { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.team-empty-text  { font-size: 12px; color: var(--muted); }
+.team-proposal {
+  background: var(--navy-c); border: 1px solid var(--border);
+  border-left: 3px solid var(--orange); border-radius: 8px;
+  overflow: hidden; margin-bottom: 14px;
+}
+.tp-header { padding: 12px 14px; border-bottom: 1px solid var(--border); }
+.tp-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+.tp-author { font-size: 11px; font-weight: 600; color: var(--text); }
+.tp-date   { font-size: 10px; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
+.tp-region { font-size: 9px; font-weight: 700; color: var(--blue); background: rgba(69,123,157,.15); border: 1px solid rgba(69,123,157,.3); padding: 1px 6px; border-radius: 3px; text-transform: uppercase; }
+.tp-urgency { font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 10px; }
+.urg-baja    { background: rgba(138,164,190,.12); color: var(--muted);  border: 1px solid rgba(138,164,190,.25); }
+.urg-media   { background: rgba(241,196,15,.1);   color: var(--gold);   border: 1px solid rgba(241,196,15,.25); }
+.urg-alta    { background: rgba(243,156,18,.15);   color: var(--orange); border: 1px solid rgba(243,156,18,.3); }
+.urg-urgente { background: rgba(230,57,70,.15);    color: var(--red);    border: 1px solid rgba(230,57,70,.3); }
+.tp-title { font-size: 14px; font-weight: 700; color: #fff; line-height: 1.35; }
+.tp-body { padding: 12px 14px; display: flex; flex-direction: column; gap: 10px; }
+.tp-section { }
+.tp-section-label { font-size: 10px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 2px; }
+.tp-section-value { font-size: 12px; color: var(--text); line-height: 1.55; }
+.tp-source { margin-bottom: 4px; }
+.tp-source a { font-size: 12px; color: var(--blue); }
+.tp-source a:hover { color: var(--gold); }
+.tp-source-medium { font-size: 10px; color: var(--orange); margin-left: 6px; font-family: 'JetBrains Mono', monospace; }
+
+/* ── PROPOSAL FORM ─────────────────────────────────────────── */
+.form-card {
+  background: var(--navy-c); border: 1px solid var(--border);
+  border-radius: 10px; padding: 20px 16px;
+}
+.form-title { font-size: 16px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+.form-desc  { font-size: 12px; color: var(--muted); margin-bottom: 16px; line-height: 1.5; }
+.form-grid  { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.form-group label {
+  display: block; font-size: 10px; font-weight: 700; color: var(--muted);
+  text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; padding: 8px 10px; border-radius: 6px;
+  background: var(--navy-b); border: 1px solid var(--border);
+  color: var(--text); font-family: 'Inter', sans-serif; font-size: 13px;
+  transition: border-color .2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { outline: none; border-color: var(--gold); }
+.form-group textarea { resize: vertical; min-height: 48px; }
+.btn-generate {
+  margin-top: 14px; padding: 10px 20px; border-radius: 8px;
+  background: var(--gold); color: #000; font-weight: 700; font-size: 13px;
+  border: none; cursor: pointer; transition: all .2s;
+}
+.btn-generate:hover { background: #e8b800; transform: translateY(-1px); }
+.form-output {
+  margin-top: 14px; padding: 14px; border-radius: 8px;
+  background: rgba(39,174,96,.06); border: 1px solid rgba(39,174,96,.2);
+}
+.form-output-label { font-size: 11px; font-weight: 700; color: var(--green); margin-bottom: 6px; }
+.form-output pre {
+  background: var(--navy); padding: 10px; border-radius: 6px;
+  font-size: 11px; color: var(--text); overflow-x: auto;
+  white-space: pre-wrap; word-break: break-all;
+  font-family: 'JetBrains Mono', monospace;
+  max-height: 300px;
+}
+.btn-copy {
+  margin-top: 8px; padding: 6px 14px; border-radius: 6px;
+  background: rgba(39,174,96,.15); border: 1px solid rgba(39,174,96,.3);
+  color: var(--green); font-size: 11px; font-weight: 600;
+  cursor: pointer; transition: all .2s;
+}
+.btn-copy:hover { background: rgba(39,174,96,.25); }
+.copy-confirm { font-size: 11px; color: var(--green); margin-left: 8px; font-weight: 600; }
+
+/* ── VERDICT BADGES (ranking) ──────────────────────────────── */
+.verd-go    { background: rgba(39,174,96,.2);  color: var(--green);  border: 1px solid rgba(39,174,96,.4);  padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+.verd-maybe { background: rgba(241,196,15,.15); color: var(--gold);   border: 1px solid rgba(241,196,15,.3); padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+.verd-no    { background: rgba(230,57,70,.13); color: var(--red);    border: 1px solid rgba(230,57,70,.3);  padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+
 /* ── FOOTER ─────────────────────────────────────────────────── */
 .footer { background: #070e17; border-top: 1px solid var(--border); padding: 13px 16px; display: flex; flex-direction: column; gap: 5px; }
 .footer-left  { font-size: 11px; color: var(--muted); }
@@ -292,6 +443,8 @@ table.ranking tr:hover td { background: rgba(69,123,157,.06); }
   .watch-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-grid  { grid-template-columns: repeat(2, 1fr); }
   .footer     { flex-direction: row; justify-content: space-between; align-items: center; }
+  .form-grid  { grid-template-columns: repeat(2, 1fr); }
+  .form-full  { grid-column: 1 / -1; }
 }
 
 /* ══════════ DESKTOP 768px ═══════════════════════════════════ */
