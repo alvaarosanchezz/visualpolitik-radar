@@ -435,7 +435,109 @@ function renderAssignmentTable(proposals) {
     </div>`;
 }
 
-// ── Team proposals ───────────────────────────────────────────
+// ── Team proposals — localStorage persistence ───────────────
+
+function loadLocalProposals() {
+  try { return JSON.parse(localStorage.getItem('vp_team_proposals') || '[]'); } catch { return []; }
+}
+function saveLocalProposals(arr) {
+  try { localStorage.setItem('vp_team_proposals', JSON.stringify(arr)); } catch {}
+}
+function addLocalProposal(proposal) {
+  const all = loadLocalProposals();
+  proposal._id = 'local-' + Date.now();
+  proposal._local = true;
+  all.unshift(proposal);
+  saveLocalProposals(all);
+  return proposal;
+}
+function removeLocalProposal(id) {
+  const all = loadLocalProposals();
+  saveLocalProposals(all.filter(p => p._id !== id));
+}
+
+// Merge: team_proposals.js (official) + localStorage (instant local)
+function getAllTeamProposals() {
+  const official = (window.TEAM_PROPOSALS || []).map(p => ({ ...p, _local: false }));
+  const local = loadLocalProposals();
+  return [...local, ...official];
+}
+
+// ── Team proposals render ────────────────────────────────────
+
+function renderSingleTeamProposal(tp) {
+  const urgencyMap = {
+    'baja':    { cls: 'urg-baja',    label: 'Baja' },
+    'media':   { cls: 'urg-media',   label: 'Media' },
+    'alta':    { cls: 'urg-alta',    label: 'Alta' },
+    'urgente': { cls: 'urg-urgente', label: 'Urgente' }
+  };
+  const urg = urgencyMap[tp.urgency] || urgencyMap['media'];
+
+  const detailFields = [
+    tp.secondDerivative && { label: '🔬 Segunda derivada', value: tp.secondDerivative },
+    tp.bigQuestion      && { label: '❓ Gran pregunta',     value: tp.bigQuestion },
+    tp.conflict         && { label: '⚔️ Conflicto',         value: tp.conflict },
+    tp.viralMotor       && { label: '🚀 Motor viral',       value: tp.viralMotor },
+    tp.competitionSignal&& { label: '🔍 Competencia',       value: tp.competitionSignal },
+    tp.investigateMore  && { label: '🔎 Investigar mas',    value: tp.investigateMore },
+    tp.notes            && { label: '📝 Notas',             value: tp.notes }
+  ].filter(Boolean);
+
+  const sourcesHtml = (tp.sources || []).map(s => `
+    <div class="tp-source">
+      <a href="${s.url}" target="_blank" rel="noopener">${s.title}</a>
+      <span class="tp-source-medium">${s.medium || ''}</span>
+    </div>`).join('');
+
+  const deleteBtn = tp._local && tp._id
+    ? `<button class="tp-delete" data-tpid="${tp._id}" title="Eliminar propuesta">🗑️</button>`
+    : '';
+  const localBadge = tp._local
+    ? '<span class="tp-local-badge">LOCAL</span>'
+    : '';
+
+  return `
+    <div class="team-proposal ${tp._local ? 'tp-local' : ''}" data-tpid="${tp._id || ''}">
+      <div class="tp-header">
+        <div class="tp-meta">
+          <span class="tp-author">👤 ${tp.author}</span>
+          <span class="tp-date">📅 ${tp.date}</span>
+          ${tp.region ? `<span class="tp-region">${tp.region}</span>` : ''}
+          <span class="tp-urgency ${urg.cls}">⚡ ${urg.label}</span>
+          ${statusBadge(tp.status || 'pendiente')}
+          ${localBadge}
+          ${deleteBtn}
+        </div>
+        <div class="tp-title">${tp.flag ? `<img src="https://flagcdn.com/16/${tp.flag}.png" style="height:13px;vertical-align:middle"> ` : ''}${tp.title}</div>
+      </div>
+      <div class="tp-body">
+        <div class="tp-section">
+          <div class="tp-section-label">🗞️ Noticia</div>
+          <div class="tp-section-value">${tp.news}</div>
+        </div>
+        <div class="tp-section">
+          <div class="tp-section-label">💡 Por que puede interesar</div>
+          <div class="tp-section-value">${tp.whyInteresting}</div>
+        </div>
+        ${tp.vpAngle ? `
+        <div class="tp-section">
+          <div class="tp-section-label">🎯 Enfoque VP</div>
+          <div class="tp-section-value">${tp.vpAngle}</div>
+        </div>` : ''}
+        ${detailFields.map(f => `
+        <div class="tp-section">
+          <div class="tp-section-label">${f.label}</div>
+          <div class="tp-section-value">${f.value}</div>
+        </div>`).join('')}
+        ${sourcesHtml ? `
+        <div class="tp-section">
+          <div class="tp-section-label">🔗 Fuentes</div>
+          <div class="tp-section-value">${sourcesHtml}</div>
+        </div>` : ''}
+      </div>
+    </div>`;
+}
 
 function renderTeamProposals(proposals) {
   if (!proposals || proposals.length === 0) {
@@ -443,74 +545,27 @@ function renderTeamProposals(proposals) {
       <div class="team-empty">
         <div class="team-empty-icon">📭</div>
         <div class="team-empty-title">No hay propuestas del equipo esta semana</div>
-        <div class="team-empty-text">Usa el formulario de abajo para proponer un tema que el radar no haya recogido.</div>
+        <div class="team-empty-text">Usa el formulario de abajo para proponer un tema.</div>
       </div>`;
   }
+  return proposals.map(renderSingleTeamProposal).join('');
+}
 
-  return proposals.map(tp => {
-    const urgencyMap = {
-      'baja':    { cls: 'urg-baja',    label: 'Baja' },
-      'media':   { cls: 'urg-media',   label: 'Media' },
-      'alta':    { cls: 'urg-alta',    label: 'Alta' },
-      'urgente': { cls: 'urg-urgente', label: 'Urgente' }
-    };
-    const urg = urgencyMap[tp.urgency] || urgencyMap['media'];
-
-    const detailFields = [
-      tp.secondDerivative && { label: '🔬 Segunda derivada', value: tp.secondDerivative },
-      tp.bigQuestion      && { label: '❓ Gran pregunta',     value: tp.bigQuestion },
-      tp.conflict         && { label: '⚔️ Conflicto',         value: tp.conflict },
-      tp.viralMotor       && { label: '🚀 Motor viral',       value: tp.viralMotor },
-      tp.competitionSignal&& { label: '🔍 Competencia',       value: tp.competitionSignal },
-      tp.investigateMore  && { label: '🔎 Investigar mas',    value: tp.investigateMore },
-      tp.notes            && { label: '📝 Notas',             value: tp.notes }
-    ].filter(Boolean);
-
-    const sourcesHtml = (tp.sources || []).map(s => `
-      <div class="tp-source">
-        <a href="${s.url}" target="_blank" rel="noopener">${s.title}</a>
-        <span class="tp-source-medium">${s.medium || ''}</span>
-      </div>`).join('');
-
-    return `
-      <div class="team-proposal">
-        <div class="tp-header">
-          <div class="tp-meta">
-            <span class="tp-author">👤 ${tp.author}</span>
-            <span class="tp-date">📅 ${tp.date}</span>
-            ${tp.region ? `<span class="tp-region">${tp.region}</span>` : ''}
-            <span class="tp-urgency ${urg.cls}">⚡ ${urg.label}</span>
-            ${statusBadge(tp.status || 'pendiente')}
-          </div>
-          <div class="tp-title">${tp.flag ? `<img src="https://flagcdn.com/16/${tp.flag}.png" style="height:13px;vertical-align:middle"> ` : ''}${tp.title}</div>
-        </div>
-        <div class="tp-body">
-          <div class="tp-section">
-            <div class="tp-section-label">🗞️ Noticia</div>
-            <div class="tp-section-value">${tp.news}</div>
-          </div>
-          <div class="tp-section">
-            <div class="tp-section-label">💡 Por que puede interesar</div>
-            <div class="tp-section-value">${tp.whyInteresting}</div>
-          </div>
-          ${tp.vpAngle ? `
-          <div class="tp-section">
-            <div class="tp-section-label">🎯 Enfoque VP</div>
-            <div class="tp-section-value">${tp.vpAngle}</div>
-          </div>` : ''}
-          ${detailFields.map(f => `
-          <div class="tp-section">
-            <div class="tp-section-label">${f.label}</div>
-            <div class="tp-section-value">${f.value}</div>
-          </div>`).join('')}
-          ${sourcesHtml ? `
-          <div class="tp-section">
-            <div class="tp-section-label">🔗 Fuentes</div>
-            <div class="tp-section-value">${sourcesHtml}</div>
-          </div>` : ''}
-        </div>
-      </div>`;
-  }).join('');
+function refreshTeamProposalsSection() {
+  const el = $('team-proposals-grid');
+  if (!el) return;
+  const all = getAllTeamProposals();
+  el.innerHTML = renderTeamProposals(all);
+  // Bind delete buttons
+  el.querySelectorAll('.tp-delete').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const id = this.dataset.tpid;
+      if (confirm('Eliminar esta propuesta?')) {
+        removeLocalProposal(id);
+        refreshTeamProposalsSection();
+      }
+    });
+  });
 }
 
 // ── Proposal form ────────────────────────────────────────────
@@ -520,7 +575,7 @@ function renderProposalForm() {
   return `
     <div class="form-card">
       <div class="form-title">Proponer un tema</div>
-      <div class="form-desc">Rellena los campos y copia el JSON generado. Envialo por Telegram al grupo del equipo para que se incluya en el proximo radar.</div>
+      <div class="form-desc">Rellena los campos y pulsa enviar. Tu propuesta aparecera al instante arriba y se generara un mensaje para Telegram.</div>
       <div class="form-grid">
         <div class="form-group">
           <label>Tu nombre *</label>
@@ -575,7 +630,7 @@ function renderProposalForm() {
           <input type="text" id="f-source-medium" placeholder="Ej: Reuters, WaPo, Al Jazeera">
         </div>
       </div>
-      <button class="btn-generate" onclick="generateProposalJSON()">📋 Generar JSON para copiar</button>
+      <button class="btn-generate" onclick="generateProposalJSON()">🚀 Enviar propuesta</button>
       <div id="form-output" class="form-output" style="display:none">
         <div class="form-output-label">Copia este texto y envialo por Telegram:</div>
         <pre id="form-json"></pre>
@@ -609,9 +664,71 @@ function generateProposalJSON() {
   const srcMed = document.getElementById('f-source-medium').value.trim();
   if (srcUrl) proposal.sources.push({ title, url: srcUrl, medium: srcMed });
 
+  // 1. Save to localStorage and refresh section INSTANTLY
+  addLocalProposal(proposal);
+  refreshTeamProposalsSection();
+
+  // 2. Generate Telegram message
+  const tgMsg = [
+    '💡 *PROPUESTA DEL EQUIPO VPK*',
+    '',
+    `*Autor:* ${author}`,
+    `*Tema:* ${title}`,
+    `*Region:* ${proposal.region || 'Sin especificar'}`,
+    `*Urgencia:* ${proposal.urgency}`,
+    '',
+    `*Noticia:* ${news}`,
+    '',
+    `*Por que interesa:* ${why}`,
+    proposal.vpAngle ? `\n*Enfoque VP:* ${proposal.vpAngle}` : '',
+    srcUrl ? `\n*Fuente:* ${srcUrl} (${srcMed})` : '',
+    '',
+    `_Propuesta enviada desde el dashboard VP — ${proposal.date}_`
+  ].filter(Boolean).join('\n');
+
+  // 3. Show combined output: JSON + Telegram toast
   document.getElementById('form-json').textContent = JSON.stringify(proposal, null, 2);
   document.getElementById('form-output').style.display = 'block';
-  document.getElementById('form-output').scrollIntoView({ behavior: 'smooth' });
+
+  // Show Telegram toast
+  showTeamProposalToast(tgMsg);
+
+  // 4. Clear form
+  document.getElementById('f-title').value = '';
+  document.getElementById('f-news').value = '';
+  document.getElementById('f-why').value = '';
+  document.getElementById('f-angle').value = '';
+  document.getElementById('f-source-url').value = '';
+  document.getElementById('f-source-medium').value = '';
+  document.getElementById('f-region').value = '';
+  document.getElementById('f-urgency').value = 'media';
+
+  // 5. Scroll to the new proposal
+  const grid = $('team-proposals-grid');
+  if (grid && grid.firstElementChild) {
+    grid.firstElementChild.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+}
+
+function showTeamProposalToast(msg) {
+  const old = document.getElementById('tg-toast');
+  if (old) old.remove();
+
+  const toast = document.createElement('div');
+  toast.id = 'tg-toast';
+  toast.className = 'tg-toast';
+  toast.innerHTML = `
+    <div class="tg-toast-header">
+      <span>✅ Propuesta anadida · Copia y envia al grupo de Telegram:</span>
+      <button class="tg-toast-close" onclick="this.closest('.tg-toast').remove()">✕</button>
+    </div>
+    <pre class="tg-toast-msg">${msg}</pre>
+    <div class="tg-toast-actions">
+      <button class="btn-copy-tg" onclick="copyTgMsg(this)">📋 Copiar mensaje</button>
+      <span class="tg-copy-ok" style="display:none">✓ Copiado</span>
+    </div>`;
+  document.body.appendChild(toast);
+  setTimeout(() => { if (toast.parentNode) toast.remove(); }, 20000);
 }
 
 function copyFormJSON() {
@@ -767,8 +884,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const assignEl = $('assignment-table');
   if (assignEl) assignEl.innerHTML = renderAssignmentTable(d.proposals);
 
-  const teamEl = $('team-proposals-grid');
-  if (teamEl) teamEl.innerHTML = renderTeamProposals(window.TEAM_PROPOSALS || []);
+  // Team proposals: merge official (team_proposals.js) + local (localStorage)
+  refreshTeamProposalsSection();
 
   const formEl = $('proposal-form');
   if (formEl) formEl.innerHTML = renderProposalForm();

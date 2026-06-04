@@ -375,6 +375,19 @@ table.assign-table tr:hover td { background: rgba(69,123,157,.06); }
 .tp-source a { font-size: 12px; color: var(--blue); }
 .tp-source a:hover { color: var(--gold); }
 .tp-source-medium { font-size: 10px; color: var(--orange); margin-left: 6px; font-family: 'JetBrains Mono', monospace; }
+.tp-local { border-left-color: var(--green); }
+.tp-local-badge {
+  font-size: 8px; font-weight: 800; color: var(--green);
+  background: rgba(39,174,96,.12); border: 1px solid rgba(39,174,96,.3);
+  padding: 1px 5px; border-radius: 3px; letter-spacing: .5px;
+  vertical-align: middle;
+}
+.tp-delete {
+  margin-left: auto; background: none; border: 1px solid rgba(230,57,70,.2);
+  border-radius: 6px; padding: 2px 6px; font-size: 12px;
+  cursor: pointer; transition: all .2s; color: #ff8a8a;
+}
+.tp-delete:hover { background: rgba(230,57,70,.15); border-color: var(--red); }
 
 /* ── PROPOSAL FORM ─────────────────────────────────────────── */
 .form-card {
