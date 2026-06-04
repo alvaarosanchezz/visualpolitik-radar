@@ -232,7 +232,13 @@ function renderHero(meta, hero) {
 
 function renderCoveredBar(videos) {
   return `
-    <div class="covered-bar-title">⚠️ VIDEOS VP PUBLICADOS ESTE MES — NO REPETIR</div>
+    <div class="covered-section-header">
+      <span class="covered-section-icon">📺</span>
+      <div>
+        <div class="covered-section-title">VIDEOS VP PUBLICADOS — NO REPETIR ESTOS TEMAS</div>
+        <div class="covered-section-subtitle">Ultimos ${videos.length} videos del canal · Datos reales de YouTube · Actualizado a ${(window.RADAR_DATA || {}).meta?.dateLabel || 'hoy'}</div>
+      </div>
+    </div>
     <div class="covered-tags">${videos.map(v => `<span class="ctag">${v}</span>`).join('')}</div>`;
 }
 

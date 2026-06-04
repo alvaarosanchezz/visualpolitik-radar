@@ -108,11 +108,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .hl     { color: var(--gold); font-weight: 700; }
 .hl-red { color: var(--red); font-weight: 700; }
 
-/* ── COVERED BAR ────────────────────────────────────────────── */
-.covered-bar { background: #0a1520; border-bottom: 1px solid var(--border); padding: 11px 16px; }
-.covered-bar-title { font-size: 10px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .7px; margin-bottom: 7px; }
-.covered-tags { display: flex; flex-wrap: wrap; gap: 5px; }
-.ctag { background: rgba(230,57,70,.12); border: 1px solid rgba(230,57,70,.3); color: #ff8a8a; font-size: 10px; padding: 2px 7px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; }
+/* ── COVERED BAR (videos VP — at bottom) ───────────────────── */
+.covered-bar { background: #0a1520; border-top: 2px solid var(--border); padding: 20px 16px; }
+.covered-section-header { display: flex; align-items: center; gap: 11px; margin-bottom: 14px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+.covered-section-icon { font-size: 20px; }
+.covered-section-title { font-size: 16px; font-weight: 800; color: #fff; }
+.covered-section-subtitle { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.covered-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.ctag { background: rgba(230,57,70,.12); border: 1px solid rgba(230,57,70,.3); color: #ff8a8a; font-size: 11px; padding: 4px 10px; border-radius: 6px; font-family: 'JetBrains Mono', monospace; line-height: 1.4; }
 
 /* ── TAGS ───────────────────────────────────────────────────── */
 .tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 3px; letter-spacing: .5px; text-transform: uppercase; white-space: nowrap; }

@@ -45,14 +45,16 @@ hero: [
 
 /* ── VÍDEOS VP PUBLICADOS (NO REPETIR) ───────────────────── */
 coveredVideos: [
-  "❌ ERITREA / MAR ROJO · 26 MAY · 192K v",
-  "❌ ZAPATERO IMPUTACIÓN · ~22 MAY",
-  "❌ PUTIN ECONOMÍA COLAPSO · 15 MAY · 354K v",
-  "❌ PAX SILICA / CHINA DEPENDENCIA · 13 MAY · 141K v",
-  "❌ NETANYAHU FIN / IRÁN ERROR · 12 MAY · 152K v",
-  "❌ TRUMP ROMPE OTAN · 6 MAY · 203K v",
-  "❌ BOLIVIA CAOS · ~25 MAY",
-  "❌ GRUPOS ARMADOS / ELECCIONES COLOMBIA · ~3 MAY"
+  "❌ COLOMBIA: FAN de BUKELE y MILEI destroza a la izquierda · 1 JUN · 265K v",
+  "❌ JAQUE a IRÁN: Alianza secreta Trump-Eritrea · 26 MAY · 269K v",
+  "❌ PÁNICO en el KREMLIN: economía de guerra de Putin colapsa · 15 MAY · 355K v",
+  "❌ EEUU vs dependencia de CHINA: la PAX SILICA · 13 MAY · 141K v",
+  "❌ ¿FIN de NETANYAHU? Error estratégico en Irán · 12 MAY · 152K v",
+  "❌ TRUMP rompe la OTAN: su peor error · 6 MAY · 203K v",
+  "❌ EMIRATOS rompe la OPEP: golpe al cártel del petróleo · 29 ABR · 334K v",
+  "❌ CHINA decisión extraña sobre IRÁN · 27 ABR · 349K v",
+  "❌ ESTADO DE ALERTA en COREA: Irán pone contra cuerdas · 24 ABR · 388K v",
+  "❌ 10M de DRONES: plan de Ucrania para Oriente Medio · 16 ABR · 312K v"
 ],
 
 /* ════════════════════════════════════════════════════════════
