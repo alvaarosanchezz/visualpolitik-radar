@@ -311,11 +311,28 @@ function renderProposalSources(sources) {
 function renderProposal(p) {
   const chips = p.chips.map(c => `<span class="chip ${c.cls}">${c.text}</span>`).join('');
   const tags  = p.tags.map(t => `<span class="tag ${t.cls}">${t.text}</span>`).join('');
-  const fields = p.fields.map(f => `
+
+  // Extract special fields for highlighted display
+  const fieldMap = {};
+  (p.fields || []).forEach(f => { fieldMap[f.label] = f.value; });
+
+  // Key highlighted fields
+  const competencia = fieldMap['Señal de competencia'] || fieldMap['Senal de competencia'] || '';
+  const caso800k = fieldMap['Caso para 800K/1M'] || '';
+  const veredicto = fieldMap['Veredicto'] || '';
+  const tituloMental = fieldMap['Título mental'] || fieldMap['Titulo mental'] || '';
+  const granPregunta = fieldMap['Gran pregunta'] || '';
+  const queInvestigar = fieldMap['Qué investigar más'] || fieldMap['Que investigar mas'] || '';
+
+  // 9-step evaluation fields (for collapsible section)
+  const stepLabels = ['La noticia','Segunda derivada','Gran pregunta','Señal de competencia','Senal de competencia','Demanda en medios','Velocidad de agenda','Historial VP','Motor viral','Retención narrativa','Retencion narrativa','Promesa cumplible','Ventaja VP','Caso para 800K/1M','Título mental','Titulo mental','Qué investigar más','Que investigar mas','Veredicto'];
+  const detailFields = p.fields.filter(f => !['Señal de competencia','Senal de competencia','Caso para 800K/1M','Veredicto','Título mental','Titulo mental'].includes(f.label));
+  const detailFieldsHtml = detailFields.map(f => `
     <div class="pfield">
       <div class="pfield-label">${f.label}</div>
       <div class="pfield-value">${f.value}</div>
     </div>`).join('');
+
   const sourceBlock = p.sources && p.sources.length
     ? `<div class="pfield">
          <div class="pfield-label">🔬 Fuentes investigacion</div>
@@ -340,6 +357,9 @@ function renderProposal(p) {
         </div>
         <span class="pot-badge ${p.potCls}">${p.potText}</span>
       </div>
+
+      ${veredicto ? `<div class="prop-veredicto-bar ${p.golden ? 'veredicto-gold' : ''}">${veredicto}</div>` : ''}
+
       <div class="assign-row" data-proposal="${p.number}" data-title="${p.title.replace(/"/g, '&quot;')}">
         <div class="assign-controls">
           <select class="assign-select" data-id="${p.number}" title="Cambiar estado">
@@ -354,11 +374,40 @@ function renderProposal(p) {
           ${status !== 'libre' ? `<button class="btn-free" data-id="${p.number}" title="Liberar tema">↩️ Liberar</button>` : ''}
         </div>
       </div>
+
       <div class="prop-body">
+        ${tituloMental ? `<div class="prop-titulo-mental">💡 <em>${tituloMental}</em></div>` : ''}
         <div class="tesis-box">${p.tesis}</div>
-        <hr class="prop-divider">
-        ${fields}
-        ${sourceBlock}
+        ${granPregunta ? `<div class="prop-gran-pregunta"><span class="gp-icon">❓</span> ${granPregunta}</div>` : ''}
+
+        ${competencia ? `
+        <div class="prop-highlight-box highlight-competencia">
+          <div class="highlight-header"><span class="highlight-icon">🔍</span> SEÑAL DE COMPETENCIA</div>
+          <div class="highlight-body">${competencia}</div>
+        </div>` : ''}
+
+        ${caso800k ? `
+        <div class="prop-highlight-box highlight-caso">
+          <div class="highlight-header"><span class="highlight-icon">🎯</span> CASO PARA 800K / 1M</div>
+          <div class="highlight-body">${caso800k}</div>
+        </div>` : ''}
+
+        <details class="prop-eval-details">
+          <summary>
+            📊 Evaluación completa — 9 pasos Auditoría de Oportunidad
+            <span class="expand-icon">▼</span>
+          </summary>
+          <div class="prop-eval-inner">
+            ${detailFieldsHtml}
+            ${sourceBlock}
+          </div>
+        </details>
+
+        ${queInvestigar ? `
+        <div class="prop-investigate">
+          <div class="pfield-label">🔎 Qué investigar más</div>
+          <div class="pfield-value">${queInvestigar}</div>
+        </div>` : ''}
       </div>
     </div>`;
 }
