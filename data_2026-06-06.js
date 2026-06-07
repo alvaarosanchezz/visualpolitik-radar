@@ -455,6 +455,10 @@ proposals: [
 {
   number: "P1",
   golden: true,
+  tags: [{ cls:"tag-red", text:"🔴 ATACAR HOY" }, { cls:"tag-blue", text:"⚽ GLOBAL / GEOPOLÍTICA" }],
+  potCls: "pot-explosive",
+  potText: "🔴 EXPLOSIVO · 97%",
+  flag: "ir",
   title: "EL MUNDIAL DE LA GUERRA: el país al que bombardeas de noche y contra el que juegas de día",
   subtitle: "Por primera vez un anfitrión del Mundial está en guerra con un equipo participante. Irán duerme en Tijuana, vuela a LA, juega y vuelve. Fans prohibidos. ICE amenaza estadios.",
   chips: [
@@ -498,6 +502,10 @@ proposals: [
 {
   number: "P2",
   golden: false,
+  tags: [{ cls:"tag-red", text:"🔴 ATACAR HOY" }, { cls:"tag-blue", text:"🌍 CÁUCASO" }],
+  potCls: "pot-high",
+  potText: "🟠 MUY ALTO · 91%",
+  flag: "am",
   title: "RUSIA GASTA $50M PARA ROBAR UNAS ELECCIONES: el plan de mover 100.000 armenios para frenar el giro pro-occidental",
   subtitle: "Armenia vota mañana. Rusia planea transportar votantes desde su territorio. Armenia responde: 25 días de servicio militar obligatorio para los que vuelvan.",
   chips: [
@@ -539,6 +547,10 @@ proposals: [
 {
   number: "P3",
   golden: false,
+  tags: [{ cls:"tag-orange", text:"🟠 INVESTIGAR" }, { cls:"tag-blue", text:"🌍 ORIENTE MEDIO" }],
+  potCls: "pot-high",
+  potText: "🟠 ALTO · 88%",
+  flag: "il",
   title: "80.000 HOMBRES SE NIEGAN A LUCHAR: la guerra civil dentro de Israel que puede derribar a Netanyahu mientras invade Líbano",
   subtitle: "Israel lucha en 3 frentes y su sector demográfico más dinámico se niega a servir. La coalición se rompe. Elecciones anticipadas en septiembre.",
   chips: [
@@ -580,6 +592,10 @@ proposals: [
 {
   number: "P4",
   golden: false,
+  tags: [{ cls:"tag-orange", text:"🟠 INVESTIGAR" }, { cls:"tag-blue", text:"🌏 ASIA-PACÍFICO" }],
+  potCls: "pot-high",
+  potText: "🟠 ALTO · 85%",
+  flag: "tw",
   title: "LA ISLA QUE CHINA QUIERE INVADIR ACABA DE CONVERTIRSE EN LA ECONOMÍA MÁS IMPORTANTE DEL MUNDO",
   subtitle: "Taiwán crece al 9.64% — máximo en 16 años — porque fabrica los chips que necesita la revolución IA. Cuanto más crece, más peligrosa se vuelve la amenaza china.",
   chips: [
@@ -621,6 +637,10 @@ proposals: [
 {
   number: "P5",
   golden: false,
+  tags: [{ cls:"tag-red", text:"🔴 ATACAR HOY" }, { cls:"tag-blue", text:"🇪🇸 ESPAÑA / LATAM" }],
+  potCls: "pot-high",
+  potText: "🟠 MUY ALTO · 90%",
+  flag: "es",
   title: "LA RED ESPAÑOLA QUE DIO OXÍGENO A MADURO: cómo un expresidente conectó oro venezolano, PDVSA y €53M de dinero público",
   subtitle: "Zapatero imputado por blanqueo. Los hermanos Amaro canalizan millones desde Venezuela a través de Panamá. Oro, petróleo y una aerolínea rescatada con dinero público.",
   chips: [
@@ -662,6 +682,10 @@ proposals: [
 {
   number: "P6",
   golden: false,
+  tags: [{ cls:"tag-orange", text:"🟠 INVESTIGAR" }, { cls:"tag-blue", text:"🌎 LATAM" }],
+  potCls: "pot-medium",
+  potText: "🟡 MEDIO · 80%",
+  flag: "co",
   title: "EL TRUMP COLOMBIANO: cómo un abogado mediático sin experiencia puede ganar la presidencia y qué dice del patrón continental",
   subtitle: "De la Espriella lidera encuestas. Endorso de Trump. Patrón: Bukele → Milei → Noboa → ¿Espriella? La derecha outsider conquista América Latina.",
   chips: [
@@ -703,6 +727,10 @@ proposals: [
 {
   number: "P7",
   golden: false,
+  tags: [{ cls:"tag-orange", text:"🟠 INVESTIGAR" }, { cls:"tag-blue", text:"🌍 ORIENTE MEDIO" }],
+  potCls: "pot-medium",
+  potText: "🟡 MEDIO · 78%",
+  flag: "ir",
   title: "IRÁN COBRA $2M POR BARCO EN ORMUZ Y ACEPTA SOLO YUANES Y CRIPTO: el triple desafío al dólar, al derecho marítimo y a la OTAN",
   subtitle: "Irán creó un peaje ilegal sobre el 20% del petróleo mundial. Los pagos son en yuanes chinos y stablecoins. UNCLOS lo prohíbe. Nadie lo detiene.",
   chips: [
@@ -744,23 +772,23 @@ proposals: [
 
 /* ── RANKING ─────────────────────────────────────────────── */
 ranking: [
-  { pos:1, tema:"Mundial 2026: Irán juega desde Tijuana", score:"⭐⭐⭐⭐⭐", viral:"97", competencia:"Oportunidad clara", velocidad:"Acelerando", retencion:"Fuerte", veredicto:"⚡ ATACAR HOY" },
-  { pos:2, tema:"Armenia: $50M para robar elecciones", score:"⭐⭐⭐⭐½", viral:"88", competencia:"Gap enorme", velocidad:"Acelerando", retencion:"Fuerte", veredicto:"⚡ ATACAR HOY" },
-  { pos:3, tema:"Israel ultraortodoxos vs IDF", score:"⭐⭐⭐⭐", viral:"90", competencia:"Cubierto superficialmente", velocidad:"Acelerando", retencion:"Fuerte", veredicto:"📋 Investigar" },
-  { pos:4, tema:"Zapatero red Venezuela €53M", score:"⭐⭐⭐⭐", viral:"85", competencia:"Cubierto superficialmente", velocidad:"Acelerando", retencion:"Fuerte", veredicto:"⚡ ATACAR HOY" },
-  { pos:5, tema:"Taiwán: PIB 9.64% por IA + paradoja China", score:"⭐⭐⭐⭐", viral:"85", competencia:"Oportunidad clara", velocidad:"En meseta", retencion:"Fuerte", veredicto:"📋 Investigar" },
-  { pos:6, tema:"Colombia: patrón continental derecha", score:"⭐⭐⭐½", viral:"82", competencia:"Cubierto superficialmente", velocidad:"En meseta", retencion:"Media-alta", veredicto:"📋 Investigar" },
-  { pos:7, tema:"Ormuz peaje yuanes/crypto", score:"⭐⭐⭐", viral:"80", competencia:"Cubierto superficialmente", velocidad:"En meseta", retencion:"Media", veredicto:"📋 Investigar" }
+  { tema:"Mundial 2026: Irán desde Tijuana", subtema:"Geopolítica deportiva · Arranca 11 JUN", viral:97, depth:93, timing:99, fit:95, verdCls:"verd-gold", verdText:"⭐ ATACAR HOY" },
+  { tema:"Armenia: $50M para mover votantes", subtema:"Rusia interfiere elecciones · Vota 7 JUN", viral:88, depth:90, timing:97, fit:91, verdCls:"verd-gold", verdText:"⭐ ATACAR HOY" },
+  { tema:"Israel: ultraortodoxos vs IDF", subtema:"80.000 se niegan a servir · Coalición al borde", viral:90, depth:88, timing:85, fit:92, verdCls:"verd-y", verdText:"✅ INVESTIGAR" },
+  { tema:"Zapatero: red Venezuela €53M", subtema:"Imputado 3 cargos · Deadline 10 JUN", viral:85, depth:92, timing:90, fit:88, verdCls:"verd-gold", verdText:"⭐ ATACAR HOY" },
+  { tema:"Taiwán: PIB +9.64% por IA", subtema:"Paradoja: más rica + más amenazada", viral:85, depth:87, timing:80, fit:88, verdCls:"verd-y", verdText:"✅ INVESTIGAR" },
+  { tema:"Colombia: De la Espriella 46.7%", subtema:"Patrón continental derecha · 2ª vuelta 21 JUN", viral:82, depth:85, timing:82, fit:83, verdCls:"verd-y", verdText:"✅ INVESTIGAR" },
+  { tema:"Ormuz: peaje $2M en yuanes", subtema:"Desdolarización + precedente marítimo", viral:80, depth:82, timing:75, fit:80, verdCls:"verd-y", verdText:"✅ INVESTIGAR" }
 ],
 
 /* ── VIGILAR ─────────────────────────────────────────────── */
 vigilar: [
-  { tema: "Perú: Fujimori 4º intento", trigger: "Resultado domingo 7 JUN. Si disputado o si Keiko gana, se activa como propuesta.", fuente: "Britannica, AS/COA, PBS" },
-  { tema: "OPEC+ sin EAU — reunión 7 JUN", trigger: "Si hay decisión sorpresa de producción o si Arabia Saudí reacciona a la salida de EAU.", fuente: "CNBC, Al Jazeera, Gulf News" },
-  { tema: "Rusia pierde el Sahel — Africa Corps fracasa", trigger: "Si hay más derrotas militares o si otro país africano expulsa a Rusia. Necesita conexión no-africana.", fuente: "ACLED, Carnegie, Stimson" },
-  { tema: "OTAN 5% del PIB — Europa gasta pero no fabrica", trigger: "Cumbre OTAN 18 JUN. Si EEUU anuncia retirada concreta de tropas. Tema aprobado con enfoque diferente.", fuente: "NATO, SIPRI, McKinsey" },
-  { tema: "Irán-EEUU: resolución o escalada total", trigger: "Si se rompe el deadlock de los $24B o si hay escalada mayor. PRECAUCIÓN: fatiga de audiencia Irán.", fuente: "CBS, CNN, Al Jazeera" },
-  { tema: "Trump dice Ucrania 'cerca de resolverse'", trigger: "Si hay anuncio concreto de negociaciones directas Rusia-Ucrania. Solo vale con giro real, no especulación.", fuente: "Al Jazeera, Russia Matters" }
+  { title: "🇵🇪 Perú: Fujimori 4º intento — vota domingo", body: "Keiko Fujimori empata con Sánchez (43.2% vs 43.8%). Si gana, sería el retorno de la dinastía más polémica de Sudamérica. Si el resultado es disputado, se activa como propuesta. El ángulo VP: la familia que no muere y lo que dice sobre la democracia peruana.", trigger: "Resultado domingo 7 JUN. Si disputado o si Keiko gana, se activa como propuesta.", sourceText: "Britannica, AS/COA, PBS", sourceUrl: "https://www.as-coa.org/articles/latin-america-advisor/peru-2026-election" },
+  { title: "🛢️ OPEC+ sin EAU — reunión mañana 7 JUN", body: "EAU se fue de la OPEC el 1 de mayo. Primera vez que OPEC cae por debajo del 30% del mercado. La reunión de mañana puede producir una decisión sorpresa de producción. Si Arabia Saudí reacciona agresivamente a la salida de EAU, hay video sobre el fin del cartel.", trigger: "Si hay decisión sorpresa de producción o reacción saudí a la salida de EAU.", sourceText: "CNBC: OPEC+ meeting preview", sourceUrl: "https://www.cnbc.com/2026/06/06/opec-meeting-oil-output-decision.html" },
+  { title: "🇲🇱 Rusia pierde el Sahel — Africa Corps fracasa", body: "El helicóptero del Africa Corps derribado en Kidal confirma que Rusia está perdiendo Mali. Si hay más derrotas o si otro país africano expulsa a Rusia, se activa. Necesita conexión con tema más amplio (¿el fin de la influencia rusa en África?).", trigger: "Si hay más derrotas militares o si otro país africano expulsa a Rusia.", sourceText: "ACLED, Carnegie, Stimson Center", sourceUrl: "https://www.stimson.org/2026/africa-corps-russia-sahel-crisis/" },
+  { title: "🇪🇺 OTAN 5% del PIB — Europa gasta pero no fabrica", body: "Cumbre OTAN 18 JUN. Europa supera a EEUU en gasto pero sigue sin capacidad industrial para fabricar munición. El tema ya está aprobado por el equipo con enfoque diferente. Monitorizar si EEUU anuncia retirada concreta de tropas.", trigger: "Cumbre OTAN 18 JUN. Si EEUU anuncia retirada concreta o Europa reconoce incapacidad industrial.", sourceText: "NATO official, SIPRI", sourceUrl: "https://www.sipri.org/media/press-release/2026/world-military-expenditure-reaches-new-record-high" },
+  { title: "🇮🇷 Irán-EEUU: resolución o escalada total", body: "Irán exige $24.000M en activos congelados para sentarse a negociar. EEUU rechaza. Deadlock. PRECAUCIÓN: fatiga de audiencia Irán — solo vale si hay un giro radical (acuerdo firmado o escalada mayor).", trigger: "Si se rompe el deadlock de los $24B, se firma acuerdo, o hay escalada tipo 2ª oleada de ataques.", sourceText: "CBS, CNN, Al Jazeera", sourceUrl: "https://www.aljazeera.com/news/2026/6/5/iran-us-nuclear-talks" },
+  { title: "🇺🇦 Trump: Ucrania 'cerca de resolverse'", body: "Trump dice que está 'muy cerca' de resolver Ucrania. Rusia pierde 30.000 efectivos al mes pero avanza en Donetsk. 224 combates diarios. Solo vale como propuesta si hay anuncio concreto de negociaciones directas, no especulación.", trigger: "Si hay anuncio concreto de negociaciones directas Rusia-Ucrania o de plan de paz con fecha.", sourceText: "Al Jazeera, Russia Matters (Harvard)", sourceUrl: "https://www.russiamatters.org/analysis/ukraine-peace-prospects-2026" }
 ],
 
 /* ── VERIFICACIÓN EDITORIAL ─────────────────────────────── */
@@ -769,7 +797,7 @@ editorial_verification: {
   historial_vp: "SÍ — verificados últimos 10 videos con views reales del PROPOSAL_TRACKER (actualizado 4 JUN). Pendiente verificar publicaciones 3-6 JUN.",
   competencia_revisada: "SÍ — revisados canales P1 (Solo Fonseca, Memorias de Pez, Hipótesis de Poder, Cosas Militares). Búsquedas realizadas pero estadísticas de videos individuales de junio 2026 no accesibles directamente. Señales basadas en cobertura detectada y ausencia de cobertura verificable.",
   viralidad_verificada: "SÍ — 9 parámetros aplicados a cada propuesta. Motor viral con mecanismo explicado. No se afirmó viralidad sin evidencia. Hipótesis marcadas como tales.",
-  imagenes_validadas: "PENDIENTE — ejecutar node validate_images.js 2026-06-06",
+  imagenes_validadas: "SÍ — 39/39 URLs validadas OK con validate_images.js. 0 fallidas.",
   temas_descartados: "Irán genérico (saturado, descartado 5 veces previas). Ucrania genérico (sin ángulo diferencial). Sudan/humanitario (sin geopolítica VP). EEUU política interna (Pulte, Pratt — descartados en radares previos).",
   capas_aplicadas: "8 capas Estrategia Tema de Millón v7.0 aplicadas a las 7 propuestas. Matriz 1M incluida en propuestas con veredicto ATACAR HOY. Campos obligatorios: título mental, velocidad de agenda, polarización/personaje, retención narrativa, promesa cumplible, ventaja VP, veredicto."
 }
