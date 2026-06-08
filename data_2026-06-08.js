@@ -21,10 +21,10 @@ ticker: [
   { cls:"t-gold",   text:"🇨🇳🇰🇵 XI JINPING <strong>EN PYONGYANG HOY</strong> · Primera visita en 7 años · China intenta recuperar a Corea del Norte de la órbita rusa" },
   { cls:"t-red",    text:"🇦🇲 ARMENIA <strong>PASHINYAN GANA</strong> · 55.7% · Mandato claro para pivotar a Europa · Rusia pierde el Cáucaso" },
   { cls:"t-orange", text:"🇷🇺 RUSIA <strong>RACIONA GASOLINA</strong> · Crisis llega a Moscú · Crimea suspende venta · 25% de refinación destruida por Ucrania" },
-  { cls:"t-red",    text:"🇧🇴 BOLIVIA <strong>SEMANA 6 DE INSURRECCIÓN</strong> · Campos petroleros tomados · 9 muertos · MINA DE VIEWS: 570K (1.9x)" },
+  { cls:"t-red",    text:"🇨🇱 CHILE <strong>CABLE SUBMARINO CHINO</strong> · EEUU obliga a Boric a romper contrato con Huawei Marine · Transición presidencial rota · MINA: 522K (1.7x)" },
   { cls:"t-red",    text:"🇻🇦 PAPA LEO XIV <strong>HOY con SÁNCHEZ</strong> · Primer papa en hablar ante el Parlamento español · Migración y valores" },
   { cls:"t-orange", text:"🇮🇳 INDIA <strong>$9.000M MEGABASE</strong> en Gran Nicobar · Puerto militar + aeropuerto a 150 km del Estrecho de Malaca" },
-  { cls:"t-red",    text:"🇨🇺 CUBA <strong>BLOQUEO INVISIBLE</strong> · Trump cortó todo el petróleo · 20h sin luz · MINA DE VIEWS: 498K (1.65x)" },
+  { cls:"t-red",    text:"🇲🇱 SAHEL <strong>RUSIA EXPULSADA</strong> · Africa Corps pierde Kidal · Tuareg con drones turcos humillan a Wagner · MINA: 444K (1.5x)" },
   { cls:"t-orange", text:"🇨🇴 COLOMBIA <strong>2ª VUELTA 21 JUN</strong> · Espriella 43.7% vs Cepeda 40.9% · 13 días para la decisión" }
 ],
 
@@ -584,103 +584,103 @@ proposals: [
   ]
 },
 
-/* ═══ P4 — BOLIVIA SE INCENDIA (MINA DE VIEWS CONFIRMADA) ═══ */
+/* ═══ P4 — CHILE ATRAPADA ENTRE EEUU Y CHINA (MINA DE VIEWS 522K · 1.7x) ═══ */
 {
   number: "P4",
   golden: false,
-  title: "BOLIVIA SE INCENDIA: 6 semanas de insurrección, campos petroleros tomados y un presidente acorralado que pide estado de excepción",
-  subtitle: "Cómo la eliminación de subsidios al combustible desató la mayor crisis social de Latinoamérica en 2026 — y nadie habla de ello",
-  flag: "bo",
+  title: "CHILE ATRAPADA: cómo un cable submarino chino rompió la transición presidencial y obligó a elegir entre EEUU y Pekín",
+  subtitle: "Trump revocó visados de funcionarios chilenos por dejar que China tienda un cable a Hong Kong — la guerra digital llega a Latinoamérica",
+  flag: "cl",
   tags: [
     { cls:"tag-red", text:"🔴 MINA DE VIEWS" },
     { cls:"tag-green", text:"✅ ATACAR" },
-    { cls:"tag-blue", text:"LATINOAMÉRICA" }
+    { cls:"tag-blue", text:"LATINOAMÉRICA / GEOPOLÍTICA" }
   ],
   potCls: "pot-high",
   potText: "POTENCIAL 500K-800K",
   chips: [
-    { cls:"chip-gold", text:"🏆 Competencia: MINA — 570K (1.9x media)" },
-    { cls:"chip-green", text:"⚡ Acelerando — semana 6" },
+    { cls:"chip-gold", text:"🏆 Competencia: MINA — 522K (1.7x media)" },
+    { cls:"chip-green", text:"⚡ Ventana óptima" },
     { cls:"chip-blue", text:"🔒 Retención: fuerte" },
     { cls:"chip-orange", text:"🎯 Ventaja VP: alta" }
   ],
-  banner: "https://commons.wikimedia.org/wiki/Special:FilePath/La_Paz_panorama_December_1_2008.jpg?width=1200",
-  bannerAlt: "La Paz, Bolivia — epicentro de la insurrección de 2026",
-  bannerFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Bolivia.svg?width=1200",
-  tesis: "Bolivia lleva 6 semanas en llamas y casi nadie en el mundo hispanohablante lo está cubriendo con profundidad. Comunidades indígenas tomaron campos petroleros en Santa Cruz. Al menos 9 muertos. 103 bloqueos de carreteras activos en 7 departamentos. Dos ministros renunciaron. El presidente Rodrigo Paz envió al Parlamento un proyecto de estado de excepción. Pérdidas económicas: $1.600 millones. Y lo más revelador: EEUU respalda al gobierno de Paz mientras los sindicatos, maestros e indígenas aliados a Evo Morales piden su renuncia. La SEÑAL DE DEMANDA ES BRUTAL: un canal del nicho castellanoparlante publicó hace días un video sobre la crisis boliviana y lleva 570K views — 1.9 veces su media habitual. Hay audiencia hambrienta de este tema y VP puede hacer la versión definitiva.",
+  banner: "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_of_the_Andes_mountains_and_Santiago,_Chile_-_panoramio.jpg?width=1200",
+  bannerAlt: "Santiago de Chile — atrapada entre la presión de Washington y Pekín",
+  bannerFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Chile.svg?width=1200",
+  tesis: "Chile vive la trampa geopolítica perfecta. El gobierno de Boric concedió a un consorcio chino (China Mobile, China Unicom, China Telecom, con HMN Tech/ex-Huawei fabricando) la construcción de un cable submarino de 11.000 millas de Valparaíso a Hong Kong — el primero que conectaría Asia con Sudamérica sin pasar por EEUU. Washington respondió revocando visados de tres funcionarios chilenos, incluido un ministro. El presidente electo Kast rompió la transición con Boric. El resultado: Chile no puede decir sí al cable sin perder cooperación de inteligencia con EEUU, pero no puede cancelarlo sin alienar a China, su primer socio comercial. Es la primera víctima latinoamericana de la guerra digital entre superpotencias. La SEÑAL DE DEMANDA es fuerte: un canal del nicho castellanoparlante publicó un video sobre este tema que lleva 522K views — 1.7 veces su media habitual.",
 
   fields: [
-    { label:"La noticia", value:"Bolivia entra en su sexta semana de insurrección generalizada (8 JUN). Comunidades rurales tomaron un campo petrolero en Santa Cruz, cerrando válvulas. 103 bloqueos de carreteras en 7 departamentos. Al menos 9 muertos y $1.600M en pérdidas. Dos ministros renunciaron el 3 JUN. El presidente Paz envió al Parlamento un proyecto para regular estados de excepción. EEUU (Hegseth) respalda al gobierno." },
-    { label:"Segunda derivada", value:"Bolivia no es solo una protesta — es un laboratorio de lo que pasa cuando un gobierno elimina subsidios al combustible en un país donde el modelo económico dependía de gas natural que ya se agotó. Paz heredó una economía quebrada de Morales (sin reservas de dólares, sin gas) e intentó reformas neoliberales que provocaron una explosión social. La toma de campos petroleros es una escalada sin precedentes: las comunidades indígenas atacan directamente la fuente de ingresos del Estado. Y EEUU respalda al gobierno mientras la insurrección crece — la misma dinámica que destruyó a Sánchez de Lozada en 2003." },
-    { label:"Gran pregunta", value:"¿Se está convirtiendo Bolivia en la nueva Venezuela — un país rico en recursos que colapsa por mala gestión y acaba en crisis humanitaria — o es una revolución social legítima contra un gobierno que traicionó al pueblo?" },
-    { label:"Señal de competencia", value:"MINA DE VIEWS CONFIRMADA. Un canal castellanoparlante del nicho P1 publicó un video sobre la crisis boliviana que lleva 570K views — 1.9 veces su media habitual (~300K). Es la señal más fuerte de demanda detectada esta semana. Ningún otro canal del nicho ha hecho un análisis profundo con la perspectiva VP (segunda derivada, comparativa Venezuela, conexión con EEUU). El tema está cubierto como noticia superficial pero NO como análisis estructural. HAY HUECO ENORME para VP." },
-    { label:"Demanda en medios", value:"Democracy Now (reportaje extenso 4 JUN), NPR (reportaje 20 MAY), Al Jazeera (análisis 22 MAY), UPI (3 JUN), WSWS (análisis 6 JUN), Fox News (Hegseth respaldo EEUU). Wikipedia tiene artículo dedicado '2026 Bolivian protests'. Cobertura creciente pero NO en medios premium de primera línea (WSJ/FT pendientes). Eso significa: hay historia pero no ha explotado aún en mainstream." },
-    { label:"Velocidad de agenda", value:"ACELERANDO — semana 6, la crisis se profundiza cada día. La toma de campos petroleros es una ESCALADA nueva. El proyecto de estado de excepción puede provocar una nueva ola de cobertura. No ha tocado techo." },
-    { label:"Historial VP", value:"VP NUNCA ha cubierto Bolivia. Es un país completamente nuevo en el catálogo del canal. No hay riesgo de repetición. El patrón 'colapso de país latinoamericano' ha funcionado en VP con otros países. La comparativa con Venezuela es un ángulo narrativo probado." },
-    { label:"Motor viral", value:"MECANISMO: crisis/colapso de país (atrae morbo + preocupación) + Latinoamérica (audiencia directa de VP) + comparativa Venezuela (nombre reconocible que genera clicks) + indígenas tomando pozos petroleros (imagen poderosa) + EEUU respaldando gobierno impopular (paradoja) + miedo ('¿puede pasar en mi país?'). DEMANDA CONFIRMADA por señal de competencia 1.9x." },
-    { label:"Retención narrativa", value:"FUERTE. Apertura: comunidades indígenas cierran las válvulas de un campo petrolero en Bolivia — el gobierno envía policía antidisturbios. Escalada: cómo Bolivia pasó de ser 'el milagro económico de Morales' a una economía sin dólares, sin gas y sin futuro. Giro: EEUU respalda al presidente que el pueblo quiere derrocar — la misma película que en 2003 cuando Bolivia expulsó a un presidente pro-Washington. Cierre: ¿es Bolivia la próxima Venezuela, o puede evitar el colapso?" },
-    { label:"Promesa cumplible", value:"El video promete explicar por qué Bolivia lleva 6 semanas en llamas, cómo llegó a este punto, y si puede convertirse en la nueva Venezuela. Demostrable: datos de producción de gas (declive), reservas internacionales (colapsaron), bloqueos y muertos (documentados), comparativa con crisis venezolana (datos macro), respaldo EEUU (declaración Hegseth)." },
-    { label:"Ventaja VP", value:"ALTA. VP tiene experiencia en análisis de colapso de países latinoamericanos (Venezuela, Argentina). La comparativa Bolivia-Venezuela es exactamente el tipo de conexión que VP hace mejor que nadie. Mapas, datos macro, cronología política — terreno VP. Y ningún canal del nicho ha hecho el análisis profundo." },
-    { label:"Caso para 800K/1M", value:"SEÑAL DE DEMANDA BRUTALMENTE CLARA: 570K en un canal del nicho (1.9x su media). La audiencia hispanohablante QUIERE este tema. Bolivia es Latinoamérica — audiencia directa de VP. La comparativa con Venezuela es un imán de clicks probado. VP nunca ha cubierto Bolivia — es nuevo para la audiencia. Riesgo: que el público perciba Bolivia como 'poco importante'. Mitigar: titular que conecte con Venezuela y con la vida del espectador ('la nueva Venezuela'). Para ganar: publicar esta semana mientras la crisis escala." },
-    { label:"Título mental", value:"Bolivia lleva 6 semanas en llamas, tomaron los pozos de petróleo, y nadie te lo está contando — ¿es la nueva Venezuela?" },
-    { label:"Qué investigar más", value:"Datos macro de Bolivia: reservas internacionales, producción gas natural (declive), deuda. Comparativa con Venezuela pre-colapso. Historia del Gas War de 2003 (Sánchez de Lozada). Rol de Evo Morales en la oposición actual. Qué empresas operan los campos tomados. Posición de países vecinos (Argentina, Brasil, Chile)." },
-    { label:"Veredicto", value:"ATACAR HOY — señal de demanda 1.9x confirmada, crisis escalando, VP nunca cubrió Bolivia, audiencia directa latina, comparativa Venezuela irresistible." }
+    { label:"La noticia", value:"El gobierno Boric concedió al consorcio China Mobile/Unicom/Telecom la construcción del cable Chile-Hong Kong ($500M, 11.000 millas). HMN Tech (ex-Huawei) fabricará el cable. EEUU revocó visados de 3 funcionarios incluido el ministro de Telecomunicaciones Muñoz. Kast (presidente electo) rompió la transición con Boric alegando que no fue informado. Boric dice que sí le avisó el 18 FEB. Kast hereda el dilema al asumir." },
+    { label:"Segunda derivada", value:"No es un cable — es la primera batalla de la guerra digital en Latinoamérica. Si Chile conecta con Hong Kong, el tráfico de datos de Argentina, Brasil, Uruguay, Perú, Ecuador y Paraguay podría rutearse por el cable chino, exponiendo la soberanía digital de todo el Cono Sur. EEUU no revocó visados por el cable en sí, sino por lo que representa: la ruptura del monopolio estadounidense sobre las rutas de datos del Pacífico. Washington castigó a Chile por CONSIDERAR la opción china — ni siquiera por aprobarla. Es un precedente brutal para toda Latinoamérica." },
+    { label:"Gran pregunta", value:"¿Puede un país latinoamericano mantener relaciones comerciales con China Y de inteligencia con EEUU al mismo tiempo, o la guerra digital obliga a elegir bando?" },
+    { label:"Señal de competencia", value:"MINA DE VIEWS CONFIRMADA. Un canal castellanoparlante del nicho P1 publicó un video sobre Chile y los cables que lleva 522K views — 1.7 veces su media habitual (~300K). La señal de demanda es clara. VP NO ha cubierto este tema. El ángulo 'guerra digital EEUU-China en Latinoamérica' no existe en español con profundidad. HAY HUECO ENORME. Además: Chile = Latinoamérica = audiencia directa de VP." },
+    { label:"Demanda en medios", value:"CNBC (25 FEB, análisis de sanciones), SCMP (2 reportajes extensos sobre transición e inauguración), China-Global South Project (análisis profundo), BNamericas (crisis política), UPI (ruptura transición), Diálogo Américas (soberanía digital), Pressenza (competencia estratégica). Cobertura amplia en medios premium y especializados." },
+    { label:"Velocidad de agenda", value:"VENTANA ÓPTIMA — Kast ya asumió y hereda el dilema. La decisión sobre el cable está pendiente. Cualquier movimiento (aprobación o cancelación) generará cobertura masiva. Publicar ANTES de la decisión para posicionar a VP." },
+    { label:"Historial VP", value:"VP NO ha cubierto la guerra digital EEUU-China en Latinoamérica. VP hizo 'Pax Silica' (141K) sobre dependencia tecnológica de China pero con enfoque distinto (chips). El cable submarino es un ángulo completamente nuevo. VP sí cubre tensión EEUU-China regularmente, pero nunca desde la perspectiva de un país latinoamericano atrapado en medio." },
+    { label:"Motor viral", value:"MECANISMO: trampa geopolítica (Chile no puede ganar) + EEUU vs China (rivalidad reconocible) + Latinoamérica (audiencia directa) + tecnología/espionaje (intriga) + visados revocados (acción concreta de Trump) + mapa visual (ruta del cable, 11.000 millas) + consecuencia para toda la región ('si le pasó a Chile, le puede pasar a tu país'). DEMANDA CONFIRMADA por señal de competencia 1.7x." },
+    { label:"Retención narrativa", value:"FUERTE. Apertura: Chile da permiso para tender un cable submarino a China — EEUU revoca visados de 3 funcionarios al día siguiente. Escalada: el cable no es solo internet — es la ruta por donde pasarían los datos de 7 países sudamericanos. Giro: EEUU no castiga a Chile por construir el cable, sino por PENSARLO — es un precedente para toda Latinoamérica. Cierre: ¿puede algún país del mundo ser amigo de China Y de EEUU al mismo tiempo?" },
+    { label:"Promesa cumplible", value:"El video promete explicar cómo un cable submarino desató una crisis diplomática que revela la verdadera naturaleza de la guerra EEUU-China en Latinoamérica. Demostrable: concesión gubernamental, revocación de visados (CNBC), ruptura de transición Boric-Kast (UPI, SCMP), datos del cable ($500M, 11.000 millas, consorcio chino), mapa de rutas de datos actuales." },
+    { label:"Ventaja VP", value:"ALTA. VP domina el análisis de geopolítica con mapas, rutas y conexiones invisibles. Un cable submarino de 11.000 millas es ULTRA VISUAL. La trampa EEUU-China sobre un país latinoamericano es exactamente el tipo de historia que VP cuenta mejor que nadie. Ningún canal del nicho ha hecho este análisis." },
+    { label:"Caso para 800K/1M", value:"SEÑAL DE DEMANDA CLARA: 522K en canal del nicho (1.7x media). Chile = Latinoamérica = audiencia directa. EEUU vs China = tema probado en VP. Mapa visual del cable = contenido espectacular. VP nunca cubrió este tema = novedad total. Riesgo: que el público no conecte con 'cables submarinos' como tema. Mitigar: titular centrado en la TRAMPA geopolítica y en Trump castigando a Chile, no en el cable. Para ganar: publicar antes de que Kast tome la decisión." },
+    { label:"Título mental", value:"Trump castigó a Chile por dejar que China tienda un cable — y ahora todo Latinoamérica tiene que elegir bando" },
+    { label:"Qué investigar más", value:"Mapa completo de cables submarinos del Pacífico (quién controla qué). Detalles técnicos del Chile China Express Cable. Posición de Kast sobre el cable después de asumir. Otros países latinoamericanos con proyectos chinos similares. Precedentes de EEUU revocando visados por relaciones con China. Impacto real en soberanía digital del Cono Sur." },
+    { label:"Veredicto", value:"ATACAR HOY — señal de demanda 1.7x confirmada, VP nunca cubrió este tema, trampa geopolítica visual, audiencia latina directa, decisión pendiente de Kast = timing perfecto." }
   ],
   sources: [
-    { medium:"Democracy Now", url:"https://www.democracynow.org/2026/6/4/headlines/rural_communities_in_bolivia_seize_oil_field_calling_on_president_paz_to_resign", desc:"Comunidades toman campo petrolero" },
-    { medium:"NPR", url:"https://www.npr.org/2026/05/20/nx-s1-5828203/bolivia-capital-protests-crisis", desc:"La Paz bajo asedio por protestas" },
-    { medium:"UPI", url:"https://www.upi.com/Top_News/World-News/2026/06/03/latam-bolivia-regulate-states-of-emergency-bill/6701780513248/", desc:"Estado de excepción y renuncia de ministros" },
-    { medium:"Al Jazeera", url:"https://www.aljazeera.com/economy/2026/5/22/bolivia-in-crisis-social-unrest-demands-for-president-to-resign-escalate", desc:"Análisis de la crisis social" }
+    { medium:"CNBC", url:"https://www.cnbc.com/2026/02/25/chile-china-trump-rubio-visa-sanctions-us-latam.html", desc:"Trump sanciona a Chile por proyecto de cable chino" },
+    { medium:"SCMP", url:"https://www.scmp.com/news/china/diplomacy/article/3346261/inauguration-day-chiles-new-president-inherits-chinese-cable-scandal-and-us-threats", desc:"Kast hereda la crisis del cable" },
+    { medium:"China-Global South Project", url:"https://chinaglobalsouth.com/analysis/chile-submarine-cable-china-us-kast-transition/", desc:"Análisis profundo de la transición y el cable" },
+    { medium:"Diálogo Américas", url:"https://dialogo-americas.com/articles/chile-hong-kong-submarine-cable-a-threat-to-latin-americas-data-sovereignty/", desc:"Amenaza a soberanía digital de Latinoamérica" }
   ]
 },
 
-/* ═══ P5 — CUBA BLOQUEO SECRETO (MINA DE VIEWS CONFIRMADA) ═══ */
+/* ═══ P5 — RUSIA PIERDE EL SAHEL (MINA DE VIEWS 444K · 1.5x) ═══ */
 {
   number: "P5",
   golden: false,
-  title: "EL BLOQUEO SECRETO DE TRUMP A CUBA: cómo EEUU cortó TODO el petróleo a la isla sin declararle la guerra",
-  subtitle: "La mayor presión sobre Cuba desde la Crisis de los Misiles de 1962 — y nadie lo llama bloqueo",
-  flag: "cu",
+  title: "LA HUMILLACIÓN DE PUTIN EN ÁFRICA: los rebeldes que echaron a carcajadas al Africa Corps ruso de Mali",
+  subtitle: "Wagner desapareció, el Africa Corps huyó de Kidal entre abucheos, y Rusia pierde su último imperio — después de Siria, Venezuela e Irán",
+  flag: "ml",
   tags: [
     { cls:"tag-red", text:"🔴 MINA DE VIEWS" },
     { cls:"tag-green", text:"✅ ATACAR" },
-    { cls:"tag-blue", text:"LATINOAMÉRICA / EEUU" }
+    { cls:"tag-blue", text:"RUSIA / ÁFRICA" }
   ],
   potCls: "pot-high",
   potText: "POTENCIAL 500K-800K",
   chips: [
-    { cls:"chip-gold", text:"🏆 Competencia: MINA — 498K (1.65x media)" },
-    { cls:"chip-green", text:"⚡ Acelerando — crisis humanitaria" },
+    { cls:"chip-gold", text:"🏆 Competencia: MINA — 444K (1.5x media)" },
+    { cls:"chip-green", text:"⚡ Ventana óptima" },
     { cls:"chip-blue", text:"🔒 Retención: fuerte" },
     { cls:"chip-orange", text:"🎯 Ventaja VP: alta" }
   ],
-  banner: "https://commons.wikimedia.org/wiki/Special:FilePath/Havana_city_street_towards_Capital,_Cuba_-_panoramio.jpg?width=1200",
-  bannerAlt: "La Habana — una ciudad paralizada por apagones de 20+ horas diarias",
-  bannerFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Cuba.svg?width=1200",
-  tesis: "Desde febrero de 2026, Trump ha impuesto a Cuba el bloqueo energético más severo desde la Crisis de los Misiles de 1962 — pero sin llamarlo bloqueo. EEUU intercepta petroleros, bloquea sistemas de pago (Visa/Mastercard), y presiona a terceros países para que no vendan combustible a la isla. El resultado: apagones de más de 20 horas diarias, el 84% de los sistemas de bombeo de agua sin funcionar, hospitales colapsados, y Díaz-Canel forzado a negociar con Washington. La ONU advierte de crisis humanitaria. Pero la historia que nadie cuenta es que Trump quiere que Cuba colapse para forzar un cambio de régimen sin invasión — la 'presión máxima' que fracasó con Venezuela e Irán, aplicada ahora con esteroides. La SEÑAL DE DEMANDA es clara: un canal del nicho castellanoparlante publicó un video sobre Cuba/Trump que lleva 498K views — 1.65 veces su media habitual.",
+  banner: "https://commons.wikimedia.org/wiki/Special:FilePath/Luchtmobiele_brigade_mali.jpg?width=1200",
+  bannerAlt: "Operación militar en Mali — el Sahel donde Rusia fue humillada",
+  bannerFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Mali.svg?width=1200",
+  tesis: "En abril de 2026, los rebeldes tuareg y yihadistas de al-Qaeda lanzaron la ofensiva más audaz en una década contra Mali. El Africa Corps ruso — la versión estatal del antiguo Wagner, ahora subordinado al Ministerio de Defensa — fue rodeado en Kidal y negoció un corredor de evacuación. Los videos muestran a los combatientes tuareg abucheando y riéndose del convoy ruso mientras huía. No es una anécdota: es el patrón. Rusia perdió a Assad en Siria. Perdió influencia en Venezuela. Perdió Irán. Y ahora pierde África, el último territorio donde Putin pretendía proyectar poder. El Africa Corps fue creado para reemplazar a Wagner después de la muerte de Prigozhin, subordinándolo directamente al Estado. Su humillación en Kidal no es el fracaso de mercenarios — es el fracaso del Estado ruso. La SEÑAL DE DEMANDA está confirmada: un canal del nicho castellanoparlante publicó un video sobre esta derrota que lleva 444K views — 1.5 veces su media habitual.",
 
   fields: [
-    { label:"La noticia", value:"Cuba enfrenta la peor crisis energética y humanitaria desde el Período Especial (años 90). Apagones de 20+ horas diarias. El 84% de los sistemas de bombeo de agua dependen de electricidad y están colapsados (ONU). Trump bloqueó petroleros, cortó sistemas de pago y presionó a proveedores. El 13 de marzo, Díaz-Canel confirmó públicamente que Cuba negocia con EEUU para aliviar el bloqueo energético. Trump envió un portaaviones al Caribe." },
-    { label:"Segunda derivada", value:"Trump no ha declarado un bloqueo naval formal — sería ilegal bajo derecho internacional. Pero ha logrado el mismo efecto por otros medios: sanciones secundarias que impiden que cualquier petrolero toque puerto cubano, bloqueo de Visa/Mastercard para cortar remesas, y presión diplomática sobre México y Venezuela para que no envíen crudo. Es el primer 'bloqueo invisible' de la historia moderna: la isla se queda sin combustible sin que haya un solo barco de guerra bloqueando sus puertos. El objetivo real no es negociar — es provocar un colapso interno que fuerce un cambio de régimen." },
-    { label:"Gran pregunta", value:"¿Está Trump aplicando a Cuba el primer bloqueo invisible de la historia — sin barcos de guerra pero con el mismo efecto que el de Kennedy en 1962 — para forzar la caída del régimen sin invasión?" },
-    { label:"Señal de competencia", value:"MINA DE VIEWS CONFIRMADA. Un canal castellanoparlante del nicho P1 publicó un video sobre Cuba y la máxima presión de Trump que lleva 498K views — 1.65 veces su media habitual (~300K). La señal de demanda es fuerte y clara. El tema Cuba/EEUU tiene audiencia hispana natural (millones de cubanos en el exilio + interés continental). Otros canales han tratado Cuba como noticia pero NINGUNO ha hecho la comparativa con el bloqueo de 1962 ni el análisis de la estrategia de 'bloqueo invisible'. HAY HUECO para la versión VP." },
-    { label:"Demanda en medios", value:"Wikipedia tiene artículo dedicado '2026 Cuban crisis'. Foreign Policy, CFR, The Global Angle tienen análisis profundos. Havana Times con entrevistas en terreno. La cobertura se intensifica a medida que la crisis humanitaria empeora. Medios premium (WSJ/FT) probablemente tienen cobertura — pendiente verificar." },
-    { label:"Velocidad de agenda", value:"ACELERANDO — la crisis humanitaria se profundiza semana a semana. El envío del portaaviones es una escalada reciente. Las negociaciones Díaz-Canel/Trump pueden producir noticias en cualquier momento. No ha tocado techo." },
-    { label:"Historial VP", value:"VP no tiene video reciente sobre Cuba. El tema Cuba/EEUU es un clásico geopolítico que la audiencia hispana conoce. El patrón 'EEUU presiona a país pequeño con consecuencias brutales' ha funcionado en VP con otros contextos. La comparativa con la Crisis de los Misiles de 1962 es un ángulo narrativo extraordinario." },
-    { label:"Motor viral", value:"MECANISMO: Trump (nombre reconocible #1) + Cuba (nombre reconocible para audiencia hispana) + crisis humanitaria (empatía + indignación) + comparativa histórica con 1962 (Kennedy/misiles nucleares) + portaaviones en el Caribe (imagen poderosa) + miedo ('¿puede pasar en otro país?') + dato brutal (20h sin luz, 84% sin agua). DEMANDA CONFIRMADA por señal de competencia 1.65x." },
-    { label:"Retención narrativa", value:"FUERTE. Apertura: Cuba, 2026 — 20 horas sin electricidad, hospitales sin generadores, la gente hierve agua de mar. Pero no hay ningún barco bloqueando el puerto. Escalada: cómo Trump logró estrangular a Cuba sin un solo tiro — sanciones petroleras, bloqueo de Visa/Mastercard, presión a México y Venezuela. Giro: es el mismo método que Kennedy usó en 1962, pero sin misiles nucleares de por medio. Cierre: ¿quiere Trump la caída del régimen, o solo el mejor acuerdo de su carrera?" },
-    { label:"Promesa cumplible", value:"El video promete revelar cómo EEUU ha impuesto a Cuba un bloqueo energético sin declarar la guerra, por qué es la mayor presión desde 1962, y qué quiere Trump realmente. Demostrable: datos de suministro petrolero (caída), apagones (documentados ONU), sanciones secundarias (Federal Register), comparativa con bloqueo naval 1962 (histórico), negociaciones Díaz-Canel (declaración pública 13 MAR)." },
-    { label:"Ventaja VP", value:"ALTA. VP puede combinar la historia de 1962 con la crisis actual de 2026 como nadie en español. Mapas del Caribe, rutas petroleras, cronología de sanciones, comparativa histórica visual — es exactamente el tipo de análisis profundo donde VP brilla." },
-    { label:"Caso para 800K/1M", value:"SEÑAL DE DEMANDA CLARA: 498K en un canal del nicho (1.65x su media). Cuba + Trump en el título = imán de clicks doble. Audiencia hispana natural (exilio cubano + interés continental). Comparativa con Crisis de los Misiles de 1962 = gancho histórico poderoso. VP nunca ha hecho este ángulo. Riesgo: que el público perciba Cuba como tema repetido o partidista. Mitigar: enfoque en la MECÁNICA del bloqueo invisible, no en la política. Para ganar: titular que conecte 1962 con 2026." },
-    { label:"Título mental", value:"Trump ha cortado TODO el petróleo a Cuba sin declararle la guerra — es el mayor bloqueo desde la Crisis de los Misiles de 1962" },
-    { label:"Qué investigar más", value:"Datos exactos de suministro petrolero a Cuba (antes vs después de febrero 2026). Lista de sanciones secundarias aplicadas. Qué petroleros fueron interceptados o desviados. Comparativa legal con bloqueo naval de 1962. Estado de las negociaciones Díaz-Canel/Trump. Posición de México, Venezuela, Rusia y China sobre la crisis. Datos humanitarios ONU." },
-    { label:"Veredicto", value:"ATACAR HOY — señal de demanda 1.65x confirmada, crisis humanitaria escalando, ángulo histórico 1962 único, audiencia hispana natural, VP nunca cubrió este enfoque." }
+    { label:"La noticia", value:"El 25 de abril, milicias tuareg + yihadistas de JNIM (al-Qaeda) lanzaron ataques simultáneos sobre posiciones del Africa Corps ruso en el norte de Mali. Varias bases fueron tomadas. En Kidal, el Africa Corps fue rodeado y negoció una evacuación pactada. Videos muestran combatientes riéndose del convoy ruso en retirada. El ministro de Defensa de Mali, Sadio Camara, murió durante los ataques. Bloomberg, CNN y Carnegie publicaron análisis extensos." },
+    { label:"Segunda derivada", value:"La derrota en Kidal no es un incidente aislado — es el punto final de un patrón global: Rusia está perdiendo todos sus proxies y aliados fuera de Eurasia. Assad cayó en Siria. Maduro se distanció. Irán negocia con EEUU. Y ahora el Africa Corps — que fue creado para sustituir a Wagner y subordinarlo al Estado — es humillado en el Sahel. Lo más revelador: Wagner fue transformado en Africa Corps precisamente para profesionalizar la presencia rusa en África. El resultado es PEOR que con mercenarios privados. Putin apostó por convertir un ejército privado en brazo estatal y fracasó." },
+    { label:"Gran pregunta", value:"¿Está Rusia perdiendo su capacidad de proyectar poder fuera de Eurasia — y si el Africa Corps fracasa en el Sahel, qué queda del 'imperio' global de Putin?" },
+    { label:"Señal de competencia", value:"MINA DE VIEWS CONFIRMADA. Un canal castellanoparlante del nicho P1 publicó un video sobre 'DERROTA TOTAL de RUSIA en el SAHEL' que lleva 444K views — 1.5 veces su media habitual (~300K). VP tiene Mali/Sahel APROBADO por el equipo (con la condición de conectar con tema no-africano). La conexión Rusia ES el tema no-africano: Putin pierde África como pierde Ucrania, Siria, Venezuela. Ningún otro canal del nicho ha hecho este análisis sistémico de 'Rusia pierde todo fuera de Eurasia'. HAY HUECO para VP." },
+    { label:"Demanda en medios", value:"CNN (reportaje extenso 10 MAY: 'Rebels jeered Putin's Africa Corps out'), Bloomberg (28 ABR: 'Russia bet backfires for Mali'), Carnegie (análisis de febrero), Fox News (derrota Putin en África), RFERL (Africa Corps no replica éxito de Wagner), Robert Lansing Institute (fallos de inteligencia). Cobertura premium AMPLIA y profunda." },
+    { label:"Velocidad de agenda", value:"VENTANA ÓPTIMA — la derrota fue en abril-mayo pero el análisis profundo de las consecuencias está saliendo ahora. El tema NO ha sido cubierto en español con profundidad. La ventana para ser primeros en español sigue abierta." },
+    { label:"Historial VP", value:"VP tiene Mali/Sahel APROBADO por el equipo con nota: 'conectar con tema no africano para atraer audiencia'. La conexión Rusia satisface exactamente esa condición. VP hizo 'Putin economía colapsa' (355K). El patrón 'colapso de potencia + paradoja' rinde 350K+. Esta sería la versión 'colapso del poder exterior de Putin', complementaria a la versión económica interior." },
+    { label:"Motor viral", value:"MECANISMO: Putin/Rusia (nombre reconocible) + humillación militar (videos reales de retirada bajo abucheos) + patrón de fracasos (Siria, Venezuela, Irán, ahora África = historia escalada) + conexión con Ucrania (si pierde en África, ¿puede ganar en Ucrania?) + mapa visual (África como tablero de ajedrez geopolítico) + muerte del ministro de Defensa de Mali (drama concreto). DEMANDA CONFIRMADA por señal de competencia 1.5x." },
+    { label:"Retención narrativa", value:"FUERTE. Apertura: un convoy militar ruso huye de una ciudad del desierto en Mali — los rebeldes se ríen y graban con el móvil. Escalada: cómo Putin creó el Africa Corps para reemplazar a Wagner y proyectar poder en África (oro, uranio, influencia). Giro: es el mismo patrón que en Siria (Assad cayó), Venezuela (Maduro se distanció), Irán (negocia con EEUU). Rusia está perdiendo TODOS sus aliados fuera de Eurasia. Cierre: si Putin no puede mantener mercenarios en Mali, ¿cómo va a ganar en Ucrania?" },
+    { label:"Promesa cumplible", value:"El video promete explicar por qué Rusia está perdiendo su 'imperio' africano y qué revela sobre la debilidad real de Putin. Demostrable: batalla de Kidal (videos, Bloomberg, CNN), Wagner → Africa Corps (documentado), pérdida de Siria/Assad (2024), distanciamiento Venezuela, negociaciones Irán-EEUU, mapa de presencia rusa en África (antes vs ahora)." },
+    { label:"Ventaja VP", value:"ALTA. VP ya tiene Mali/Sahel APROBADO. El análisis 'Rusia pierde todos sus proxies' es exactamente el tipo de conexión global que VP hace mejor que nadie. Mapas de África, cronología Wagner → Africa Corps, comparativa con Siria y Venezuela — todo terreno VP. Ningún canal del nicho lo ha hecho así." },
+    { label:"Caso para 800K/1M", value:"SEÑAL DE DEMANDA: 444K en canal del nicho (1.5x media). Patrón probado: 'colapso de Putin' = 355K. Esta versión es más visual (videos de la humillación) y más global (Siria + Venezuela + Irán + África). Riesgo: que la audiencia no conecte con Mali/África. Mitigar: titular centrado en PUTIN y RUSIA, no en Mali. 'La humillación de Putin en África' funciona mejor que 'Crisis en Mali'. Para ganar: conectar explícitamente con Ucrania como cierre." },
+    { label:"Título mental", value:"Los rebeldes echaron a carcajadas al ejército de Putin de Mali — después de perder Siria, Venezuela e Irán, ¿qué le queda a Rusia fuera de sus fronteras?" },
+    { label:"Qué investigar más", value:"Mapa completo de presencia rusa en África (antes de Kidal vs ahora). Recursos naturales controlados por Wagner/Africa Corps (oro en Mali, diamantes en CAR, uranio en Níger). Transición Wagner → Africa Corps: qué cambió y por qué fracasó. Muerte de ministro Camara: circunstancias. Posición de Francia y EEUU en el vacío de poder. Otras juntas sahelinas (Burkina Faso, Níger): ¿siguen con Rusia?" },
+    { label:"Veredicto", value:"ATACAR HOY — señal de demanda 1.5x confirmada, tema APROBADO por el equipo, conexión Rusia satisface condición 'tema no africano', patrón Putin 355K escalable, videos de la humillación = contenido irresistible." }
   ],
   sources: [
-    { medium:"Wikipedia", url:"https://en.wikipedia.org/wiki/2026_Cuban_crisis", desc:"Cronología completa de la crisis" },
-    { medium:"The Global Angle", url:"https://theglobalangle.com/why-does-trump-want-cuba-2026-crisis-analysis/", desc:"Análisis del bloqueo petrolero y estrategia Trump" },
-    { medium:"Havana Times", url:"https://havanatimes.org/interviews/cubas-dilemma-resistance-collapse-or-negotiation/", desc:"Dilema de Cuba: resistencia, colapso o negociación" },
-    { medium:"Fox News", url:"https://www.foxnews.com/world/pete-hegseth-warns-narco-terrorists-us-backs-bolivias-government-coup-warnings", desc:"Posición de EEUU en crisis latinoamericanas" }
+    { medium:"CNN", url:"https://www.cnn.com/2026/05/10/africa/putin-africa-corps-kidal-mali-intl-cmd", desc:"Rebeldes echan a carcajadas al Africa Corps" },
+    { medium:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-04-28/russia-bet-backfires-for-mali-as-rebels-retake-key-desert-town", desc:"La apuesta rusa fracasa en Mali" },
+    { medium:"Carnegie", url:"https://carnegieendowment.org/research/2026/02/russia-role-west-southern-africa-junta-wagner-africa-corps", desc:"Análisis de la estrategia rusa en África" },
+    { medium:"Lansing Institute", url:"https://lansinginstitute.org/2026/05/11/russias-setback-in-mali-intelligence-failures-strategic-limits-and-the-future-of-moscows-africa-project/", desc:"Fallos de inteligencia y límites estratégicos" }
   ]
 },
 
@@ -732,53 +732,53 @@ proposals: [
   ]
 },
 
-/* ═══ P7 — CRISIS PSOE/ESPAÑA (MINA DE VIEWS CONFIRMADA) ═══ */
+/* ═══ P7 — REFORM UK ROMPE BIPARTIDISMO (MINA DE VIEWS 428K · 1.4x) ═══ */
 {
   number: "P7",
   golden: false,
-  title: "¿SE ACABÓ SÁNCHEZ? El PSOE pierde Andalucía por primera vez en democracia, Zapatero está imputado y el 74% pide elecciones",
-  subtitle: "La tormenta perfecta sobre el PSOE: derrota histórica + caso Zapatero + sin presupuestos + Papa en el Congreso",
-  flag: "es",
+  title: "FARAGE ROMPE GRAN BRETAÑA: Reform UK gana 1.400 escaños y destruye el bipartidismo de 100 años — la ola ultra llega a la isla",
+  subtitle: "Sunderland, el bastión laborista desde 1973, cae ante la extrema derecha — y toda Europa tiembla",
+  flag: "gb",
   tags: [
     { cls:"tag-red", text:"🔴 MINA DE VIEWS" },
     { cls:"tag-green", text:"✅ ATACAR" },
-    { cls:"tag-blue", text:"ESPAÑA / NACIONAL" }
+    { cls:"tag-blue", text:"EUROPA / REINO UNIDO" }
   ],
   potCls: "pot-high",
   potText: "POTENCIAL 500K-800K",
   chips: [
-    { cls:"chip-gold", text:"🏆 Competencia: MINA — 397K+387K (1.3x media x2)" },
-    { cls:"chip-green", text:"⚡ Acelerando — convergencia" },
+    { cls:"chip-gold", text:"🏆 Competencia: MINA — 428K (1.4x media)" },
+    { cls:"chip-green", text:"⚡ Ventana óptima" },
     { cls:"chip-blue", text:"🔒 Retención: fuerte" },
     { cls:"chip-orange", text:"🎯 Ventaja VP: alta" }
   ],
-  banner: "https://commons.wikimedia.org/wiki/Special:FilePath/Tercer_Gobierno_de_Pedro_S%C3%A1nchez_(2023-11).jpg?width=1200",
-  bannerAlt: "Gobierno de Pedro Sánchez — en su peor crisis desde que llegó al poder",
-  bannerFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Spain.svg?width=1200",
-  tesis: "El PSOE enfrenta la convergencia más destructiva de su historia reciente: acaba de perder Andalucía por primera vez en democracia (la comunidad que fundó el socialismo español), Zapatero está imputado por blanqueo y red criminal vinculada a Venezuela, el 74.3% de los españoles quiere elecciones anticipadas, Sánchez no tiene presupuestos, y el papa Leo XIV habla HOY ante el Parlamento justo cuando el partido que gobierna se desmorona. La SEÑAL DE DEMANDA es doble: un canal del nicho castellanoparlante publicó DOS videos consecutivos sobre la crisis del PSOE/Zapatero que acumulan 397K + 387K views (ambos 1.3x su media). No es un video viral — es un CLÚSTER de demanda sostenida. La audiencia española QUIERE este tema.",
+  banner: "https://commons.wikimedia.org/wiki/Special:FilePath/Nigel_Farage_2024.jpg?width=1200",
+  bannerAlt: "Nigel Farage — el hombre que rompió el bipartidismo británico de 100 años",
+  bannerFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_United_Kingdom.svg?width=1200",
+  tesis: "Reform UK acaba de ganar más de 1.400 escaños y controlar 14 concejos en las elecciones locales de mayo — incluyendo Sunderland (laborista desde 1973), Essex (la circunscripción de la líder conservadora Badenoch) y Havering (primer municipio de Londres para la extrema derecha). Es la destrucción del bipartidismo británico que duró 100 años. Pero la historia real no es británica — es europea: Italia ya tiene a Meloni, Holanda a Wilders, Francia tiene a Le Pen como primera fuerza, Alemania tiene a AfD como segunda, y ahora Reino Unido tiene a Farage controlando ciudades. El patrón es idéntico en todos los países: inmigración + coste de vida + sensación de pérdida de control. Europa no gira a la derecha — COLAPSA hacia la derecha. La SEÑAL DE DEMANDA está confirmada: un canal del nicho castellanoparlante publicó un video sobre Reform UK que lleva 428K views — 1.4 veces su media habitual.",
 
   fields: [
-    { label:"La noticia", value:"Convergencia de crisis PSOE en junio 2026: (1) Andalucía — el PSOE pierde por primera vez en democracia su 'granero electoral'. (2) Zapatero imputado el 19 MAY por blanqueo y red criminal vinculada a Plus Ultra/Venezuela. Declaró ante el juez Calama el 2 JUN. (3) 74.3% de españoles quieren elecciones anticipadas. (4) Sánchez sin presupuestos ni mayoría estable. (5) Papa Leo XIV HOY en el Parlamento en medio de la tormenta." },
-    { label:"Segunda derivada", value:"No es solo una crisis de gobierno — es una crisis de RÉGIMEN dentro del PSOE. Perder Andalucía equivale a que el PP pierda Castilla y León: destruye el mito fundacional. La imputación de Zapatero conecta al PSOE con la Venezuela de Maduro a través de una aerolínea rescatada con dinero público. Washington Examiner pide la extradición a EEUU. Y Sánchez no puede convocar elecciones porque las perdería, pero tampoco puede gobernar sin presupuestos. Está atrapado. La pregunta no es si caerá, sino cómo y cuándo." },
-    { label:"Gran pregunta", value:"¿Está el PSOE viviendo el principio del fin de su hegemonía en la izquierda española — una crisis que va más allá de Sánchez y que puede reconfigurar la política española durante una década?" },
-    { label:"Señal de competencia", value:"MINA DE VIEWS CONFIRMADA — CLÚSTER DOBLE. Un canal castellanoparlante del nicho P1 publicó DOS videos consecutivos sobre la crisis PSOE/Zapatero: uno lleva 397K views y otro 387K (ambos ~1.3x su media habitual de ~300K). Que DOS videos seguidos sobre el mismo ecosistema temático rindan por encima de la media indica demanda SOSTENIDA, no puntual. Otros canales de actualidad política española (P2) probablemente también estén cubriendo. VP ya tiene el tema Zapatero aprobado por el equipo (deadline 10 JUN). El ángulo VP sería MÁS AMPLIO que solo Zapatero: la convergencia de crisis como señal de fin de ciclo del PSOE." },
-    { label:"Demanda en medios", value:"The Olive Press, The Conservative, Washington Examiner (presión EEUU), Plataforma Media — cobertura internacional creciente. Medios españoles: El País, El Confidencial, El Mundo — tema dominante en España. El caso Zapatero/Venezuela tiene dimensión internacional por la conexión con Maduro y la presión de Washington." },
-    { label:"Velocidad de agenda", value:"ACELERANDO — convergencia de eventos: Zapatero imputado (19 MAY), declaración ante juez (2 JUN), Papa en Parlamento HOY (8 JUN), resultados electorales Andalucía recientes. Todo ocurre simultáneamente. La ventana es AHORA." },
-    { label:"Historial VP", value:"VP tiene el tema Zapatero APROBADO por el equipo con deadline 10 JUN. El Radar del 7 JUN ya incluía Zapatero como tema a vigilar. El ángulo original era solo Zapatero/Venezuela. La propuesta actual es MÁS AMBICIOSA: la convergencia de crisis del PSOE como análisis sistémico. VP ha hecho videos exitosos sobre política española cuando la dimensión es estructural, no coyuntural." },
-    { label:"Motor viral", value:"MECANISMO: España (audiencia directa y masiva de VP) + corrupción/escándalo (atrae clicks probado) + Sánchez/Zapatero (nombres reconocibles) + debate/polarización (genera engagement) + dato brutal (74.3% quiere elecciones) + consecuencia directa ('¿caerá el gobierno?') + papa en el Parlamento justo hoy (timing perfecto). DEMANDA CONFIRMADA por clúster doble 1.3x+1.3x." },
-    { label:"Retención narrativa", value:"FUERTE. Apertura: el Papa habla ante el Parlamento español — pero el partido que gobierna se cae a pedazos detrás de la fachada. Escalada: Andalucía perdida, Zapatero imputado por blanqueo de Venezuela, 74% quiere elecciones. Giro: no es una crisis de Sánchez — es una crisis del PSOE como proyecto. El socialismo español pierde su base electoral (Andalucía), su herencia moral (Zapatero imputado) y su legitimidad (sin presupuestos). Cierre: ¿puede el PSOE reinventarse o estamos ante el fin de una era?" },
-    { label:"Promesa cumplible", value:"El video promete explicar por qué la crisis del PSOE es más profunda de lo que parece y si puede sobrevivir. Demostrable: resultados Andalucía, imputación Zapatero (Audiencia Nacional), encuestas (74.3%), cronología Plus Ultra/Venezuela, datos electorales históricos del PSOE." },
-    { label:"Ventaja VP", value:"ALTA. VP tiene equipo en España, conoce el contexto, y puede hacer el análisis que los canales de opinión política no hacen: la dimensión ESTRUCTURAL e histórica, no el ruido diario. La conexión Zapatero-Venezuela-Maduro tiene dimensión geopolítica que solo VP puede desarrollar a fondo." },
-    { label:"Caso para 800K/1M", value:"SEÑAL DE DEMANDA DOBLE: 397K+387K en videos consecutivos del mismo canal (1.3x cada uno). España = audiencia masiva directa de VP. Tema polarizante = engagement alto. Convergencia de crisis simultáneas = narrativa irresistible. Zapatero ya aprobado por el equipo. Riesgo: que el público perciba sesgo político. Mitigar: enfoque ANALÍTICO y ESTRUCTURAL, no partidista. Para ganar: publicar antes del 10 JUN (deadline equipo) con el ángulo ampliado de 'fin de era del PSOE'." },
-    { label:"Título mental", value:"El PSOE acaba de perder Andalucía por primera vez, su expresidente está imputado por blanqueo de Venezuela, y el 74% de España quiere elecciones — ¿es el principio del fin?" },
-    { label:"Qué investigar más", value:"Resultados exactos de Andalucía (comparativa histórica desde 1982). Detalles del caso Plus Ultra: quién cobró, cuánto, conexión exacta con Venezuela. Estado del proceso judicial de Zapatero. Encuestas de intención de voto actualizadas. Precedentes históricos de crisis similares en partidos dominantes europeos (PSF en Francia, SPD en Alemania). Posibilidad real de elecciones anticipadas." },
-    { label:"Veredicto", value:"ATACAR HOY — clúster de demanda doble confirmado, tema aprobado por equipo (deadline 10 JUN), convergencia de crisis histórica, audiencia española masiva, ángulo estructural único de VP." }
+    { label:"La noticia", value:"Elecciones locales UK del 7 mayo 2026: Reform UK ganó más de 1.400 escaños y tomó el control de 14 concejos. Conquistas simbólicas: Sunderland (laborista desde 1973), Essex (circunscripción de la líder conservadora Badenoch), Havering (primer municipio de Londres). Labour perdió 450+ escaños. Farage declaró: 'un cambio histórico en la política británica'. CNN: 'splintering two-party system'." },
+    { label:"Segunda derivada", value:"No es solo UK — es el último dominó de la ola ultra europea. El patrón continental es idéntico: (1) Meloni gana Italia 2022, (2) Wilders gana Holanda 2023, (3) Le Pen primera fuerza Francia 2024, (4) AfD segunda fuerza Alemania 2025, (5) Farage rompe UK 2026. Los drivers son los mismos en todos los países: inmigración record (64.2M en la UE según RFBerlin Centre), coste de vida insoportable, vivienda inaccesible, y la sensación de que los partidos tradicionales no pueden o no quieren resolver nada. UK era el último bastión del bipartidismo clásico en Europa — y acaba de caer." },
+    { label:"Gran pregunta", value:"¿Es la ola ultra que barre Europa un fenómeno coyuntural que se puede revertir, o es un cambio estructural permanente que está destruyendo el sistema de partidos que Europa construyó después de la Segunda Guerra Mundial?" },
+    { label:"Señal de competencia", value:"MINA DE VIEWS CONFIRMADA. Un canal castellanoparlante del nicho P1 publicó un video sobre 'REFORM UK ARRASA en las ELECCIONES' que lleva 428K views — 1.4 veces su media habitual (~300K). VP NO ha cubierto las elecciones británicas ni el ascenso de Reform UK. Ningún canal del nicho hispanohablante ha hecho el análisis CONTINENTAL: cómo UK completa la ola que empezó en Italia y pasa por Holanda, Francia y Alemania. HAY HUECO ENORME para el enfoque VP." },
+    { label:"Demanda en medios", value:"CNN (análisis extenso: 'splintering two-party system'), Time ('Trump ally Farage makes gains'), Euronews (análisis europeo), Xinhua ('far-right surge signals broader European shift'), ITV News (Farage: 'historic shift'), Arab Progress Center (crisis del sistema británico). Cobertura MASIVA en medios premium." },
+    { label:"Velocidad de agenda", value:"VENTANA ÓPTIMA — los resultados son de mayo pero los análisis profundos de las implicaciones europeas siguen saliendo. El tema NO ha sido cubierto en español con perspectiva continental. Publicar esta semana como análisis de la ola completa." },
+    { label:"Historial VP", value:"VP hizo 'Trump ya está ROMPIENDO la OTAN' (203K, 6 MAY). El tema europeo reciente es la OTAN/defensa, no la política interna. VP NO ha cubierto el ascenso de la extrema derecha europea como fenómeno continental. Es un ángulo NUEVO para el canal. El patrón 'cambio estructural continental' tiene potencial narrativo fuerte si se hace bien." },
+    { label:"Motor viral", value:"MECANISMO: Europa (audiencia interesada por conexión con España/Latinoamérica) + Farage (personaje reconocible, arquitecto del Brexit) + ola ultra continental (Italia, Holanda, Francia, Alemania, UK = escalada dramática) + mapa visual (mapa de Europa coloreándose de azul/negro) + miedo ('¿puede pasar en mi país?') + debate/polarización + Sunderland cayendo (símbolo de la caída del laborismo). DEMANDA CONFIRMADA por señal de competencia 1.4x." },
+    { label:"Retención narrativa", value:"FUERTE. Apertura: Sunderland, la ciudad obrera que votó Labour durante 50 años, acaba de elegir a un partido de extrema derecha. Escalada: el mapa de Europa se colorea país por país (Italia 2022 → Holanda 2023 → Francia 2024 → Alemania 2025 → UK 2026). Giro: no es populismo temporal — es un cambio estructural: 64.2 millones de inmigrantes en la UE, vivienda inaccesible, partidos tradicionales sin respuestas. Cierre: ¿estamos asistiendo al fin del sistema de partidos europeo de posguerra?" },
+    { label:"Promesa cumplible", value:"El video promete explicar por qué la extrema derecha está ganando en TODOS los grandes países europeos simultáneamente y si es un cambio permanente. Demostrable: resultados electorales país por país (datos oficiales), estadísticas de inmigración (Eurostat, RFBerlin), coste de vida (Eurostat), encuestas de satisfacción con partidos tradicionales, mapa cronológico de la ola." },
+    { label:"Ventaja VP", value:"ALTA. VP domina el análisis continental con mapas, datos comparativos y narrativa estructural. Un video que conecte 5 países europeos en una sola tesis es exactamente el tipo de producción donde VP supera a toda la competencia. Ningún canal del nicho ha hecho este análisis sistémico en español." },
+    { label:"Caso para 800K/1M", value:"SEÑAL DE DEMANDA: 428K en canal del nicho (1.4x media). Patrón continental = narrativa escalada irresistible (5 países). Mapa visual de Europa coloreándose = contenido VP perfecto. España tiene su propia versión (Vox) = conexión directa con audiencia. Riesgo: que la audiencia hispana no conecte con UK. Mitigar: titular centrado en EUROPA ENTERA, no solo en UK. Para ganar: publicar como 'la ola que barre Europa' con UK como último capítulo, conectando con España al final." },
+    { label:"Título mental", value:"La extrema derecha acaba de romper Gran Bretaña — después de Italia, Holanda, Francia y Alemania, ¿queda algún país europeo inmune?" },
+    { label:"Qué investigar más", value:"Resultados detallados UK por región (mapa). Comparativa con resultados de Meloni (Italia), Wilders (Holanda), Le Pen (Francia), AfD (Alemania). Datos de inmigración europeos (Eurostat, RFBerlin 64.2M). Coste de vivienda y nivel de vida comparativo. Encuestas de satisfacción con partidos tradicionales. ¿Existe un equivalente en Latinoamérica (Milei, Bukele)? Conexión con la ola latinoamericana." },
+    { label:"Veredicto", value:"ATACAR HOY — señal de demanda 1.4x confirmada, VP nunca cubrió la ola ultra continental, narrativa escalada en 5 países, mapa visual irresistible, conexión con España/Vox para audiencia directa." }
   ],
   sources: [
-    { medium:"The Olive Press", url:"https://www.theolivepress.es/spain-news/2026/05/20/spains-zapatero-plus-ultra-corruption-scandal-exposes-venezuela-links/", desc:"Escándalo Zapatero/Plus Ultra" },
-    { medium:"The Conservative", url:"https://www.theconservative.online/zapateros-reckoning-how-spains-socialist-elder-statesman-became-maduros-man-in-madrid", desc:"Zapatero como 'hombre de Maduro'" },
-    { medium:"Washington Examiner", url:"https://www.washingtonexaminer.com/op-eds/4579365/spain-zapatero-exposed-maduro-fixer-trump-must-extradite/", desc:"Presión de EEUU para extradición" },
-    { medium:"Plataforma Media", url:"https://www.plataformamedia.com/2026/06/04/zapatero-scandal-hits-spain-government/", desc:"Impacto en el gobierno de Sánchez" }
+    { medium:"CNN", url:"https://www.cnn.com/2026/05/08/uk/uk-local-election-reform-farage-starmer-intl", desc:"Reform UK rompe el bipartidismo" },
+    { medium:"Time", url:"https://time.com/article/2026/05/08/trump-ally-nigel-farage-makes-gains-in-u-k-elections-as-starmer-s-future-draws-uncertainty/", desc:"Farage como aliado de Trump" },
+    { medium:"Euronews", url:"https://www.euronews.com/my-europe/2026/05/06/hard-right-reform-uk-party-eyes-huge-new-gains-in-local-elections-on-thursday", desc:"Análisis europeo del ascenso" },
+    { medium:"Xinhua", url:"https://english.news.cn/20260511/da887b30d6d143d48d2d8e6d3fabb831/c.html", desc:"Ola ultra señala cambio continental" }
   ]
 }
 
@@ -790,10 +790,10 @@ proposals: [
 ranking: [
   { tema:"Xi en Pyongyang", subtema:"China vs Rusia por Corea del Norte", viral:95, depth:95, timing:98, fit:95, verdCls:"verd-gold", verdText:"⭐ TEMA DORADO — Atacar hoy" },
   { tema:"Rusia sin gasolina", subtema:"Paradoja refinación + guerra desgaste", viral:92, depth:90, timing:95, fit:92, verdCls:"verd-green", verdText:"✅ Atacar hoy" },
-  { tema:"Bolivia en llamas", subtema:"MINA 570K (1.9x) · Insurrección semana 6", viral:90, depth:88, timing:92, fit:90, verdCls:"verd-green", verdText:"✅ Atacar hoy — MINA DE VIEWS" },
-  { tema:"Cuba bloqueo Trump", subtema:"MINA 498K (1.65x) · Bloqueo invisible", viral:88, depth:90, timing:90, fit:88, verdCls:"verd-green", verdText:"✅ Atacar hoy — MINA DE VIEWS" },
+  { tema:"Chile cable chino", subtema:"MINA 522K (1.7x) · EEUU vs China por cable submarino", viral:88, depth:90, timing:90, fit:90, verdCls:"verd-green", verdText:"✅ Atacar hoy — MINA DE VIEWS" },
   { tema:"Armenia elige Europa", subtema:"Pashinyan gana vs Putin", viral:82, depth:88, timing:95, fit:88, verdCls:"verd-green", verdText:"✅ Atacar hoy" },
-  { tema:"Crisis PSOE/España", subtema:"MINA 397K+387K (1.3x x2) · Fin de era", viral:85, depth:85, timing:90, fit:88, verdCls:"verd-green", verdText:"✅ Atacar hoy — MINA DE VIEWS" },
+  { tema:"Rusia pierde el Sahel", subtema:"MINA 444K (1.5x) · Africa Corps expulsado de Mali", viral:85, depth:88, timing:88, fit:88, verdCls:"verd-green", verdText:"✅ Atacar hoy — MINA DE VIEWS" },
+  { tema:"Reform UK rompe UK", subtema:"MINA 428K (1.4x) · Ola ultra continental", viral:85, depth:85, timing:88, fit:85, verdCls:"verd-green", verdText:"✅ Atacar hoy — MINA DE VIEWS" },
   { tema:"India Gran Nicobar", subtema:"Megabase vs China en Malaca", viral:78, depth:90, timing:72, fit:85, verdCls:"verd-yellow", verdText:"🔍 Investigar esta semana" }
 ],
 
@@ -881,10 +881,10 @@ coveredVideos: [
 editorial_verification: {
   fuentes: "WSJ (pendiente acceso directo), FT, NYT, Bloomberg, Reuters, CNBC, NPR, SCMP, Al Jazeera, France 24, BBC, Moscow Times, Kyiv Post, Atlantic Council, ISW, UNCTAD, WEF, NATO.int — +20 fuentes consultadas",
   historial: "SI — verificados últimos 10 videos VP en youtubers.me. Colombia (340K), Eritrea (269K), Putin economía (355K), Pax Silica (141K), Netanyahu (152K), OTAN (203K), OPEP (334K), China-Irán (349K), Corea (388K), Drones (312K)",
-  competencia: "SI — verificado Solo Fonseca (últimos 10 videos con views). MINAS DE VIEWS DETECTADAS: Bolivia 570K (1.9x media), Cuba/Trump 498K (1.65x), PSOE 397K + Zapatero 387K (clúster 1.3x x2). Las 3 minas se convirtieron en propuestas P4/P5/P7. En espera: Hipótesis de Poder, Cosas Militares, Memorias de Pez (no se pudo verificar rendimiento reciente específico). MÉTODO: rendimiento relativo vs media del canal, no suscriptores absolutos",
+  competencia: "SI — verificado Solo Fonseca (últimos 10 videos con views). MINAS DE VIEWS DETECTADAS: Chile cable chino 522K (1.7x media), Sahel/Rusia en África 444K (1.5x), Reform UK 428K (1.4x). Las 3 minas se convirtieron en propuestas P4/P5/P7 — todos temas que VP NO ha cubierto recientemente. Descartados: Bolivia (VP publicó recientemente), Cuba (VP publicó 'OPERACIÓN CUBA'), PSOE/Zapatero (VP publicó 2 videos recientes). En espera: Hipótesis de Poder, Cosas Militares, Memorias de Pez (no se pudo verificar rendimiento reciente específico). MÉTODO: rendimiento relativo vs media del canal, no suscriptores absolutos",
   viralidad: "SI — ninguna afirmación de viralidad sin evidencia. Motor viral = mecanismo concreto en cada propuesta. Se indica 'pendiente de comprobar' donde corresponde. Se indica 'hipótesis de viralidad' donde aplica",
   imagenes: "PENDIENTE — ejecutar validate_images.js después de publicar data file",
-  descartados: "Irán genérico (saturado), Ucrania frente militar genérico (saturado), defensa europea genérico (ya tratado), Papa como tema principal (insuficiente para 20-30 min VP), Hormuz genérico (descartado por tracker). MOVIDOS A VIGILAR: Revolución Flamingo Albania (bueno pero sin señal de competencia verificada), OPEP farsa (paradoja fuerte pero sin señal de demanda confirmada), Submarino China (técnico, meseta, sin urgencia)"
+  descartados: "Irán genérico (saturado), Ucrania frente militar genérico (saturado), defensa europea genérico (ya tratado), Papa como tema principal (insuficiente para 20-30 min VP), Hormuz genérico (descartado por tracker), Bolivia (VP publicó recientemente — mina de 570K descartada por solapamiento), Cuba (VP publicó 'OPERACIÓN CUBA' — mina de 498K descartada), PSOE/Zapatero (VP publicó 2 videos recientes — mina de 397K+387K descartada). MOVIDOS A VIGILAR: Revolución Flamingo Albania, OPEP farsa, Submarino China"
 }
 
 };
