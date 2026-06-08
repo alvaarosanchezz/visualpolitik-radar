@@ -21,10 +21,10 @@ ticker: [
   { cls:"t-gold",   text:"🇨🇳🇰🇵 XI JINPING <strong>EN PYONGYANG HOY</strong> · Primera visita en 7 años · China intenta recuperar a Corea del Norte de la órbita rusa" },
   { cls:"t-red",    text:"🇦🇲 ARMENIA <strong>PASHINYAN GANA</strong> · 55.7% · Mandato claro para pivotar a Europa · Rusia pierde el Cáucaso" },
   { cls:"t-orange", text:"🇷🇺 RUSIA <strong>RACIONA GASOLINA</strong> · Crisis llega a Moscú · Crimea suspende venta · 25% de refinación destruida por Ucrania" },
-  { cls:"t-orange", text:"🇦🇱 ALBANIA <strong>REVOLUCIÓN FLAMINGO DÍA 9</strong> · SPAK investiga a Kushner · Miles piden dimisión de Rama" },
+  { cls:"t-red",    text:"🇧🇴 BOLIVIA <strong>SEMANA 6 DE INSURRECCIÓN</strong> · Campos petroleros tomados · 9 muertos · MINA DE VIEWS: 570K (1.9x)" },
   { cls:"t-red",    text:"🇻🇦 PAPA LEO XIV <strong>HOY con SÁNCHEZ</strong> · Primer papa en hablar ante el Parlamento español · Migración y valores" },
   { cls:"t-orange", text:"🇮🇳 INDIA <strong>$9.000M MEGABASE</strong> en Gran Nicobar · Puerto militar + aeropuerto a 150 km del Estrecho de Malaca" },
-  { cls:"t-red",    text:"🇨🇳 CHINA <strong>SUBMARINO INVISIBLE</strong> · Satélite revela sub nuclear de 120m SIN ALETA · Desafío a EEUU en el Pacífico" },
+  { cls:"t-red",    text:"🇨🇺 CUBA <strong>BLOQUEO INVISIBLE</strong> · Trump cortó todo el petróleo · 20h sin luz · MINA DE VIEWS: 498K (1.65x)" },
   { cls:"t-orange", text:"🇨🇴 COLOMBIA <strong>2ª VUELTA 21 JUN</strong> · Espriella 43.7% vs Cepeda 40.9% · 13 días para la decisión" }
 ],
 
@@ -584,102 +584,103 @@ proposals: [
   ]
 },
 
-/* ═══ P4 — REVOLUCIÓN FLAMINGO ═══ */
+/* ═══ P4 — BOLIVIA SE INCENDIA (MINA DE VIEWS CONFIRMADA) ═══ */
 {
   number: "P4",
   golden: false,
-  title: "LA REVOLUCIÓN FLAMINGO: cómo un resort de Kushner desató una revolución generacional que puede tumbar al gobierno de Albania",
-  subtitle: "Corrupción, familia Trump, medio ambiente y Gen Z: la crisis que nadie esperaba en un aliado de la OTAN",
-  flag: "al",
+  title: "BOLIVIA SE INCENDIA: 6 semanas de insurrección, campos petroleros tomados y un presidente acorralado que pide estado de excepción",
+  subtitle: "Cómo la eliminación de subsidios al combustible desató la mayor crisis social de Latinoamérica en 2026 — y nadie habla de ello",
+  flag: "bo",
   tags: [
-    { cls:"tag-red", text:"🔴 HOY" },
-    { cls:"tag-green", text:"✅ INVESTIGAR" },
-    { cls:"tag-blue", text:"EUROPA" }
+    { cls:"tag-red", text:"🔴 MINA DE VIEWS" },
+    { cls:"tag-green", text:"✅ ATACAR" },
+    { cls:"tag-blue", text:"LATINOAMÉRICA" }
   ],
   potCls: "pot-high",
   potText: "POTENCIAL 500K-800K",
   chips: [
-    { cls:"chip-gold", text:"🏆 Competencia: oportunidad clara" },
-    { cls:"chip-green", text:"⚡ Acelerando" },
+    { cls:"chip-gold", text:"🏆 Competencia: MINA — 570K (1.9x media)" },
+    { cls:"chip-green", text:"⚡ Acelerando — semana 6" },
     { cls:"chip-blue", text:"🔒 Retención: fuerte" },
-    { cls:"chip-yellow", text:"🎯 Ventaja VP: media-alta" }
+    { cls:"chip-orange", text:"🎯 Ventaja VP: alta" }
   ],
-  banner: "https://commons.wikimedia.org/wiki/Special:FilePath/Tirana_Skanderbeg_Square.jpg?width=1200",
-  bannerAlt: "Plaza Skanderbeg de Tirana — epicentro de las protestas flamingo",
-  bannerFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Albania.svg?width=1200",
-  tesis: "Albania está viviendo una revolución generacional improbable. Miles de jóvenes de la Generación Z protestan desde hace 9 días contra un resort de $1.600M vinculado a Jared Kushner e Ivanka Trump, construido sobre un humedal protegido donde anidan flamencos. La fiscalía anticorrupción ha abierto investigación. La conexión con la mafia italiana ha sido documentada. Pero la historia profunda no es medioambiental — es geopolítica: Albania necesita el favor de EEUU para entrar en la UE y no puede decir 'no' a la familia del presidente sin arriesgar su futuro. Es una trampa sin salida.",
+  banner: "https://commons.wikimedia.org/wiki/Special:FilePath/La_Paz_panorama_December_1_2008.jpg?width=1200",
+  bannerAlt: "La Paz, Bolivia — epicentro de la insurrección de 2026",
+  bannerFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Bolivia.svg?width=1200",
+  tesis: "Bolivia lleva 6 semanas en llamas y casi nadie en el mundo hispanohablante lo está cubriendo con profundidad. Comunidades indígenas tomaron campos petroleros en Santa Cruz. Al menos 9 muertos. 103 bloqueos de carreteras activos en 7 departamentos. Dos ministros renunciaron. El presidente Rodrigo Paz envió al Parlamento un proyecto de estado de excepción. Pérdidas económicas: $1.600 millones. Y lo más revelador: EEUU respalda al gobierno de Paz mientras los sindicatos, maestros e indígenas aliados a Evo Morales piden su renuncia. La SEÑAL DE DEMANDA ES BRUTAL: un canal del nicho castellanoparlante publicó hace días un video sobre la crisis boliviana y lleva 570K views — 1.9 veces su media habitual. Hay audiencia hambrienta de este tema y VP puede hacer la versión definitiva.",
 
   fields: [
-    { label:"La noticia", value:"Protestas en Albania entran en día 9 (8 JUN). SPAK (fiscalía anticorrupción) abrió investigación formal. BIRN documentó red de 'individuos y empresas turbias' con conexiones mafia italiana. Proyecto: €1.400M resort en isla Sazan (base militar comunista) + zona protegida Vjosa-Narta. Protestas globales: Berlín, Londres, NY, Toronto, Milán." },
-    { label:"Segunda derivada", value:"Albania no puede decir 'no' a Kushner sin arriesgar su relación con Trump, que necesita para el proceso de adhesión a la UE. Rama (primer ministro desde 2013) cambió la ley de protección ambiental específicamente para permitir el proyecto. La investigación anticorrupción pone al descubierto cómo los negocios de la familia Trump generan crisis institucionales en países pequeños que dependen del favor de Washington." },
-    { label:"Gran pregunta", value:"¿Pueden los negocios privados de la familia del presidente de EEUU destruir la democracia de un país aliado de la OTAN sin que nadie lo impida?" },
-    { label:"Señal de competencia", value:"OPORTUNIDAD CLARA. GAP TOTAL en español. France 24 en español mencionó las protestas brevemente. Ningún canal del nicho castellanoparlante ha hecho un video profundo. En inglés: TLDR, France 24 EN, Al Jazeera tienen cobertura. El tema es nuevo, visual (flamencos, protestas masivas) y conecta con Trump — un imán de clicks. Competencia pendiente de comprobar rendimiento relativo en canales internacionales." },
-    { label:"Demanda en medios", value:"CNN, CBS News, Al Jazeera, Time, France 24, Euronews — cobertura MASIVA internacional. Es una de las historias de la semana en medios occidentales. La conexión Trump/Kushner garantiza portadas." },
-    { label:"Velocidad de agenda", value:"ACELERANDO — las protestas crecen cada día, la investigación SPAK es nueva, y la diáspora se moviliza globalmente. Puede escalar aún más esta semana." },
-    { label:"Historial VP", value:"VP no ha cubierto Albania. Es un país nuevo en el catálogo VP. Riesgo: la audiencia puede no conectar con Albania como destino. Mitigar: el ángulo no es Albania sino 'la familia Trump desestabiliza un país aliado'. VP hizo videos exitosos sobre países poco conocidos cuando la conexión geopolítica era fuerte." },
-    { label:"Motor viral", value:"MECANISMO: Trump/Kushner (nombre reconocible global) + corrupción + medio ambiente + Gen Z revolucionaria + 'revolución flamingo' (nombre memorable) + fotos espectaculares + escándalo mafia italiana + país de la OTAN. Múltiples ganchos simultáneos." },
-    { label:"Retención narrativa", value:"FUERTE. Apertura: flamencos anidando en un humedal protegido — al lado, Kushner quiere construir el resort más grande de Europa. Escalada: gobierno cambia la ley, mafia italiana involucrada. Giro: la Gen Z albanesa sale a la calle y el mundo presta atención. Cierre: ¿puede un país pequeño resistir la presión de la familia más poderosa del mundo?" },
-    { label:"Promesa cumplible", value:"El video promete revelar la trama detrás del resort Kushner: quién cambió las leyes, quién se beneficia, por qué Albania no puede decir no, y qué pasa si la revolución triunfa. Demostrable: investigación BIRN, SPAK, datos proyecto, ley cambiada, protestas documentadas." },
-    { label:"Ventaja VP", value:"MEDIA-ALTA. VP puede documentar la trama con profundidad: mapa de la isla, red de empresas, cronología legislativa, geopolítica OTAN/UE. Pero la competencia internacional ya está cubriendo. La ventaja VP está en ser PRIMEROS en español con análisis profundo." },
-    { label:"Caso para 800K/1M", value:"Nombre 'Trump/Kushner' en el título = imán de clicks probado. Historia visual espectacular (flamencos vs resort de lujo). Escándalo de corrupción con mafia italiana. Gen Z revolucionaria. GAP TOTAL en español. Riesgo: Albania como país puede no atraer. Mitigar: titular centrado en Kushner/Trump, no en Albania. Para ganar: publicar antes de que alguien en español lo haga." },
-    { label:"Título mental", value:"La familia Trump quiso construir un resort de lujo sobre un paraíso de flamencos — y desató una revolución que puede tumbar un gobierno" },
-    { label:"Qué investigar más", value:"Investigación BIRN completa sobre red empresarial. Detalles del cambio legislativo de protección ambiental. Relación Rama-Trump (reuniones, correspondencia). Posición de la UE sobre la adhesión de Albania. Precedentes de proyectos Kushner en otros países." },
-    { label:"Veredicto", value:"INVESTIGAR ESTA SEMANA — tema fortísimo pero necesita profundizar en la trama empresarial y la conexión OTAN/UE. Publicar antes del 12 JUN si se consiguen las fuentes." }
+    { label:"La noticia", value:"Bolivia entra en su sexta semana de insurrección generalizada (8 JUN). Comunidades rurales tomaron un campo petrolero en Santa Cruz, cerrando válvulas. 103 bloqueos de carreteras en 7 departamentos. Al menos 9 muertos y $1.600M en pérdidas. Dos ministros renunciaron el 3 JUN. El presidente Paz envió al Parlamento un proyecto para regular estados de excepción. EEUU (Hegseth) respalda al gobierno." },
+    { label:"Segunda derivada", value:"Bolivia no es solo una protesta — es un laboratorio de lo que pasa cuando un gobierno elimina subsidios al combustible en un país donde el modelo económico dependía de gas natural que ya se agotó. Paz heredó una economía quebrada de Morales (sin reservas de dólares, sin gas) e intentó reformas neoliberales que provocaron una explosión social. La toma de campos petroleros es una escalada sin precedentes: las comunidades indígenas atacan directamente la fuente de ingresos del Estado. Y EEUU respalda al gobierno mientras la insurrección crece — la misma dinámica que destruyó a Sánchez de Lozada en 2003." },
+    { label:"Gran pregunta", value:"¿Se está convirtiendo Bolivia en la nueva Venezuela — un país rico en recursos que colapsa por mala gestión y acaba en crisis humanitaria — o es una revolución social legítima contra un gobierno que traicionó al pueblo?" },
+    { label:"Señal de competencia", value:"MINA DE VIEWS CONFIRMADA. Un canal castellanoparlante del nicho P1 publicó un video sobre la crisis boliviana que lleva 570K views — 1.9 veces su media habitual (~300K). Es la señal más fuerte de demanda detectada esta semana. Ningún otro canal del nicho ha hecho un análisis profundo con la perspectiva VP (segunda derivada, comparativa Venezuela, conexión con EEUU). El tema está cubierto como noticia superficial pero NO como análisis estructural. HAY HUECO ENORME para VP." },
+    { label:"Demanda en medios", value:"Democracy Now (reportaje extenso 4 JUN), NPR (reportaje 20 MAY), Al Jazeera (análisis 22 MAY), UPI (3 JUN), WSWS (análisis 6 JUN), Fox News (Hegseth respaldo EEUU). Wikipedia tiene artículo dedicado '2026 Bolivian protests'. Cobertura creciente pero NO en medios premium de primera línea (WSJ/FT pendientes). Eso significa: hay historia pero no ha explotado aún en mainstream." },
+    { label:"Velocidad de agenda", value:"ACELERANDO — semana 6, la crisis se profundiza cada día. La toma de campos petroleros es una ESCALADA nueva. El proyecto de estado de excepción puede provocar una nueva ola de cobertura. No ha tocado techo." },
+    { label:"Historial VP", value:"VP NUNCA ha cubierto Bolivia. Es un país completamente nuevo en el catálogo del canal. No hay riesgo de repetición. El patrón 'colapso de país latinoamericano' ha funcionado en VP con otros países. La comparativa con Venezuela es un ángulo narrativo probado." },
+    { label:"Motor viral", value:"MECANISMO: crisis/colapso de país (atrae morbo + preocupación) + Latinoamérica (audiencia directa de VP) + comparativa Venezuela (nombre reconocible que genera clicks) + indígenas tomando pozos petroleros (imagen poderosa) + EEUU respaldando gobierno impopular (paradoja) + miedo ('¿puede pasar en mi país?'). DEMANDA CONFIRMADA por señal de competencia 1.9x." },
+    { label:"Retención narrativa", value:"FUERTE. Apertura: comunidades indígenas cierran las válvulas de un campo petrolero en Bolivia — el gobierno envía policía antidisturbios. Escalada: cómo Bolivia pasó de ser 'el milagro económico de Morales' a una economía sin dólares, sin gas y sin futuro. Giro: EEUU respalda al presidente que el pueblo quiere derrocar — la misma película que en 2003 cuando Bolivia expulsó a un presidente pro-Washington. Cierre: ¿es Bolivia la próxima Venezuela, o puede evitar el colapso?" },
+    { label:"Promesa cumplible", value:"El video promete explicar por qué Bolivia lleva 6 semanas en llamas, cómo llegó a este punto, y si puede convertirse en la nueva Venezuela. Demostrable: datos de producción de gas (declive), reservas internacionales (colapsaron), bloqueos y muertos (documentados), comparativa con crisis venezolana (datos macro), respaldo EEUU (declaración Hegseth)." },
+    { label:"Ventaja VP", value:"ALTA. VP tiene experiencia en análisis de colapso de países latinoamericanos (Venezuela, Argentina). La comparativa Bolivia-Venezuela es exactamente el tipo de conexión que VP hace mejor que nadie. Mapas, datos macro, cronología política — terreno VP. Y ningún canal del nicho ha hecho el análisis profundo." },
+    { label:"Caso para 800K/1M", value:"SEÑAL DE DEMANDA BRUTALMENTE CLARA: 570K en un canal del nicho (1.9x su media). La audiencia hispanohablante QUIERE este tema. Bolivia es Latinoamérica — audiencia directa de VP. La comparativa con Venezuela es un imán de clicks probado. VP nunca ha cubierto Bolivia — es nuevo para la audiencia. Riesgo: que el público perciba Bolivia como 'poco importante'. Mitigar: titular que conecte con Venezuela y con la vida del espectador ('la nueva Venezuela'). Para ganar: publicar esta semana mientras la crisis escala." },
+    { label:"Título mental", value:"Bolivia lleva 6 semanas en llamas, tomaron los pozos de petróleo, y nadie te lo está contando — ¿es la nueva Venezuela?" },
+    { label:"Qué investigar más", value:"Datos macro de Bolivia: reservas internacionales, producción gas natural (declive), deuda. Comparativa con Venezuela pre-colapso. Historia del Gas War de 2003 (Sánchez de Lozada). Rol de Evo Morales en la oposición actual. Qué empresas operan los campos tomados. Posición de países vecinos (Argentina, Brasil, Chile)." },
+    { label:"Veredicto", value:"ATACAR HOY — señal de demanda 1.9x confirmada, crisis escalando, VP nunca cubrió Bolivia, audiencia directa latina, comparativa Venezuela irresistible." }
   ],
   sources: [
-    { medium:"CNN", url:"https://www.cnn.com/2026/06/06/europe/ivanka-trump-kushner-luxury-resort-albania-intl", desc:"Investigación CNN del proyecto" },
-    { medium:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/6/5/why-the-kushners-plan-to-build-an-albanian-resort-has-sparked-protests", desc:"Contexto de las protestas" },
-    { medium:"Popular Information", url:"https://popular.info/p/kushners-albanian-resort-faces-corruption", desc:"Investigación anticorrupción SPAK" },
-    { medium:"Time", url:"https://time.com/article/2026/06/05/jared-kushner-backed-luxury-resort-albania-protests/", desc:"Cobertura internacional" }
+    { medium:"Democracy Now", url:"https://www.democracynow.org/2026/6/4/headlines/rural_communities_in_bolivia_seize_oil_field_calling_on_president_paz_to_resign", desc:"Comunidades toman campo petrolero" },
+    { medium:"NPR", url:"https://www.npr.org/2026/05/20/nx-s1-5828203/bolivia-capital-protests-crisis", desc:"La Paz bajo asedio por protestas" },
+    { medium:"UPI", url:"https://www.upi.com/Top_News/World-News/2026/06/03/latam-bolivia-regulate-states-of-emergency-bill/6701780513248/", desc:"Estado de excepción y renuncia de ministros" },
+    { medium:"Al Jazeera", url:"https://www.aljazeera.com/economy/2026/5/22/bolivia-in-crisis-social-unrest-demands-for-president-to-resign-escalate", desc:"Análisis de la crisis social" }
   ]
 },
 
-/* ═══ P5 — OPEP FARSA ═══ */
+/* ═══ P5 — CUBA BLOQUEO SECRETO (MINA DE VIEWS CONFIRMADA) ═══ */
 {
   number: "P5",
   golden: false,
-  title: "LA GRAN FARSA DE LA OPEP: votan subir producción pero producen 10 millones de barriles MENOS que hace 3 meses",
-  subtitle: "Cómo el cierre de Ormuz convirtió a la OPEP en un teatro de sombras — y por qué el petróleo no va a bajar",
-  flag: "sa",
+  title: "EL BLOQUEO SECRETO DE TRUMP A CUBA: cómo EEUU cortó TODO el petróleo a la isla sin declararle la guerra",
+  subtitle: "La mayor presión sobre Cuba desde la Crisis de los Misiles de 1962 — y nadie lo llama bloqueo",
+  flag: "cu",
   tags: [
-    { cls:"tag-red", text:"🔴 AYER" },
-    { cls:"tag-green", text:"✅ INVESTIGAR" },
-    { cls:"tag-blue", text:"ECONOMÍA / ENERGÍA" }
+    { cls:"tag-red", text:"🔴 MINA DE VIEWS" },
+    { cls:"tag-green", text:"✅ ATACAR" },
+    { cls:"tag-blue", text:"LATINOAMÉRICA / EEUU" }
   ],
-  potCls: "pot-medium",
-  potText: "POTENCIAL 400K-600K",
+  potCls: "pot-high",
+  potText: "POTENCIAL 500K-800K",
   chips: [
-    { cls:"chip-yellow", text:"🏆 Competencia: cubierto superficialmente" },
-    { cls:"chip-green", text:"⚡ Ventana óptima" },
-    { cls:"chip-blue", text:"🔒 Retención: media-fuerte" },
+    { cls:"chip-gold", text:"🏆 Competencia: MINA — 498K (1.65x media)" },
+    { cls:"chip-green", text:"⚡ Acelerando — crisis humanitaria" },
+    { cls:"chip-blue", text:"🔒 Retención: fuerte" },
     { cls:"chip-orange", text:"🎯 Ventaja VP: alta" }
   ],
-  banner: "https://commons.wikimedia.org/wiki/Special:FilePath/Vienna_OPEC_Headquarters_(9812748993).jpg?width=1200",
-  bannerAlt: "Sede de la OPEP en Viena — cuotas ficticias",
-  bannerFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_OPEC.svg?width=1200",
-  tesis: "La OPEP acaba de votar subir la producción en 188.000 barriles diarios. Suena a alivio para el mercado. Pero es pura ficción: la producción real del grupo ha colapsado de 42.77 millones de b/d en febrero a 33.19 millones en abril — una caída del 22%. El Estrecho de Ormuz sigue cerrado y Arabia Saudí no puede entregar su petróleo. Emiratos se fue. La OPEP vota aumentos que son físicamente imposibles de cumplir. Es un cártel que controla cuotas de un producto que no puede transportar. La mayor farsa del mercado energético global.",
+  banner: "https://commons.wikimedia.org/wiki/Special:FilePath/Havana_city_street_towards_Capital,_Cuba_-_panoramio.jpg?width=1200",
+  bannerAlt: "La Habana — una ciudad paralizada por apagones de 20+ horas diarias",
+  bannerFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Cuba.svg?width=1200",
+  tesis: "Desde febrero de 2026, Trump ha impuesto a Cuba el bloqueo energético más severo desde la Crisis de los Misiles de 1962 — pero sin llamarlo bloqueo. EEUU intercepta petroleros, bloquea sistemas de pago (Visa/Mastercard), y presiona a terceros países para que no vendan combustible a la isla. El resultado: apagones de más de 20 horas diarias, el 84% de los sistemas de bombeo de agua sin funcionar, hospitales colapsados, y Díaz-Canel forzado a negociar con Washington. La ONU advierte de crisis humanitaria. Pero la historia que nadie cuenta es que Trump quiere que Cuba colapse para forzar un cambio de régimen sin invasión — la 'presión máxima' que fracasó con Venezuela e Irán, aplicada ahora con esteroides. La SEÑAL DE DEMANDA es clara: un canal del nicho castellanoparlante publicó un video sobre Cuba/Trump que lleva 498K views — 1.65 veces su media habitual.",
 
   fields: [
-    { label:"La noticia", value:"OPEC+ acordó el 7 JUN subir cuotas 188.000 b/d desde julio. Es la 4ª subida consecutiva. Pero la producción REAL ha caído 22% (de 42.77M a 33.19M b/d) porque Ormuz sigue paralizado. Primera reunión sin EAU (que rompió con la OPEP en abril). Brent a $101." },
-    { label:"Segunda derivada", value:"La OPEP ha perdido su razón de ser. Su poder residía en controlar la oferta. Pero cuando un estrecho bloquea la exportación física del petróleo, las cuotas son irrelevantes. Arabia Saudí no puede abastecer a sus clientes europeos y asiáticos no porque no quiera producir más, sino porque no puede sacarlo del Golfo. El cártel se ha convertido en un club de debate." },
-    { label:"Gran pregunta", value:"¿Ha muerto la OPEP como mecanismo de control del mercado petrolero, o podrá resucitar cuando (si) se reabra Ormuz?" },
-    { label:"Señal de competencia", value:"CUBIERTO SUPERFICIALMENTE. Canales del nicho han mencionado OPEC+ como noticia. VP ya hizo 'Emiratos rompe la OPEP' (334K) — el tema de la descomposición del cártel funciona. No se ha visto un video profundo sobre la paradoja cuotas-vs-producción-real. El ángulo 'la OPEP es una farsa' es nuevo." },
-    { label:"Demanda en medios", value:"CNBC, Bloomberg, Reuters, TASS — cobertura técnica amplia pero sin el ángulo de la paradoja. WSJ probablemente tiene cobertura (pendiente verificar). El dato '42.77M → 33.19M' es explosivo y poco difundido." },
-    { label:"Velocidad de agenda", value:"VENTANA ÓPTIMA — reunión fue ayer. Los análisis post-reunión saldrán esta semana." },
-    { label:"Historial VP", value:"'Emiratos rompe OPEP: el golpe que puede hundir el cártel del petróleo' (334K, 29 ABR). El patrón 'traición/colapso de cartel + petróleo' funciona. Este sería la continuación natural." },
-    { label:"Motor viral", value:"MECANISMO: dinero (impacto en precios gasolina global) + paradoja (votan subir pero producen menos) + revelación de dato (42.77M → 33.19M) + consecuencia para el espectador (por qué la gasolina no va a bajar) + visualidad (gráficos de producción vs cuotas)." },
-    { label:"Retención narrativa", value:"MEDIA-FUERTE. Apertura: OPEP vota subir producción — los titulares celebran. Escalada: pero los datos reales dicen lo contrario (gráfico dramático). Giro: Ormuz está cerrado, el petróleo no puede salir, las cuotas son papel mojado. Cierre: ¿para qué sirve la OPEP si no controla nada?" },
-    { label:"Promesa cumplible", value:"El video promete revelar por qué las decisiones de la OPEP ya no importan y por qué el petróleo no va a bajar pronto. Demostrable: datos OPEC oficiales, Kpler (tráfico Ormuz), precios Brent, salida EAU." },
-    { label:"Ventaja VP", value:"ALTA. VP tiene experiencia en temas OPEP (334K anterior). El análisis de datos petroleros con gráficos y mapas es terreno VP. La combinación paradoja+datos+consecuencia global es la firma editorial del canal." },
-    { label:"Caso para 800K/1M", value:"Patrón probado: tema OPEP/petróleo = 334K. Paradoja nueva y más fuerte que la anterior. Dato revelador (22% caída). Riesgo: tema 'técnico' puede no atraer audiencia casual. Mitigar: titular centrado en consecuencia para el espectador ('por qué tu gasolina no va a bajar'). Para 800K: necesita conexión con impacto real en economía doméstica." },
-    { label:"Título mental", value:"La OPEP acaba de votar subir la producción de petróleo — pero produce 10 millones de barriles MENOS que hace 3 meses" },
-    { label:"Qué investigar más", value:"Datos de producción real por país (Arabia Saudí, Irak, Rusia). Rutas alternativas de exportación (pipeline vs mar). Impacto del cierre de Ormuz en precios domésticos europeos y asiáticos. Estrategia de Emiratos post-salida." },
-    { label:"Veredicto", value:"INVESTIGAR ESTA SEMANA — paradoja poderosa, datos contundentes, pero necesita desarrollo visual y conexión con impacto doméstico para maximizar alcance." }
+    { label:"La noticia", value:"Cuba enfrenta la peor crisis energética y humanitaria desde el Período Especial (años 90). Apagones de 20+ horas diarias. El 84% de los sistemas de bombeo de agua dependen de electricidad y están colapsados (ONU). Trump bloqueó petroleros, cortó sistemas de pago y presionó a proveedores. El 13 de marzo, Díaz-Canel confirmó públicamente que Cuba negocia con EEUU para aliviar el bloqueo energético. Trump envió un portaaviones al Caribe." },
+    { label:"Segunda derivada", value:"Trump no ha declarado un bloqueo naval formal — sería ilegal bajo derecho internacional. Pero ha logrado el mismo efecto por otros medios: sanciones secundarias que impiden que cualquier petrolero toque puerto cubano, bloqueo de Visa/Mastercard para cortar remesas, y presión diplomática sobre México y Venezuela para que no envíen crudo. Es el primer 'bloqueo invisible' de la historia moderna: la isla se queda sin combustible sin que haya un solo barco de guerra bloqueando sus puertos. El objetivo real no es negociar — es provocar un colapso interno que fuerce un cambio de régimen." },
+    { label:"Gran pregunta", value:"¿Está Trump aplicando a Cuba el primer bloqueo invisible de la historia — sin barcos de guerra pero con el mismo efecto que el de Kennedy en 1962 — para forzar la caída del régimen sin invasión?" },
+    { label:"Señal de competencia", value:"MINA DE VIEWS CONFIRMADA. Un canal castellanoparlante del nicho P1 publicó un video sobre Cuba y la máxima presión de Trump que lleva 498K views — 1.65 veces su media habitual (~300K). La señal de demanda es fuerte y clara. El tema Cuba/EEUU tiene audiencia hispana natural (millones de cubanos en el exilio + interés continental). Otros canales han tratado Cuba como noticia pero NINGUNO ha hecho la comparativa con el bloqueo de 1962 ni el análisis de la estrategia de 'bloqueo invisible'. HAY HUECO para la versión VP." },
+    { label:"Demanda en medios", value:"Wikipedia tiene artículo dedicado '2026 Cuban crisis'. Foreign Policy, CFR, The Global Angle tienen análisis profundos. Havana Times con entrevistas en terreno. La cobertura se intensifica a medida que la crisis humanitaria empeora. Medios premium (WSJ/FT) probablemente tienen cobertura — pendiente verificar." },
+    { label:"Velocidad de agenda", value:"ACELERANDO — la crisis humanitaria se profundiza semana a semana. El envío del portaaviones es una escalada reciente. Las negociaciones Díaz-Canel/Trump pueden producir noticias en cualquier momento. No ha tocado techo." },
+    { label:"Historial VP", value:"VP no tiene video reciente sobre Cuba. El tema Cuba/EEUU es un clásico geopolítico que la audiencia hispana conoce. El patrón 'EEUU presiona a país pequeño con consecuencias brutales' ha funcionado en VP con otros contextos. La comparativa con la Crisis de los Misiles de 1962 es un ángulo narrativo extraordinario." },
+    { label:"Motor viral", value:"MECANISMO: Trump (nombre reconocible #1) + Cuba (nombre reconocible para audiencia hispana) + crisis humanitaria (empatía + indignación) + comparativa histórica con 1962 (Kennedy/misiles nucleares) + portaaviones en el Caribe (imagen poderosa) + miedo ('¿puede pasar en otro país?') + dato brutal (20h sin luz, 84% sin agua). DEMANDA CONFIRMADA por señal de competencia 1.65x." },
+    { label:"Retención narrativa", value:"FUERTE. Apertura: Cuba, 2026 — 20 horas sin electricidad, hospitales sin generadores, la gente hierve agua de mar. Pero no hay ningún barco bloqueando el puerto. Escalada: cómo Trump logró estrangular a Cuba sin un solo tiro — sanciones petroleras, bloqueo de Visa/Mastercard, presión a México y Venezuela. Giro: es el mismo método que Kennedy usó en 1962, pero sin misiles nucleares de por medio. Cierre: ¿quiere Trump la caída del régimen, o solo el mejor acuerdo de su carrera?" },
+    { label:"Promesa cumplible", value:"El video promete revelar cómo EEUU ha impuesto a Cuba un bloqueo energético sin declarar la guerra, por qué es la mayor presión desde 1962, y qué quiere Trump realmente. Demostrable: datos de suministro petrolero (caída), apagones (documentados ONU), sanciones secundarias (Federal Register), comparativa con bloqueo naval 1962 (histórico), negociaciones Díaz-Canel (declaración pública 13 MAR)." },
+    { label:"Ventaja VP", value:"ALTA. VP puede combinar la historia de 1962 con la crisis actual de 2026 como nadie en español. Mapas del Caribe, rutas petroleras, cronología de sanciones, comparativa histórica visual — es exactamente el tipo de análisis profundo donde VP brilla." },
+    { label:"Caso para 800K/1M", value:"SEÑAL DE DEMANDA CLARA: 498K en un canal del nicho (1.65x su media). Cuba + Trump en el título = imán de clicks doble. Audiencia hispana natural (exilio cubano + interés continental). Comparativa con Crisis de los Misiles de 1962 = gancho histórico poderoso. VP nunca ha hecho este ángulo. Riesgo: que el público perciba Cuba como tema repetido o partidista. Mitigar: enfoque en la MECÁNICA del bloqueo invisible, no en la política. Para ganar: titular que conecte 1962 con 2026." },
+    { label:"Título mental", value:"Trump ha cortado TODO el petróleo a Cuba sin declararle la guerra — es el mayor bloqueo desde la Crisis de los Misiles de 1962" },
+    { label:"Qué investigar más", value:"Datos exactos de suministro petrolero a Cuba (antes vs después de febrero 2026). Lista de sanciones secundarias aplicadas. Qué petroleros fueron interceptados o desviados. Comparativa legal con bloqueo naval de 1962. Estado de las negociaciones Díaz-Canel/Trump. Posición de México, Venezuela, Rusia y China sobre la crisis. Datos humanitarios ONU." },
+    { label:"Veredicto", value:"ATACAR HOY — señal de demanda 1.65x confirmada, crisis humanitaria escalando, ángulo histórico 1962 único, audiencia hispana natural, VP nunca cubrió este enfoque." }
   ],
   sources: [
-    { medium:"CNBC", url:"https://www.cnbc.com/amp/2026/06/07/opec-set-for-fourth-oil-quota-hike-since-strait-of-hormuz-closure.html", desc:"Reunión y paradoja cuotas vs realidad" },
-    { medium:"Bloomberg", url:"https://www.bloomberg.com/graphics/2026-iran-war-hormuz-closure-oil-shock/", desc:"Impacto global del cierre de Ormuz" },
-    { medium:"Gulf News", url:"https://gulfnews.com/amp/story/world/mena/three-months-of-paralysis-strait-of-hormuz-remains-a-ghost-route-1.500560668", desc:"Datos de tráfico Ormuz" }
+    { medium:"Wikipedia", url:"https://en.wikipedia.org/wiki/2026_Cuban_crisis", desc:"Cronología completa de la crisis" },
+    { medium:"The Global Angle", url:"https://theglobalangle.com/why-does-trump-want-cuba-2026-crisis-analysis/", desc:"Análisis del bloqueo petrolero y estrategia Trump" },
+    { medium:"Havana Times", url:"https://havanatimes.org/interviews/cubas-dilemma-resistance-collapse-or-negotiation/", desc:"Dilema de Cuba: resistencia, colapso o negociación" },
+    { medium:"Fox News", url:"https://www.foxnews.com/world/pete-hegseth-warns-narco-terrorists-us-backs-bolivias-government-coup-warnings", desc:"Posición de EEUU en crisis latinoamericanas" }
   ]
 },
 
@@ -731,52 +732,53 @@ proposals: [
   ]
 },
 
-/* ═══ P7 — SUBMARINO INVISIBLE CHINO ═══ */
+/* ═══ P7 — CRISIS PSOE/ESPAÑA (MINA DE VIEWS CONFIRMADA) ═══ */
 {
   number: "P7",
   golden: false,
-  title: "EL SUBMARINO INVISIBLE DE CHINA: satélites revelan un sub nuclear de diseño revolucionario que EEUU no vio venir",
-  subtitle: "120 metros sin aleta, más rápido y más silencioso — cómo China desafía la última ventaja submarina de EEUU en el Pacífico",
-  flag: "cn",
+  title: "¿SE ACABÓ SÁNCHEZ? El PSOE pierde Andalucía por primera vez en democracia, Zapatero está imputado y el 74% pide elecciones",
+  subtitle: "La tormenta perfecta sobre el PSOE: derrota histórica + caso Zapatero + sin presupuestos + Papa en el Congreso",
+  flag: "es",
   tags: [
-    { cls:"tag-orange", text:"🟠 SEMANA" },
-    { cls:"tag-green", text:"✅ INVESTIGAR" },
-    { cls:"tag-blue", text:"ASIA-PACÍFICO / MILITAR" }
+    { cls:"tag-red", text:"🔴 MINA DE VIEWS" },
+    { cls:"tag-green", text:"✅ ATACAR" },
+    { cls:"tag-blue", text:"ESPAÑA / NACIONAL" }
   ],
-  potCls: "pot-medium",
-  potText: "POTENCIAL 350K-500K",
+  potCls: "pot-high",
+  potText: "POTENCIAL 500K-800K",
   chips: [
-    { cls:"chip-yellow", text:"🏆 Competencia: cubierto superficialmente" },
-    { cls:"chip-yellow", text:"⚡ Meseta" },
-    { cls:"chip-blue", text:"🔒 Retención: media-fuerte" },
+    { cls:"chip-gold", text:"🏆 Competencia: MINA — 397K+387K (1.3x media x2)" },
+    { cls:"chip-green", text:"⚡ Acelerando — convergencia" },
+    { cls:"chip-blue", text:"🔒 Retención: fuerte" },
     { cls:"chip-orange", text:"🎯 Ventaja VP: alta" }
   ],
-  banner: "https://commons.wikimedia.org/wiki/Special:FilePath/202309_Jiangnan_Shipyard_in_Changxing_Island.jpg?width=1200",
-  bannerAlt: "Astillero Jiangnan de Shanghái — cuna del submarino invisible",
-  bannerFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_People%27s_Republic_of_China.svg?width=1200",
-  tesis: "Imágenes satelitales revelan un submarino nuclear chino de 120 metros con un diseño sin precedentes: sin aleta convencional (sail-less), optimizado para velocidad y sigilo. Es el segundo diseño nuclear nuevo detectado en China en un año. El diseño sin aleta no se veía desde el USS Albacore experimental de 1953. China no solo construye más submarinos — está innovando en diseños que cambian las reglas del combate submarino. Si puede operar subs nucleares indetectables cerca de Taiwán, la ventaja submarina de EEUU — su última carta en el Pacífico — queda comprometida.",
+  banner: "https://commons.wikimedia.org/wiki/Special:FilePath/Tercer_Gobierno_de_Pedro_S%C3%A1nchez_(2023-11).jpg?width=1200",
+  bannerAlt: "Gobierno de Pedro Sánchez — en su peor crisis desde que llegó al poder",
+  bannerFallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Spain.svg?width=1200",
+  tesis: "El PSOE enfrenta la convergencia más destructiva de su historia reciente: acaba de perder Andalucía por primera vez en democracia (la comunidad que fundó el socialismo español), Zapatero está imputado por blanqueo y red criminal vinculada a Venezuela, el 74.3% de los españoles quiere elecciones anticipadas, Sánchez no tiene presupuestos, y el papa Leo XIV habla HOY ante el Parlamento justo cuando el partido que gobierna se desmorona. La SEÑAL DE DEMANDA es doble: un canal del nicho castellanoparlante publicó DOS videos consecutivos sobre la crisis del PSOE/Zapatero que acumulan 397K + 387K views (ambos 1.3x su media). No es un video viral — es un CLÚSTER de demanda sostenida. La audiencia española QUIERE este tema.",
 
   fields: [
-    { label:"La noticia", value:"Satélites fotografiaron el 1 JUN un submarino de clase desconocida en el astillero Jiangnan (Shanghái). 120 metros de eslora, timones en X, sin aleta convencional. Mayor que los Type 093 actuales. No hay designación oficial. China no ha hecho anuncio. Es el segundo sub nuclear nuevo en un año." },
-    { label:"Segunda derivada", value:"EEUU domina el combate submarino con 68 subs nucleares vs ~12 chinos. Pero la ventaja no es solo numérica — es tecnológica: los subs americanos son más silenciosos. Un sub sin aleta reduce drásticamente la huella acústica. Si China cierra la brecha tecnológica, EEUU pierde su ventaja más importante en un escenario de guerra por Taiwán." },
-    { label:"Gran pregunta", value:"¿Está China a punto de romper la supremacía submarina de EEUU en el Pacífico, la última ventaja militar americana que impedía una invasión de Taiwán?" },
-    { label:"Señal de competencia", value:"CUBIERTO SUPERFICIALMENTE en inglés. SCMP, Naval News, Asia Times tienen artículos técnicos. Canales militares internacionales (The Military Show, Good Times Bad Times) probablemente lo traten. En español: posible cobertura por Cosas Militares pero no verificada. El ángulo 'esto compromete la defensa de Taiwán' no se ha desarrollado." },
-    { label:"Demanda en medios", value:"SCMP, Naval News, Asia Times, Defense News, Marine Insight — cobertura especializada intensa. No es mainstream todavía pero puede serlo si se conecta con Taiwán." },
-    { label:"Velocidad de agenda", value:"MESETA — la noticia tiene una semana. No hay urgencia de última hora pero el tema es atemporal y el ángulo 'supremacía submarina' no se ha explorado." },
-    { label:"Historial VP", value:"VP hizo '10 millones de drones: plan Ucrania Oriente Medio' (312K) sobre tecnología militar. El patrón 'tecnología militar + escala' funciona. El ángulo submarino es nuevo." },
-    { label:"Motor viral", value:"MECANISMO: tecnología militar futurista + China como potencia emergente + secretismo (no anunciado oficialmente) + visualidad (imágenes satelitales, comparación con subs conocidos) + consecuencia para Taiwán + conexión con equilibrio de poder global." },
-    { label:"Retención narrativa", value:"MEDIA-FUERTE. Apertura: un satélite fotografía algo en Shanghái que no debería existir. Escalada: análisis del diseño, comparación con USS Albacore de 1953. Giro: esto no es un sub más — es el diseño que podría romper la supremacía submarina de EEUU. Cierre: ¿qué significa para Taiwán?" },
-    { label:"Promesa cumplible", value:"El video promete explicar por qué un submarino sin aleta puede cambiar el equilibrio militar en el Pacífico. Demostrable: imágenes satelitales, análisis de expertos (SCMP, Naval News), datos de flotas, doctrina submarina." },
-    { label:"Ventaja VP", value:"ALTA. VP combina análisis militar con geopolítica mejor que la mayoría. Mapas del Pacífico, rutas submarinas, zonas de exclusión — terreno VP." },
-    { label:"Caso para 800K/1M", value:"Patrón probado: tecnología militar = 312K base. Tema China = audiencia interesada. Imágenes satelitales secretas = gancho irresistible. Riesgo: tema muy técnico puede perder audiencia casual. Mitigar: titular centrado en consecuencia ('EEUU no lo vio venir'), no en especificaciones técnicas. Para 800K: necesita conexión clara con Taiwán y con la vida del espectador." },
-    { label:"Título mental", value:"Un satélite acaba de fotografiar el arma secreta de China: un submarino nuclear que EEUU no puede detectar" },
-    { label:"Qué investigar más", value:"Comparativa flota submarina EEUU vs China (números, capacidades, rutas). Doctrina submarina china actual (A2/AD). Impacto en escenario Taiwán. Análisis del USS Albacore y la doctrina de casco hidrodinámico. Reacción del Pentágono." },
-    { label:"Veredicto", value:"INVESTIGAR ESTA SEMANA — tema potente pero técnico. Necesita un guión que conecte el submarino con Taiwán para maximizar alcance." }
+    { label:"La noticia", value:"Convergencia de crisis PSOE en junio 2026: (1) Andalucía — el PSOE pierde por primera vez en democracia su 'granero electoral'. (2) Zapatero imputado el 19 MAY por blanqueo y red criminal vinculada a Plus Ultra/Venezuela. Declaró ante el juez Calama el 2 JUN. (3) 74.3% de españoles quieren elecciones anticipadas. (4) Sánchez sin presupuestos ni mayoría estable. (5) Papa Leo XIV HOY en el Parlamento en medio de la tormenta." },
+    { label:"Segunda derivada", value:"No es solo una crisis de gobierno — es una crisis de RÉGIMEN dentro del PSOE. Perder Andalucía equivale a que el PP pierda Castilla y León: destruye el mito fundacional. La imputación de Zapatero conecta al PSOE con la Venezuela de Maduro a través de una aerolínea rescatada con dinero público. Washington Examiner pide la extradición a EEUU. Y Sánchez no puede convocar elecciones porque las perdería, pero tampoco puede gobernar sin presupuestos. Está atrapado. La pregunta no es si caerá, sino cómo y cuándo." },
+    { label:"Gran pregunta", value:"¿Está el PSOE viviendo el principio del fin de su hegemonía en la izquierda española — una crisis que va más allá de Sánchez y que puede reconfigurar la política española durante una década?" },
+    { label:"Señal de competencia", value:"MINA DE VIEWS CONFIRMADA — CLÚSTER DOBLE. Un canal castellanoparlante del nicho P1 publicó DOS videos consecutivos sobre la crisis PSOE/Zapatero: uno lleva 397K views y otro 387K (ambos ~1.3x su media habitual de ~300K). Que DOS videos seguidos sobre el mismo ecosistema temático rindan por encima de la media indica demanda SOSTENIDA, no puntual. Otros canales de actualidad política española (P2) probablemente también estén cubriendo. VP ya tiene el tema Zapatero aprobado por el equipo (deadline 10 JUN). El ángulo VP sería MÁS AMPLIO que solo Zapatero: la convergencia de crisis como señal de fin de ciclo del PSOE." },
+    { label:"Demanda en medios", value:"The Olive Press, The Conservative, Washington Examiner (presión EEUU), Plataforma Media — cobertura internacional creciente. Medios españoles: El País, El Confidencial, El Mundo — tema dominante en España. El caso Zapatero/Venezuela tiene dimensión internacional por la conexión con Maduro y la presión de Washington." },
+    { label:"Velocidad de agenda", value:"ACELERANDO — convergencia de eventos: Zapatero imputado (19 MAY), declaración ante juez (2 JUN), Papa en Parlamento HOY (8 JUN), resultados electorales Andalucía recientes. Todo ocurre simultáneamente. La ventana es AHORA." },
+    { label:"Historial VP", value:"VP tiene el tema Zapatero APROBADO por el equipo con deadline 10 JUN. El Radar del 7 JUN ya incluía Zapatero como tema a vigilar. El ángulo original era solo Zapatero/Venezuela. La propuesta actual es MÁS AMBICIOSA: la convergencia de crisis del PSOE como análisis sistémico. VP ha hecho videos exitosos sobre política española cuando la dimensión es estructural, no coyuntural." },
+    { label:"Motor viral", value:"MECANISMO: España (audiencia directa y masiva de VP) + corrupción/escándalo (atrae clicks probado) + Sánchez/Zapatero (nombres reconocibles) + debate/polarización (genera engagement) + dato brutal (74.3% quiere elecciones) + consecuencia directa ('¿caerá el gobierno?') + papa en el Parlamento justo hoy (timing perfecto). DEMANDA CONFIRMADA por clúster doble 1.3x+1.3x." },
+    { label:"Retención narrativa", value:"FUERTE. Apertura: el Papa habla ante el Parlamento español — pero el partido que gobierna se cae a pedazos detrás de la fachada. Escalada: Andalucía perdida, Zapatero imputado por blanqueo de Venezuela, 74% quiere elecciones. Giro: no es una crisis de Sánchez — es una crisis del PSOE como proyecto. El socialismo español pierde su base electoral (Andalucía), su herencia moral (Zapatero imputado) y su legitimidad (sin presupuestos). Cierre: ¿puede el PSOE reinventarse o estamos ante el fin de una era?" },
+    { label:"Promesa cumplible", value:"El video promete explicar por qué la crisis del PSOE es más profunda de lo que parece y si puede sobrevivir. Demostrable: resultados Andalucía, imputación Zapatero (Audiencia Nacional), encuestas (74.3%), cronología Plus Ultra/Venezuela, datos electorales históricos del PSOE." },
+    { label:"Ventaja VP", value:"ALTA. VP tiene equipo en España, conoce el contexto, y puede hacer el análisis que los canales de opinión política no hacen: la dimensión ESTRUCTURAL e histórica, no el ruido diario. La conexión Zapatero-Venezuela-Maduro tiene dimensión geopolítica que solo VP puede desarrollar a fondo." },
+    { label:"Caso para 800K/1M", value:"SEÑAL DE DEMANDA DOBLE: 397K+387K en videos consecutivos del mismo canal (1.3x cada uno). España = audiencia masiva directa de VP. Tema polarizante = engagement alto. Convergencia de crisis simultáneas = narrativa irresistible. Zapatero ya aprobado por el equipo. Riesgo: que el público perciba sesgo político. Mitigar: enfoque ANALÍTICO y ESTRUCTURAL, no partidista. Para ganar: publicar antes del 10 JUN (deadline equipo) con el ángulo ampliado de 'fin de era del PSOE'." },
+    { label:"Título mental", value:"El PSOE acaba de perder Andalucía por primera vez, su expresidente está imputado por blanqueo de Venezuela, y el 74% de España quiere elecciones — ¿es el principio del fin?" },
+    { label:"Qué investigar más", value:"Resultados exactos de Andalucía (comparativa histórica desde 1982). Detalles del caso Plus Ultra: quién cobró, cuánto, conexión exacta con Venezuela. Estado del proceso judicial de Zapatero. Encuestas de intención de voto actualizadas. Precedentes históricos de crisis similares en partidos dominantes europeos (PSF en Francia, SPD en Alemania). Posibilidad real de elecciones anticipadas." },
+    { label:"Veredicto", value:"ATACAR HOY — clúster de demanda doble confirmado, tema aprobado por equipo (deadline 10 JUN), convergencia de crisis histórica, audiencia española masiva, ángulo estructural único de VP." }
   ],
   sources: [
-    { medium:"SCMP", url:"https://www.scmp.com/news/china/military/article/3355991/chinas-futuristic-stealth-sub-boost-hunt-and-kill-capabilities-experts", desc:"Análisis de capacidades" },
-    { medium:"Naval News", url:"https://www.navalnews.com/naval-news/2026/06/new-mystery-submarine-signals-chinas-rapid-undersea-expansion/", desc:"Análisis técnico" },
-    { medium:"Asia Times", url:"https://asiatimes.com/2026/06/chinas-sailless-submarine-takes-warfare-to-the-seabed/", desc:"Implicaciones estratégicas" }
+    { medium:"The Olive Press", url:"https://www.theolivepress.es/spain-news/2026/05/20/spains-zapatero-plus-ultra-corruption-scandal-exposes-venezuela-links/", desc:"Escándalo Zapatero/Plus Ultra" },
+    { medium:"The Conservative", url:"https://www.theconservative.online/zapateros-reckoning-how-spains-socialist-elder-statesman-became-maduros-man-in-madrid", desc:"Zapatero como 'hombre de Maduro'" },
+    { medium:"Washington Examiner", url:"https://www.washingtonexaminer.com/op-eds/4579365/spain-zapatero-exposed-maduro-fixer-trump-must-extradite/", desc:"Presión de EEUU para extradición" },
+    { medium:"Plataforma Media", url:"https://www.plataformamedia.com/2026/06/04/zapatero-scandal-hits-spain-government/", desc:"Impacto en el gobierno de Sánchez" }
   ]
 }
 
@@ -788,11 +790,11 @@ proposals: [
 ranking: [
   { tema:"Xi en Pyongyang", subtema:"China vs Rusia por Corea del Norte", viral:95, depth:95, timing:98, fit:95, verdCls:"verd-gold", verdText:"⭐ TEMA DORADO — Atacar hoy" },
   { tema:"Rusia sin gasolina", subtema:"Paradoja refinación + guerra desgaste", viral:92, depth:90, timing:95, fit:92, verdCls:"verd-green", verdText:"✅ Atacar hoy" },
+  { tema:"Bolivia en llamas", subtema:"MINA 570K (1.9x) · Insurrección semana 6", viral:90, depth:88, timing:92, fit:90, verdCls:"verd-green", verdText:"✅ Atacar hoy — MINA DE VIEWS" },
+  { tema:"Cuba bloqueo Trump", subtema:"MINA 498K (1.65x) · Bloqueo invisible", viral:88, depth:90, timing:90, fit:88, verdCls:"verd-green", verdText:"✅ Atacar hoy — MINA DE VIEWS" },
   { tema:"Armenia elige Europa", subtema:"Pashinyan gana vs Putin", viral:82, depth:88, timing:95, fit:88, verdCls:"verd-green", verdText:"✅ Atacar hoy" },
-  { tema:"Revolución Flamingo", subtema:"Kushner Albania corrupción Gen Z", viral:88, depth:85, timing:90, fit:82, verdCls:"verd-yellow", verdText:"🔍 Investigar esta semana" },
-  { tema:"Farsa OPEP", subtema:"Cuotas ficticias + Ormuz cerrado", viral:75, depth:88, timing:88, fit:85, verdCls:"verd-yellow", verdText:"🔍 Investigar esta semana" },
-  { tema:"India Gran Nicobar", subtema:"Megabase vs China en Malaca", viral:78, depth:90, timing:72, fit:85, verdCls:"verd-yellow", verdText:"🔍 Investigar esta semana" },
-  { tema:"Submarino invisible China", subtema:"Sub nuclear sin aleta 120m", viral:72, depth:85, timing:68, fit:80, verdCls:"verd-yellow", verdText:"🔍 Investigar esta semana" }
+  { tema:"Crisis PSOE/España", subtema:"MINA 397K+387K (1.3x x2) · Fin de era", viral:85, depth:85, timing:90, fit:88, verdCls:"verd-green", verdText:"✅ Atacar hoy — MINA DE VIEWS" },
+  { tema:"India Gran Nicobar", subtema:"Megabase vs China en Malaca", viral:78, depth:90, timing:72, fit:85, verdCls:"verd-yellow", verdText:"🔍 Investigar esta semana" }
 ],
 
 /* ════════════════════════════════════════════════════════════
@@ -840,6 +842,20 @@ vigilar: [
     trigger: "Si Pentágono emite declaración o si aparecen nuevas imágenes satelitales con más detalles del submarino.",
     sourceUrl: "https://www.navalnews.com/naval-news/2026/06/new-mystery-submarine-signals-chinas-rapid-undersea-expansion/",
     sourceText: "Naval News — expansión submarina"
+  },
+  {
+    title: "Revolución Flamingo Albania — Kushner/SPAK · día 9+",
+    body: "Protestas contra resort Kushner/Ivanka en Albania siguen creciendo. SPAK investiga corrupción. Conexión mafia italiana documentada. GAP TOTAL en español. Si escala a nivel institucional (caída gobierno Rama), se convierte en propuesta.",
+    trigger: "Si Rama dimite, si SPAK emite acusación formal, o si EEUU reacciona oficialmente al escándalo Kushner.",
+    sourceUrl: "https://www.cnn.com/2026/06/06/europe/ivanka-trump-kushner-luxury-resort-albania-intl",
+    sourceText: "CNN — Proyecto Kushner Albania"
+  },
+  {
+    title: "OPEP farsa — cuotas ficticias vs producción real",
+    body: "OPEP+ vota subir producción pero produce 22% menos que en febrero. Ormuz paralizado. Las cuotas son papel mojado. Si el Brent supera $110 o si hay escasez real de diésel en Europa, se convierte en propuesta urgente.",
+    trigger: "Si el Brent supera $110, si Europa reporta escasez de diésel, o si Ormuz se reabre (entonces el ángulo cambia completamente).",
+    sourceUrl: "https://www.cnbc.com/amp/2026/06/07/opec-set-for-fourth-oil-quota-hike-since-strait-of-hormuz-closure.html",
+    sourceText: "CNBC — paradoja OPEP"
   }
 ],
 
@@ -865,10 +881,10 @@ coveredVideos: [
 editorial_verification: {
   fuentes: "WSJ (pendiente acceso directo), FT, NYT, Bloomberg, Reuters, CNBC, NPR, SCMP, Al Jazeera, France 24, BBC, Moscow Times, Kyiv Post, Atlantic Council, ISW, UNCTAD, WEF, NATO.int — +20 fuentes consultadas",
   historial: "SI — verificados últimos 10 videos VP en youtubers.me. Colombia (340K), Eritrea (269K), Putin economía (355K), Pax Silica (141K), Netanyahu (152K), OTAN (203K), OPEP (334K), China-Irán (349K), Corea (388K), Drones (312K)",
-  competencia: "SI — verificado Solo Fonseca (últimos 10 videos con views). Bolivia 570K, Chile 522K, Cuba 498K, PSOE 397K, Zapatero 387K. En espera: Hipótesis de Poder, Cosas Militares, Memorias de Pez (no se pudo verificar rendimiento reciente específico). Señal: Zapatero (387K en Solo Fonseca) confirma demanda de tema España/Venezuela/corrupción",
+  competencia: "SI — verificado Solo Fonseca (últimos 10 videos con views). MINAS DE VIEWS DETECTADAS: Bolivia 570K (1.9x media), Cuba/Trump 498K (1.65x), PSOE 397K + Zapatero 387K (clúster 1.3x x2). Las 3 minas se convirtieron en propuestas P4/P5/P7. En espera: Hipótesis de Poder, Cosas Militares, Memorias de Pez (no se pudo verificar rendimiento reciente específico). MÉTODO: rendimiento relativo vs media del canal, no suscriptores absolutos",
   viralidad: "SI — ninguna afirmación de viralidad sin evidencia. Motor viral = mecanismo concreto en cada propuesta. Se indica 'pendiente de comprobar' donde corresponde. Se indica 'hipótesis de viralidad' donde aplica",
   imagenes: "PENDIENTE — ejecutar validate_images.js después de publicar data file",
-  descartados: "Irán genérico (saturado, descartado por tracker), Ucrania frente militar genérico (saturado), defensa europea genérico (ya tratado, necesita enfoque diferente), Papa como tema principal (insuficiente para 20-30 min VP), Hormuz genérico (descartado por tracker)"
+  descartados: "Irán genérico (saturado), Ucrania frente militar genérico (saturado), defensa europea genérico (ya tratado), Papa como tema principal (insuficiente para 20-30 min VP), Hormuz genérico (descartado por tracker). MOVIDOS A VIGILAR: Revolución Flamingo Albania (bueno pero sin señal de competencia verificada), OPEP farsa (paradoja fuerte pero sin señal de demanda confirmada), Submarino China (técnico, meseta, sin urgencia)"
 }
 
 };
