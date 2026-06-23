@@ -5,27 +5,42 @@
 ═══════════════════════════════════════════════════════════════ */
 window.RADAR_DATA = {
 
-date: "23 junio 2026",
-version: "v8.2 · Radar Editorial VP · Auditoría 9 pasos · 5+3",
+/* ── META ─────────────────────────────────────────────────── */
+meta: {
+  date: "2026-06-23",
+  dateLabel: "23 JUNIO 2026",
+  brisbane: "BAJO DEMANDA",
+  brent: "$77.50",
+  brentChange: "↕ Ormuz disputado (12 buques vs 35) · Roadmap 60 días Suiza · Crimea sin gasolina · Starmer dimite"
+},
 
 /* ═══ TICKER ═══ */
 ticker: [
-  "🔴 STARMER DIMITE — UK tendrá su 7º PM en 10 años · Andy Burnham favorito",
-  "🇮🇷 IRÁN-EEUU: 'roadmap' de 60 días acordado en Suiza · Vance negocia",
-  "🇨🇳 CHINA sanciona 10 empresas militares EEUU · Bloquea exportaciones duales",
-  "🇨🇴 COLOMBIA: De la Espriella (El Tigre) gana con 49.7% · 5º dominó Trump",
-  "⛽ CRIMEA SIN GASOLINA — Aksyonov suspende ventas · Ataques ucranianos",
-  "💀 ALAN GREENSPAN muere a los 100 · 4 presidentes · Arquitecto economía moderna",
-  "🌡️ EUROPA 45°C — Francia alerta roja · UK rompe récord junio · Blackouts Turín",
-  "📊 BRENT ~$77.5 — Ormuz disputado · 12 buques domingo vs 35 día anterior",
-  "🏆 VP HIT: Europa Inmigración 551K/5d · G2 Cubano 388K/6d"
+  { cls:"t-red",    text:"🔴 STARMER DIMITE — UK tendrá su <strong>7º PM en 10 años</strong> · Andy Burnham favorito · Reform UK presiona · BREAKING HOY" },
+  { cls:"t-gold",   text:"🇮🇷 IRÁN-EEUU: <strong>'roadmap' de 60 días</strong> acordado en Suiza · Vance + Ghalibaf · Célula desconflicción Ormuz · HOY MADRUGADA" },
+  { cls:"t-red",    text:"🇨🇳 CHINA <strong>sanciona 10 empresas militares EEUU</strong> · MP Materials + USA Rare Earth bloqueadas · Lockheed/Raytheon/General Dynamics afectadas · HOY" },
+  { cls:"t-orange", text:"🇨🇴 COLOMBIA: De la Espriella <strong>(El Tigre) GANA con 49.7%</strong> · 5º dominó Trump · VP publicó hoy 106K/8h · Candidato más votado historia Colombia" },
+  { cls:"t-red",    text:"⛽ CRIMEA <strong>SIN GASOLINA</strong> — Aksyonov suspende ventas civiles · Ataques a depósitos Krasnodar · Zelenskyy: 'sanciones de largo alcance'" },
+  { cls:"t-orange", text:"💀 ALAN GREENSPAN <strong>muere a los 100</strong> · 19 años como chairman Fed · 4 presidentes · Arquitecto economía burbujas · Parkinson" },
+  { cls:"t-red",    text:"🌡️ EUROPA <strong>45°C en junio</strong> — Francia alerta roja · UK rompe récord junio (38°C) · Blackouts Turín · 14-18°C por encima normal" },
+  { cls:"t-orange", text:"📊 BRENT <strong>~$77.5/barril</strong> — Ormuz disputado: 12 buques domingo vs 35 día anterior · Ni abierto ni cerrado" },
+  { cls:"t-gold",   text:"🏆 VP: Europa Inmigración <strong>551K/5d ⭐ HIT</strong> · G2 Cubano <strong>388K/6d ⭐ HIT</strong> · Colombia 106K/8h" }
 ],
 
 /* ═══ HERO ═══ */
 hero: [
-  { title:"DECISIÓN DEL DÍA", body:"Crimea sin gasolina: convergencia máxima (698K/3d en competencia). Ucrania descubrió cómo ganar sin avanzar. ¿Atacamos con ángulo logístico?", cls:"hero-gold" },
-  { title:"OPORTUNIDAD EXCLUSIVA", body:"China acaba de sancionar a MP Materials y USA Rare Earth — las empresas que extraen las tierras raras que EEUU necesita para sus armas. Nadie en español lo ha conectado.", cls:"hero-blue" },
-  { title:"INDICADORES CLAVE", body:"VP media semanal: 225K · Europa Inmigración 551K (HIT) · G2 Cubano 388K · Solo Fonseca 'Moscú Pánico' 698K/3d = 3.5x · TLDR 'Trump Deal' 464K/3d = 4.64x", cls:"hero-dark" }
+  {
+    label: "⚡ Tema dorado del día",
+    content: "<span class='hl'>CRIMEA SIN GASOLINA — LA GUERRA QUE SE GANA SIN AVANZAR:</span> Aksyonov suspende ventas de combustible a civiles (21 JUN). Ucrania destruye depósitos con drones de $50K. <span class='hl-red'>CONVERGENCIA TRIPLE: canal nicho 698K/3d (3.5x) + canal internacional 1.5M/9d + VP propio 459K.</span> Ángulo NUEVO: guerra logística, no frente."
+  },
+  {
+    label: "🎯 Oportunidad exclusiva",
+    content: "<span class='hl'>CHINA SANCIONA TIERRAS RARAS DEFENSA EEUU (HOY):</span> MP Materials y USA Rare Earth bloqueadas — las únicas que extraen tierras raras en suelo americano. <span class='hl-red'>Sin tierras raras no hay F-35, no hay misiles guiados, no hay defensa antimisiles.</span> NADIE en español lo ha conectado. Gap total."
+  },
+  {
+    label: "📊 Señales de competencia (15+ canales)",
+    content: "Moscú pánico <span class='hl-red'>698K/3d (3.5x)</span> · Trump deal <span class='hl-red'>464K/3d (4.64x)</span> · US-Israel divorce <span class='hl-red'>290K/4d (2.9x)</span> · UK Marc Vidal <span class='hl-red'>260K/3d (2.6x)</span> · Derecha Latam <span class='hl-red'>106K/5h</span> · VP Europa Inmigración <span class='hl'>551K ⭐ HIT</span>"
+  }
 ],
 
 /* ════════════════════════════════════════════════════════════
