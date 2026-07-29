@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<title>Radar Editorial VP · 29 JUL 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="ticker-wrap" id="ticker-wrap"></div>
+<div class="hero" id="hero"></div>
+
+<!-- SECCION 1: PROPUESTAS (sin noticias — actualidad integrada en cada propuesta) -->
+<div class="section alt">
+  <div class="section-header"><span class="section-icon">🎯</span><div><div class="section-title">TEMAS PROPUESTOS PARA VIDEOS</div><div class="section-subtitle">8 propuestas · 5 competencia + 3 ventana · Auditoría de Oportunidad v8.3 · Actualidad integrada</div></div></div>
+  <div class="proposals" id="proposals"></div>
+</div>
+
+<!-- SECCION 2: TABLA COMPARATIVA -->
+<div class="section">
+  <div class="section-header"><span class="section-icon">📊</span><div><div class="section-title">TABLA COMPARATIVA</div><div class="section-subtitle">Prioridad editorial · Scroll horizontal en movil</div></div></div>
+  <div class="ranking-wrap" id="ranking-wrap"></div>
+</div>
+
+<!-- SECCION 3: ASIGNACION SEMANAL -->
+<div class="section alt">
+  <div class="section-header"><span class="section-icon">📋</span><div><div class="section-title">ASIGNACION SEMANAL DE TEMAS</div><div class="section-subtitle">Quien trabaja cada tema · Asignate directamente</div></div></div>
+  <div id="assignment-table"></div>
+</div>
+
+<!-- SECCION 4: PROPUESTAS DEL EQUIPO VPK -->
+<div class="section">
+  <div class="section-header"><span class="section-icon">💡</span><div><div class="section-title">PROPUESTAS DEL EQUIPO VPK</div><div class="section-subtitle">Temas propuestos por los guionistas · Mesa editorial colaborativa</div></div></div>
+  <div id="team-proposals-grid"></div>
+  <div style="margin-top: 20px;" id="proposal-form"></div>
+</div>
+
+<!-- SECCION 5: TEMAS A VIGILAR -->
+<div class="section alt">
+  <div class="section-header"><span class="section-icon">👀</span><div><div class="section-title">TEMAS A VIGILAR</div><div class="section-subtitle">No merecen video aun — pero podrian explotar</div></div></div>
+  <div class="watch-grid" id="vigilar-grid"></div>
+</div>
+
+<!-- SECCION 6: VIDEOS VP PUBLICADOS (al final, antes del footer) -->
+<div class="covered-bar" id="covered-bar"></div>
+
+<!-- NOTICIAS: sección oculta pero necesaria para dashboard.js -->
+<div class="section" id="news-section" style="display:none;">
+  <div class="news-grid" id="news-grid"></div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-left">📡 VP Radar Editorial · <span id="footer-date"></span></div>
+  <div class="footer-right" id="footer-version"></div>
+</footer>
+
+<script src="data_2026-07-29.js"></script>
+<script src="team_proposals.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>
