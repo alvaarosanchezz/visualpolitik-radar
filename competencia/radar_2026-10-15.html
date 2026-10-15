@@ -1,0 +1,667 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><meta name="robots" content="noindex, nofollow"><title>Radar de competencia VP · 15 OCTUBRE 2026</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"><style>/* ══════════════════════════════════════════════════════════════
+   VP RADAR DASHBOARD — styles.css v5.0
+   Mobile-first · Inter + JetBrains Mono · Dark VP branding
+══════════════════════════════════════════════════════════════ */
+
+:root {
+  --navy:   #0d1620;
+  --navy-l: #111e2e;
+  --navy-c: #152233;
+  --navy-b: #1a2a3f;
+  --red:    #e63946;
+  --gold:   #f1c40f;
+  --blue:   #457b9d;
+  --green:  #27ae60;
+  --orange: #f39c12;
+  --text:   #d8e4f0;
+  --muted:  #8aa4be;
+  --border: rgba(69,123,157,.22);
+  --r: 10px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--navy);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--blue); text-decoration: none; }
+a:hover, a:focus { color: var(--gold); text-decoration: underline; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+/* ── TICKER ─────────────────────────────────────────────────── */
+.ticker-wrap {
+  background: #070e17;
+  border-bottom: 2px solid var(--red);
+  overflow: hidden;
+  padding: 7px 0;
+}
+.ticker-inner {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: scroll-ticker 90s linear infinite;
+}
+.ticker-inner:hover { animation-play-state: paused; }
+.ticker-item {
+  display: inline-block;
+  padding: 0 28px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+}
+.t-red    { color: var(--red); }
+.t-gold   { color: var(--gold); }
+.t-green  { color: var(--green); }
+.t-blue   { color: var(--blue); }
+.t-orange { color: var(--orange); }
+@keyframes scroll-ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── HERO ───────────────────────────────────────────────────── */
+.hero {
+  background: linear-gradient(135deg, #0a1520, #152233 60%, #0d1f35);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 16px 16px;
+}
+.hero-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+.vp-logo {
+  background: var(--red);
+  color: #fff;
+  font-weight: 900;
+  font-size: 12px;
+  padding: 4px 9px;
+  letter-spacing: 1px;
+  border-radius: 3px;
+}
+.live-badge {
+  background: var(--red);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 20px;
+  animation: pulse 2s infinite;
+  letter-spacing: 1px;
+}
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:.5; } }
+.hero-date { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); }
+.hero-title { font-size: 22px; font-weight: 900; color: #fff; letter-spacing: -.5px; line-height: 1.15; }
+.hero-title span { color: var(--red); }
+.hero-subtitle { font-size: 12px; color: var(--muted); margin-top: 5px; }
+.hero-grid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 14px; }
+.hero-box { background: rgba(21,34,51,.7); border: 1px solid var(--border); border-radius: 8px; padding: 11px 13px; }
+.hero-box-label { font-size: 10px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.hero-box-content { font-size: 13px; color: var(--text); line-height: 1.5; }
+.hl     { color: var(--gold); font-weight: 700; }
+.hl-red { color: var(--red); font-weight: 700; }
+
+/* ── COVERED BAR (videos VP — at bottom) ───────────────────── */
+.covered-bar { background: #0a1520; border-top: 2px solid var(--border); padding: 20px 16px; }
+.covered-section-header { display: flex; align-items: center; gap: 11px; margin-bottom: 14px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+.covered-section-icon { font-size: 20px; }
+.covered-section-title { font-size: 16px; font-weight: 800; color: #fff; }
+.covered-section-subtitle { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.covered-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.ctag { background: rgba(230,57,70,.12); border: 1px solid rgba(230,57,70,.3); color: #ff8a8a; font-size: 11px; padding: 4px 10px; border-radius: 6px; font-family: 'JetBrains Mono', monospace; line-height: 1.4; }
+
+/* ── TAGS ───────────────────────────────────────────────────── */
+.tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 3px; letter-spacing: .5px; text-transform: uppercase; white-space: nowrap; }
+.tag-red    { background: rgba(230,57,70,.2);  color: var(--red);    border: 1px solid rgba(230,57,70,.4); }
+.tag-orange { background: rgba(243,156,18,.15); color: var(--orange); border: 1px solid rgba(243,156,18,.35); }
+.tag-yellow { background: rgba(241,196,15,.1);  color: var(--gold);   border: 1px solid rgba(241,196,15,.3); }
+.tag-blue   { background: rgba(69,123,157,.2);  color: var(--blue);   border: 1px solid rgba(69,123,157,.4); }
+.tag-green  { background: rgba(39,174,96,.15);  color: var(--green);  border: 1px solid rgba(39,174,96,.3); }
+
+/* ── SECTIONS ───────────────────────────────────────────────── */
+.section { padding: 20px 16px; }
+.section.alt { background: var(--navy-l); }
+.section-header { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; border-bottom: 2px solid var(--border); padding-bottom: 11px; }
+.section-icon  { font-size: 20px; }
+.section-title { font-size: 18px; font-weight: 800; color: #fff; }
+.section-subtitle { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+/* ── NEWS GRID ──────────────────────────────────────────────── */
+.news-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+
+/* ── NEWS CARD ──────────────────────────────────────────────── */
+.news-card {
+  background: var(--navy-c);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  overflow: hidden;
+  transition: border-color .2s, box-shadow .2s;
+}
+.news-card:hover { border-color: rgba(69,123,157,.5); box-shadow: 0 4px 20px rgba(0,0,0,.3); }
+.news-card-img-wrap { position: relative; overflow: hidden; }
+.news-card-img { width: 100%; height: 180px; object-fit: cover; background: var(--navy-b); display: block; }
+.img-credit {
+  position: absolute;
+  bottom: 0; right: 0;
+  background: rgba(7,14,23,.75);
+  color: var(--muted);
+  font-size: 9px;
+  padding: 2px 5px;
+  pointer-events: none;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.news-card-body { padding: 12px 13px; }
+.news-card-header { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; flex-wrap: wrap; }
+.news-card-title { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 7px; line-height: 1.35; }
+.news-data { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 7px; }
+.data-pill { background: rgba(69,123,157,.12); border: 1px solid var(--border); font-size: 10px; font-family: 'JetBrains Mono', monospace; padding: 2px 6px; border-radius: 4px; color: var(--text); }
+.why-box { background: rgba(241,196,15,.06); border-left: 3px solid var(--gold); padding: 6px 9px; font-size: 11px; color: var(--text); border-radius: 0 4px 4px 0; margin-bottom: 7px; line-height: 1.55; }
+.why-box strong { color: var(--gold); }
+.viral-bar { height: 4px; background: rgba(255,255,255,.08); border-radius: 2px; margin-bottom: 5px; overflow: hidden; }
+.viral-fill { height: 100%; border-radius: 2px; }
+.viral-high { background: linear-gradient(90deg, var(--red), #ff6b6b); }
+.viral-med  { background: linear-gradient(90deg, var(--orange), #ffd89b); }
+.viral-low  { background: linear-gradient(90deg, var(--blue), #74b9ff); }
+.viral-label { font-size: 10px; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
+
+/* ── EXPAND (details/summary accordion) ────────────────────── */
+details.news-details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 13px;
+  background: rgba(69,123,157,.07);
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--blue);
+  font-weight: 600;
+  letter-spacing: .3px;
+  cursor: pointer;
+  min-height: 40px;
+  list-style: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background .15s;
+}
+details.news-details summary::-webkit-details-marker { display: none; }
+details.news-details summary:hover { background: rgba(69,123,157,.14); color: var(--gold); }
+details.news-details summary .expand-icon { font-size: 10px; transition: transform .28s; flex-shrink: 0; margin-left: 8px; }
+details.news-details[open] summary .expand-icon { transform: rotate(180deg); }
+details.news-details[open] .detail-inner { animation: fade-in .3s ease; }
+@keyframes fade-in { from { opacity:0; transform:translateY(-6px); } to { opacity:1; transform:translateY(0); } }
+
+/* ── DETAIL INNER ───────────────────────────────────────────── */
+.detail-inner { padding: 14px 13px; border-top: 1px solid var(--border); background: rgba(8,14,24,.5); display: flex; flex-direction: column; gap: 11px; }
+.detail-summary { font-size: 13px; color: var(--text); line-height: 1.65; }
+.detail-block { border-radius: 6px; padding: 10px 12px; font-size: 12px; line-height: 1.6; }
+.detail-block .block-label { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px; font-weight: 700; }
+.detail-block p { margin-top: 3px; }
+.detail-context { background: rgba(69,123,157,.08); border: 1px solid rgba(69,123,157,.2); }
+.detail-context .block-label { color: var(--blue); }
+.detail-context p { color: var(--muted); }
+.detail-vp { background: rgba(241,196,15,.05); border: 1px solid rgba(241,196,15,.18); }
+.detail-vp .block-label { color: var(--gold); }
+.detail-vp p { color: var(--text); }
+.sources-label { font-size: 10px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .7px; }
+.source-item { background: var(--navy-b); border: 1px solid var(--border); border-radius: 6px; padding: 9px 11px; }
+.source-item + .source-item { margin-top: 6px; }
+.source-link { font-size: 13px; font-weight: 600; color: var(--blue); line-height: 1.4; display: block; margin-bottom: 4px; word-break: break-word; }
+.source-link:hover { color: var(--gold); }
+.source-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 3px; }
+.source-medium { font-size: 10px; font-weight: 700; color: var(--orange); font-family: 'JetBrains Mono', monospace; }
+.source-date   { font-size: 10px; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
+.source-desc   { font-size: 11px; color: var(--muted); font-style: italic; }
+.verif-note { font-size: 10px; color: rgba(39,174,96,.8); border-left: 2px solid rgba(39,174,96,.4); padding-left: 8px; line-height: 1.5; }
+
+/* ── PROPOSALS ──────────────────────────────────────────────── */
+.proposals { display: flex; flex-direction: column; gap: 22px; }
+.proposal { background: var(--navy-c); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.proposal.golden { border-color: var(--gold); box-shadow: 0 0 28px rgba(241,196,15,.1); }
+.proposal.golden .prop-header { background: linear-gradient(135deg, rgba(241,196,15,.13), rgba(241,196,15,.03)); }
+.prop-banner { width: 100%; height: 160px; object-fit: cover; background: var(--navy-b); }
+.prop-header { padding: 13px 14px; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.prop-header-left { flex: 1; min-width: 0; }
+.prop-number { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); margin-bottom: 3px; }
+.prop-region { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; margin-bottom: 5px; }
+.prop-title { font-size: 15px; font-weight: 800; color: #fff; line-height: 1.3; }
+.golden .prop-title { color: var(--gold); }
+.pot-badge { padding: 4px 9px; border-radius: 6px; font-size: 11px; font-weight: 700; letter-spacing: .5px; white-space: nowrap; flex-shrink: 0; }
+.pot-explosive { background: rgba(230,57,70,.25); color: var(--red);    border: 2px solid var(--red); }
+.pot-veryhigh  { background: rgba(243,156,18,.2);  color: var(--orange); border: 1px solid var(--orange); }
+.pot-high      { background: rgba(241,196,15,.15); color: var(--gold);   border: 1px solid var(--gold); }
+.pot-medium    { background: rgba(243,156,18,.12); color: var(--orange); border: 1px solid rgba(243,156,18,.4); }
+.pot-low       { background: rgba(127,140,141,.12); color: var(--muted);  border: 1px solid rgba(127,140,141,.3); }
+.signal-row { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 7px; }
+.chip { font-size: 10px; padding: 2px 6px; border-radius: 12px; font-weight: 600; font-family: 'JetBrains Mono', monospace; white-space: nowrap; }
+.chip-vhigh { background: rgba(230,57,70,.2);  color: #ff6b6b;       border: 1px solid rgba(230,57,70,.4); }
+.chip-vmed  { background: rgba(243,156,18,.18); color: var(--orange); border: 1px solid rgba(243,156,18,.35); }
+.chip-gfull { background: rgba(39,174,96,.18);  color: #2ecc71;       border: 1px solid rgba(39,174,96,.35); }
+.chip-gpart { background: rgba(241,196,15,.13); color: var(--gold);   border: 1px solid rgba(241,196,15,.3); }
+.chip-vpok  { background: rgba(69,123,157,.18); color: var(--blue);   border: 1px solid rgba(69,123,157,.35); }
+.chip-vpwarn{ background: rgba(230,57,70,.13);  color: #ff8a8a;       border: 1px solid rgba(230,57,70,.28); }
+.chip-gold  { background: rgba(241,196,15,.18); color: var(--gold);   border: 1px solid rgba(241,196,15,.4); }
+.chip-green { background: rgba(39,174,96,.18);  color: #2ecc71;       border: 1px solid rgba(39,174,96,.35); }
+.chip-blue  { background: rgba(69,123,157,.18); color: var(--blue);   border: 1px solid rgba(69,123,157,.35); }
+.chip-orange{ background: rgba(243,156,18,.18); color: var(--orange); border: 1px solid rgba(243,156,18,.35); }
+.chip-yellow{ background: rgba(241,196,15,.12); color: #f1c40f;       border: 1px solid rgba(241,196,15,.3); }
+.chip-red   { background: rgba(230,57,70,.18);  color: #ff6b6b;       border: 1px solid rgba(230,57,70,.35); }
+.prop-body { padding: 14px; display: flex; flex-direction: column; gap: 12px; }
+.pfield { display: flex; flex-direction: column; gap: 2px; }
+.pfield-label { font-size: 10px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .7px; }
+.pfield-value { font-size: 13px; color: var(--text); line-height: 1.6; }
+.pfield-value a { color: var(--blue); }
+.pfield-value a:hover { color: var(--gold); }
+.tesis-box { background: rgba(241,196,15,.07); border-left: 3px solid var(--gold); padding: 10px 13px; border-radius: 0 6px 6px 0; font-size: 13px; font-style: italic; color: var(--text); line-height: 1.65; }
+.covered-alert { background: rgba(230,57,70,.1); border: 1px solid rgba(230,57,70,.3); border-radius: 6px; padding: 8px 11px; font-size: 11px; color: #ff8a8a; line-height: 1.5; }
+.prop-divider { border: none; border-top: 1px solid var(--border); margin: 2px 0; }
+
+/* ── PROPOSAL v8.1 — Visual redesign ────────────────────────── */
+.prop-veredicto-bar { padding: 10px 16px; font-size: 13px; font-weight: 700; letter-spacing: .3px; background: rgba(39,174,96,.1); border-bottom: 1px solid rgba(39,174,96,.25); color: #2ecc71; }
+.prop-veredicto-bar.veredicto-gold { background: linear-gradient(90deg, rgba(241,196,15,.12), rgba(241,196,15,.04)); border-bottom-color: rgba(241,196,15,.3); color: var(--gold); }
+
+.prop-titulo-mental { font-size: 14px; font-weight: 700; color: var(--gold); line-height: 1.4; padding: 8px 0 4px; }
+
+.prop-gran-pregunta { background: rgba(69,123,157,.08); border: 1px solid rgba(69,123,157,.2); border-radius: 8px; padding: 10px 13px; font-size: 13px; color: var(--text); line-height: 1.55; font-weight: 500; }
+.gp-icon { font-size: 14px; margin-right: 3px; }
+
+.prop-highlight-box { border-radius: 8px; padding: 12px 14px; margin: 4px 0; }
+.highlight-header { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .8px; margin-bottom: 6px; display: flex; align-items: center; gap: 5px; }
+.highlight-icon { font-size: 13px; }
+.highlight-body { font-size: 13px; color: var(--text); line-height: 1.6; }
+
+.highlight-competencia { background: rgba(230,57,70,.06); border: 1px solid rgba(230,57,70,.2); border-left: 3px solid var(--red); }
+.highlight-competencia .highlight-header { color: var(--red); }
+
+.highlight-caso { background: rgba(241,196,15,.06); border: 1px solid rgba(241,196,15,.2); border-left: 3px solid var(--gold); }
+.highlight-caso .highlight-header { color: var(--gold); }
+
+.prop-eval-details { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.prop-eval-details summary { padding: 10px 14px; font-size: 12px; font-weight: 700; color: var(--muted); cursor: pointer; background: rgba(255,255,255,.02); display: flex; align-items: center; justify-content: space-between; user-select: none; }
+.prop-eval-details summary:hover { color: var(--text); background: rgba(255,255,255,.04); }
+.prop-eval-details[open] summary .expand-icon { transform: rotate(180deg); }
+.prop-eval-inner { padding: 14px; display: flex; flex-direction: column; gap: 12px; border-top: 1px solid var(--border); }
+
+.prop-investigate { background: rgba(69,123,157,.06); border: 1px solid rgba(69,123,157,.15); border-radius: 8px; padding: 10px 13px; }
+
+.rsource { background: rgba(69,123,157,.06); border: 1px solid rgba(69,123,157,.18); border-radius: 6px; padding: 9px 11px; }
+.rsource + .rsource { margin-top: 6px; }
+.rsource-link { font-size: 12px; font-weight: 600; color: var(--blue); word-break: break-word; display: block; margin-bottom: 3px; }
+.rsource-link:hover { color: var(--gold); }
+.rsource-meta { font-size: 10px; font-family: 'JetBrains Mono', monospace; }
+.rsource-medium { color: var(--orange); }
+.rsource-date   { color: var(--muted); margin-left: 6px; }
+.rsource-desc   { font-size: 11px; color: var(--muted); font-style: italic; margin-top: 3px; }
+
+/* ── RANKING TABLE ──────────────────────────────────────────── */
+.ranking-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table.ranking { width: 100%; border-collapse: collapse; min-width: 580px; }
+table.ranking th { background: var(--navy-b); color: var(--muted); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .7px; padding: 9px 10px; text-align: left; border-bottom: 2px solid var(--border); white-space: nowrap; }
+table.ranking td { padding: 10px 10px; border-bottom: 1px solid var(--border); vertical-align: middle; font-size: 12px; }
+table.ranking tr:hover td { background: rgba(69,123,157,.06); }
+.bar-cell  { display: flex; align-items: center; gap: 7px; }
+.bar-f     { height: 7px; border-radius: 4px; }
+.verd-y { background: rgba(39,174,96,.2);  color: var(--green);  border: 1px solid rgba(39,174,96,.4);  padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+.verd-w { background: rgba(241,196,15,.15); color: var(--gold);   border: 1px solid rgba(241,196,15,.3); padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+.verd-n { background: rgba(230,57,70,.13); color: var(--red);    border: 1px solid rgba(230,57,70,.3);  padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+
+/* ── VIGILAR ────────────────────────────────────────────────── */
+.watch-grid { display: grid; grid-template-columns: 1fr; gap: 11px; }
+.watch-card { background: var(--navy-c); border: 1px solid var(--border); border-left: 3px solid var(--blue); border-radius: 8px; padding: 13px 14px; }
+.watch-card-title { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 5px; }
+.watch-card-body  { font-size: 12px; color: var(--muted); line-height: 1.55; }
+.watch-trigger    { margin-top: 7px; font-size: 11px; color: var(--gold); }
+.watch-source     { margin-top: 5px; font-size: 11px; }
+
+/* ── ASSIGNMENT ROW (inside proposals) ─────────────────────── */
+.assign-row {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  padding: 8px 14px;
+  background: rgba(69,123,157,.05);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.assign-status {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 10px; font-weight: 700; padding: 3px 8px;
+  border-radius: 12px; white-space: nowrap;
+  font-family: 'JetBrains Mono', monospace;
+}
+.st-libre       { background: rgba(138,164,190,.15); color: var(--muted);  border: 1px solid rgba(138,164,190,.3); }
+.st-interesante { background: rgba(241,196,15,.12);  color: var(--gold);   border: 1px solid rgba(241,196,15,.3); }
+.st-reservado   { background: rgba(243,156,18,.15);  color: var(--orange); border: 1px solid rgba(243,156,18,.35); }
+.st-invest      { background: rgba(69,123,157,.18);  color: var(--blue);   border: 1px solid rgba(69,123,157,.35); }
+.st-guion       { background: rgba(39,174,96,.15);   color: var(--green);  border: 1px solid rgba(39,174,96,.35); }
+.st-revision    { background: rgba(155,89,182,.15);  color: #bb86fc;       border: 1px solid rgba(155,89,182,.35); }
+.st-descartado  { background: rgba(230,57,70,.1);    color: #ff8a8a;       border: 1px solid rgba(230,57,70,.25); }
+.assign-who   { font-size: 11px; color: var(--text); font-weight: 600; }
+.assign-date  { font-size: 10px; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
+.assign-notes { font-size: 10px; color: var(--muted); font-style: italic; }
+.btn-interest {
+  margin-left: auto;
+  font-size: 10px; font-weight: 600;
+  padding: 4px 10px; border-radius: 12px;
+  background: rgba(241,196,15,.08); border: 1px solid rgba(241,196,15,.25);
+  color: var(--gold); cursor: pointer;
+  transition: all .2s;
+}
+.btn-interest:hover { background: rgba(241,196,15,.18); border-color: var(--gold); }
+.btn-interest.interested {
+  background: rgba(39,174,96,.15); border-color: rgba(39,174,96,.4);
+  color: var(--green);
+}
+
+/* ── ASSIGNMENT TABLE (section) ────────────────────────────── */
+.assign-how {
+  background: rgba(69,123,157,.06); border: 1px solid var(--border);
+  border-radius: 8px; padding: 14px 16px; margin-bottom: 16px;
+}
+.assign-how-title { font-size: 12px; font-weight: 700; color: var(--gold); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .5px; }
+.assign-how-text  { font-size: 12px; color: var(--muted); line-height: 1.7; }
+.assign-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table.assign-table { width: 100%; border-collapse: collapse; min-width: 600px; }
+table.assign-table th {
+  background: var(--navy-b); color: var(--muted);
+  font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .7px;
+  padding: 9px 10px; text-align: left;
+  border-bottom: 2px solid var(--border); white-space: nowrap;
+}
+table.assign-table td { padding: 10px 10px; border-bottom: 1px solid var(--border); vertical-align: middle; font-size: 12px; }
+table.assign-table tr:hover td { background: rgba(69,123,157,.06); }
+.row-libre td { opacity: .7; }
+.assign-golden-tag { background: var(--gold); color: #000; font-size: 8px; font-weight: 800; padding: 1px 5px; border-radius: 3px; margin-left: 4px; vertical-align: middle; }
+.assign-tema-cell { max-width: 280px; }
+.assign-tema-title { font-size: 12px; font-weight: 600; color: #fff; line-height: 1.3; }
+.assign-tema-pot { margin-top: 3px; }
+.pot-badge-sm { padding: 2px 6px; border-radius: 4px; font-size: 9px; font-weight: 700; }
+.assign-empty { color: rgba(138,164,190,.4); }
+.assign-legend { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; padding: 10px 0; }
+.legend-item { font-size: 10px; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
+
+/* ── TEAM PROPOSALS ────────────────────────────────────────── */
+.team-empty { text-align: center; padding: 30px 16px; }
+.team-empty-icon  { font-size: 32px; margin-bottom: 8px; }
+.team-empty-title { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.team-empty-text  { font-size: 12px; color: var(--muted); }
+.team-proposal {
+  background: var(--navy-c); border: 1px solid var(--border);
+  border-left: 3px solid var(--orange); border-radius: 8px;
+  overflow: hidden; margin-bottom: 14px;
+}
+.tp-header { padding: 12px 14px; border-bottom: 1px solid var(--border); }
+.tp-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+.tp-author { font-size: 11px; font-weight: 600; color: var(--text); }
+.tp-date   { font-size: 10px; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
+.tp-region { font-size: 9px; font-weight: 700; color: var(--blue); background: rgba(69,123,157,.15); border: 1px solid rgba(69,123,157,.3); padding: 1px 6px; border-radius: 3px; text-transform: uppercase; }
+.tp-urgency { font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 10px; }
+.urg-baja    { background: rgba(138,164,190,.12); color: var(--muted);  border: 1px solid rgba(138,164,190,.25); }
+.urg-media   { background: rgba(241,196,15,.1);   color: var(--gold);   border: 1px solid rgba(241,196,15,.25); }
+.urg-alta    { background: rgba(243,156,18,.15);   color: var(--orange); border: 1px solid rgba(243,156,18,.3); }
+.urg-urgente { background: rgba(230,57,70,.15);    color: var(--red);    border: 1px solid rgba(230,57,70,.3); }
+.tp-title { font-size: 14px; font-weight: 700; color: #fff; line-height: 1.35; }
+.tp-body { padding: 12px 14px; display: flex; flex-direction: column; gap: 10px; }
+.tp-section { }
+.tp-section-label { font-size: 10px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 2px; }
+.tp-section-value { font-size: 12px; color: var(--text); line-height: 1.55; }
+.tp-source { margin-bottom: 4px; }
+.tp-source a { font-size: 12px; color: var(--blue); }
+.tp-source a:hover { color: var(--gold); }
+.tp-source-medium { font-size: 10px; color: var(--orange); margin-left: 6px; font-family: 'JetBrains Mono', monospace; }
+.tp-local { border-left-color: var(--green); }
+.tp-local-badge {
+  font-size: 8px; font-weight: 800; color: var(--green);
+  background: rgba(39,174,96,.12); border: 1px solid rgba(39,174,96,.3);
+  padding: 1px 5px; border-radius: 3px; letter-spacing: .5px;
+  vertical-align: middle;
+}
+.tp-delete {
+  margin-left: auto; background: none; border: 1px solid rgba(230,57,70,.2);
+  border-radius: 6px; padding: 2px 6px; font-size: 12px;
+  cursor: pointer; transition: all .2s; color: #ff8a8a;
+}
+.tp-delete:hover { background: rgba(230,57,70,.15); border-color: var(--red); }
+
+/* ── PROPOSAL FORM ─────────────────────────────────────────── */
+.form-card {
+  background: var(--navy-c); border: 1px solid var(--border);
+  border-radius: 10px; padding: 20px 16px;
+}
+.form-title { font-size: 16px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+.form-desc  { font-size: 12px; color: var(--muted); margin-bottom: 16px; line-height: 1.5; }
+.form-grid  { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.form-group label {
+  display: block; font-size: 10px; font-weight: 700; color: var(--muted);
+  text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; padding: 8px 10px; border-radius: 6px;
+  background: var(--navy-b); border: 1px solid var(--border);
+  color: var(--text); font-family: 'Inter', sans-serif; font-size: 13px;
+  transition: border-color .2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { outline: none; border-color: var(--gold); }
+.form-group textarea { resize: vertical; min-height: 48px; }
+.btn-generate {
+  margin-top: 14px; padding: 10px 20px; border-radius: 8px;
+  background: var(--gold); color: #000; font-weight: 700; font-size: 13px;
+  border: none; cursor: pointer; transition: all .2s;
+}
+.btn-generate:hover { background: #e8b800; transform: translateY(-1px); }
+.form-output {
+  margin-top: 14px; padding: 14px; border-radius: 8px;
+  background: rgba(39,174,96,.06); border: 1px solid rgba(39,174,96,.2);
+}
+.form-output-label { font-size: 11px; font-weight: 700; color: var(--green); margin-bottom: 6px; }
+.form-output pre {
+  background: var(--navy); padding: 10px; border-radius: 6px;
+  font-size: 11px; color: var(--text); overflow-x: auto;
+  white-space: pre-wrap; word-break: break-all;
+  font-family: 'JetBrains Mono', monospace;
+  max-height: 300px;
+}
+.btn-copy {
+  margin-top: 8px; padding: 6px 14px; border-radius: 6px;
+  background: rgba(39,174,96,.15); border: 1px solid rgba(39,174,96,.3);
+  color: var(--green); font-size: 11px; font-weight: 600;
+  cursor: pointer; transition: all .2s;
+}
+.btn-copy:hover { background: rgba(39,174,96,.25); }
+.copy-confirm { font-size: 11px; color: var(--green); margin-left: 8px; font-weight: 600; }
+
+/* ── USER BADGE (hero bar) ─────────────────────────────────── */
+.user-badge { margin-left: auto; cursor: pointer; }
+.user-badge-name {
+  font-size: 11px; font-weight: 600; color: var(--green);
+  background: rgba(39,174,96,.1); border: 1px solid rgba(39,174,96,.3);
+  padding: 3px 10px; border-radius: 14px;
+  transition: all .2s;
+}
+.user-badge-name:hover { background: rgba(39,174,96,.2); }
+.user-badge-login {
+  font-size: 11px; font-weight: 600; color: var(--gold);
+  background: rgba(241,196,15,.1); border: 1px solid rgba(241,196,15,.3);
+  padding: 3px 10px; border-radius: 14px;
+  animation: pulse 2s infinite;
+}
+
+/* ── NAME MODAL ────────────────────────────────────────────── */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,.7); backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 16px;
+}
+.modal-card {
+  background: var(--navy-c); border: 1px solid var(--border);
+  border-radius: 14px; padding: 28px 24px; max-width: 380px; width: 100%;
+  box-shadow: 0 20px 60px rgba(0,0,0,.5);
+  text-align: center;
+}
+.modal-icon  { font-size: 36px; margin-bottom: 8px; }
+.modal-title { font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 6px; }
+.modal-desc  { font-size: 12px; color: var(--muted); margin-bottom: 16px; line-height: 1.5; }
+.modal-input {
+  width: 100%; padding: 10px 14px; border-radius: 8px;
+  background: var(--navy-b); border: 2px solid var(--border);
+  color: #fff; font-size: 15px; font-weight: 600;
+  text-align: center; transition: border-color .2s;
+}
+.modal-input:focus { outline: none; border-color: var(--gold); }
+.modal-buttons { display: flex; gap: 8px; margin-top: 14px; justify-content: center; }
+.modal-btn {
+  padding: 8px 20px; border-radius: 8px; font-size: 13px; font-weight: 700;
+  border: none; cursor: pointer; transition: all .2s;
+}
+.modal-btn-primary { background: var(--gold); color: #000; }
+.modal-btn-primary:hover { background: #e8b800; transform: translateY(-1px); }
+.modal-btn-secondary { background: rgba(138,164,190,.15); color: var(--muted); border: 1px solid var(--border); }
+.modal-btn-secondary:hover { background: rgba(138,164,190,.25); }
+
+/* ── TELEGRAM TOAST ────────────────────────────────────────── */
+.tg-toast {
+  position: fixed; bottom: 16px; right: 16px; z-index: 9998;
+  background: var(--navy-c); border: 1px solid rgba(39,174,96,.3);
+  border-radius: 12px; padding: 14px 16px;
+  max-width: 400px; width: calc(100% - 32px);
+  box-shadow: 0 8px 32px rgba(0,0,0,.5);
+  animation: slide-up .3s ease;
+}
+@keyframes slide-up { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+.tg-toast-header {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 11px; font-weight: 700; color: var(--green); margin-bottom: 8px;
+}
+.tg-toast-close {
+  background: none; border: none; color: var(--muted); font-size: 16px;
+  cursor: pointer; padding: 0 4px; line-height: 1;
+}
+.tg-toast-close:hover { color: #fff; }
+.tg-toast-msg {
+  background: var(--navy); padding: 10px; border-radius: 6px;
+  font-size: 11px; color: var(--text); overflow-x: auto;
+  white-space: pre-wrap; word-break: break-word;
+  font-family: 'JetBrains Mono', monospace;
+  max-height: 200px; margin: 0;
+}
+.tg-toast-actions { margin-top: 8px; display: flex; align-items: center; gap: 8px; }
+.btn-copy-tg {
+  padding: 5px 12px; border-radius: 6px;
+  background: rgba(39,174,96,.15); border: 1px solid rgba(39,174,96,.3);
+  color: var(--green); font-size: 11px; font-weight: 600; cursor: pointer;
+}
+.btn-copy-tg:hover { background: rgba(39,174,96,.25); }
+.tg-copy-ok { font-size: 11px; color: var(--green); font-weight: 600; }
+
+/* ── FREE BUTTON ───────────────────────────────────────────── */
+.btn-free {
+  font-size: 10px; font-weight: 600;
+  padding: 4px 10px; border-radius: 12px;
+  background: rgba(230,57,70,.08); border: 1px solid rgba(230,57,70,.25);
+  color: #ff8a8a; cursor: pointer; transition: all .2s;
+}
+.btn-free:hover { background: rgba(230,57,70,.18); border-color: var(--red); }
+
+/* ── ASSIGN ROW — updated layout ───────────────────────────── */
+.assign-controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.assign-actions  { display: flex; align-items: center; gap: 6px; margin-left: auto; }
+.assign-select {
+  font-size: 10px; padding: 3px 6px; border-radius: 6px;
+  background: var(--navy-b); border: 1px solid var(--border);
+  color: var(--text); font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+}
+.assign-select:focus { outline: none; border-color: var(--gold); }
+
+/* ── VERDICT BADGES (ranking) ──────────────────────────────── */
+.verd-go    { background: rgba(39,174,96,.2);  color: var(--green);  border: 1px solid rgba(39,174,96,.4);  padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+.verd-maybe { background: rgba(241,196,15,.15); color: var(--gold);   border: 1px solid rgba(241,196,15,.3); padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+.verd-no    { background: rgba(230,57,70,.13); color: var(--red);    border: 1px solid rgba(230,57,70,.3);  padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+
+/* ── FOOTER ─────────────────────────────────────────────────── */
+.footer { background: #070e17; border-top: 1px solid var(--border); padding: 13px 16px; display: flex; flex-direction: column; gap: 5px; }
+.footer-left  { font-size: 11px; color: var(--muted); }
+.footer-right { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); }
+
+/* ══════════ TABLET 600px ════════════════════════════════════ */
+@media (min-width: 600px) {
+  .news-grid  { grid-template-columns: repeat(2, 1fr); }
+  .watch-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-grid  { grid-template-columns: repeat(2, 1fr); }
+  .footer     { flex-direction: row; justify-content: space-between; align-items: center; }
+  .form-grid  { grid-template-columns: repeat(2, 1fr); }
+  .form-full  { grid-column: 1 / -1; }
+}
+
+/* ══════════ DESKTOP 768px ═══════════════════════════════════ */
+@media (min-width: 768px) {
+  .hero          { padding: 28px 32px 24px; }
+  .hero-title    { font-size: 26px; }
+  .section       { padding: 32px; }
+  .section-icon  { font-size: 22px; }
+  .section-title { font-size: 20px; }
+  .covered-bar   { padding: 14px 32px; }
+  .prop-header   { padding: 16px 20px; }
+  .prop-body     { padding: 18px 20px; gap: 14px; }
+  .prop-banner   { height: 200px; }
+  .prop-title    { font-size: 17px; }
+  .pfield        { flex-direction: row; gap: 10px; align-items: baseline; }
+  .pfield-label  { width: 160px; flex-shrink: 0; padding-top: 2px; }
+  .pfield-value  { flex: 1; }
+  .footer        { padding: 15px 32px; }
+}
+
+/* ══════════ WIDE 1100px ══════════════════════════════════════ */
+@media (min-width: 1100px) {
+  .news-grid  { grid-template-columns: repeat(3, 1fr); }
+  .hero-grid  { grid-template-columns: repeat(3, 1fr); }
+  .watch-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+
+.pot-gold{background:rgba(241,196,15,.2);color:var(--gold);border:2px solid var(--gold)}
+.tag-gold{background:rgba(241,196,15,.18);color:var(--gold);border:1px solid rgba(241,196,15,.45)}
+.banner-wrap{position:relative;background:var(--navy-b)}
+.banner-wrap .img-credit{position:absolute}
+.vlist{display:flex;flex-direction:column;gap:8px}
+.vrow{display:flex;gap:10px;align-items:flex-start;background:rgba(8,14,24,.35);
+      border:1px solid var(--border);border-radius:8px;padding:8px}
+.vrow.anterior{opacity:.6}
+.vthumb{width:112px;height:63px;object-fit:cover;border-radius:5px;flex-shrink:0;background:var(--navy-b)}
+.vinfo{flex:1;min-width:0}
+.vtit{font-size:13px;font-weight:600;color:#fff;line-height:1.3;display:block;margin-bottom:3px}
+.vtit:hover{color:var(--gold)}
+.vmeta{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
+.vx{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:13px;min-width:54px;text-align:right}
+.vx.out{color:var(--red)} .vx.des{color:var(--gold)} .vx.nor{color:var(--muted)}
+.vres{font-size:11.5px;color:var(--muted);margin-top:3px;line-height:1.45}
+.alerta{background:rgba(230,57,70,.1);border:1px solid rgba(230,57,70,.35);border-left:3px solid var(--red);
+        border-radius:8px;padding:10px 13px;font-size:12.5px;color:#ffb3ac;line-height:1.6;margin-bottom:16px}
+.alerta b{color:#fff}
+.nota{background:rgba(69,123,157,.07);border:1px solid rgba(69,123,157,.18);border-radius:8px;
+      padding:11px 13px;font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:16px}
+.nota b{color:var(--text)}
+.ejemplo-banner{background:var(--gold);color:#000;font-weight:800;font-size:12px;text-align:center;padding:6px 10px;letter-spacing:.3px}
+.lista{margin:2px 0 0 16px;font-size:13px;line-height:1.6;color:var(--text)}
+.lista li{margin-bottom:3px}
+.riesgos li{color:#ffb3ac}
+.num{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
+.enfoques{display:flex;flex-wrap:wrap;gap:5px}
+.verif{display:grid;grid-template-columns:1fr;gap:8px}
+.verif-row{display:flex;gap:10px;font-size:12.5px;border-bottom:1px solid var(--border);padding:7px 0}
+.verif-k{width:190px;flex-shrink:0;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.5px;padding-top:2px}
+.verif-v{flex:1;color:var(--text)}
+.ok{color:#2ecc71;font-weight:700} .ko{color:#ff6b6b;font-weight:700}
+@media (max-width:600px){.vthumb{width:88px;height:50px}.verif-k{width:120px}}
+</style></head><body><div class="ticker-wrap"><div class="ticker-inner"><span class="ticker-item t-red">● 3 VÍDEOS DE LA COMPETENCIA EN EL TOP 10% DE SU CANAL ESTA SEMANA</span><span class="ticker-item t-gold">★ 2 OPORTUNIDADES EDITORIALES</span><span class="ticker-item t-blue">NOTICIAS ILUSTRADAS ×9,12 · 829.240 VIS · HACE 4 D</span><span class="ticker-item t-blue">UN MUNDO INMENSO ×2,88 · 680.074 VIS · HACE 3 D</span><span class="ticker-item t-blue">TLDR NEWS GLOBAL ×2,27 · 1.452.136 VIS · HACE 7 D</span><span class="ticker-item t-orange">◆ ESPAÑA SE ENCIENDE: VIVIENDA, DESAHUCIOS Y UN NUEVO 15M: SE HABLA (5 VÍDEOS) PERO NO FUNCIONA</span><span class="ticker-item t-orange">◆ LA FED CONTRA TRUMP Y EL FIN DEL DINERO BARATO: SE HABLA (4 VÍDEOS) PERO NO FUNCIONA</span><span class="ticker-item t-orange">◆ CRISIS DEL MAR ROJO Y EL PETRÓLEO DEL GOLFO: SE HABLA (4 VÍDEOS) PERO NO FUNCIONA</span><span class="ticker-item t-orange">◆ EL PACTO DEL DIÉSEL ENTRE TRUMP Y PUTIN: SE HABLA (3 VÍDEOS) PERO NO FUNCIONA</span><span class="ticker-item t-orange">◆ FRANCIA EN LA CALLE: PROTESTAS ESTUDIANTILES: SE HABLA (3 VÍDEOS) PERO NO FUNCIONA</span><span class="ticker-item t-orange">◆ EDUCACION FINANCIERA BASICA: SE HABLA (3 VÍDEOS) PERO NO FUNCIONA</span><span class="ticker-item t-green">■ 31 CANALES VIGILADOS · 87 VÍDEOS ESTA SEMANA</span><span class="ticker-item t-red">● 3 VÍDEOS DE LA COMPETENCIA EN EL TOP 10% DE SU CANAL ESTA SEMANA</span><span class="ticker-item t-gold">★ 2 OPORTUNIDADES EDITORIALES</span><span class="ticker-item t-blue">NOTICIAS ILUSTRADAS ×9,12 · 829.240 VIS · HACE 4 D</span><span class="ticker-item t-blue">UN MUNDO INMENSO ×2,88 · 680.074 VIS · HACE 3 D</span><span class="ticker-item t-blue">TLDR NEWS GLOBAL ×2,27 · 1.452.136 VIS · HACE 7 D</span><span class="ticker-item t-orange">◆ ESPAÑA SE ENCIENDE: VIVIENDA, DESAHUCIOS Y UN NUEVO 15M: SE HABLA (5 VÍDEOS) PERO NO FUNCIONA</span><span class="ticker-item t-orange">◆ LA FED CONTRA TRUMP Y EL FIN DEL DINERO BARATO: SE HABLA (4 VÍDEOS) PERO NO FUNCIONA</span><span class="ticker-item t-orange">◆ CRISIS DEL MAR ROJO Y EL PETRÓLEO DEL GOLFO: SE HABLA (4 VÍDEOS) PERO NO FUNCIONA</span><span class="ticker-item t-orange">◆ EL PACTO DEL DIÉSEL ENTRE TRUMP Y PUTIN: SE HABLA (3 VÍDEOS) PERO NO FUNCIONA</span><span class="ticker-item t-orange">◆ FRANCIA EN LA CALLE: PROTESTAS ESTUDIANTILES: SE HABLA (3 VÍDEOS) PERO NO FUNCIONA</span><span class="ticker-item t-orange">◆ EDUCACION FINANCIERA BASICA: SE HABLA (3 VÍDEOS) PERO NO FUNCIONA</span><span class="ticker-item t-green">■ 31 CANALES VIGILADOS · 87 VÍDEOS ESTA SEMANA</span></div></div><div class="hero"><div class="hero-top"><span class="vp-logo">VISUALPOLITIK</span><span class="live-badge">● COMPETENCIA</span><span class="hero-date">📡 RADAR DE COMPETENCIA · 15 OCTUBRE 2026 · ÚLTIMOS 7 DÍAS</span></div><div class="hero-title">QUÉ ESTÁ FUNCIONANDO EN LA <span>COMPETENCIA</span></div><div class="hero-subtitle">Señales de audiencia de otros canales de YouTube, convertidas en ideas para VisualPolitik</div><div class="hero-grid"><div class="hero-box"><div class="hero-box-label">🎯 Oportunidad del día</div><div class="hero-box-content"><span class="hl">Cuando el ajuste de la deuda llega a la calle: Bélgica, Francia e Italia a la vez</span> — veredicto <span class="hl-red">INVESTIGAR</span>, potencial editorial <span class="hl">medio</span>. Europa al borde: energía, deuda y crecimiento</div></div><div class="hero-box"><div class="hero-box-label">📈 Qué funciona esta semana</div><div class="hero-box-content"><span class="hl">Sánchez convoca elecciones el 29N</span> · SEÑAL · 2 canales con señal · mejor ×1,97<br><span class="hl">Europa al borde: energía, deuda y crecimiento</span> · SEÑAL · 2 canales con señal · mejor ×1,85<br><span class="hl">Misterios de la geografia</span> · SEÑAL · 1 canal con señal · mejor ×2,88<br><span class="hl">Etiopía: la guerra que vuelve</span> · SEÑAL · 1 canal con señal · mejor ×2,27</div></div><div class="hero-box"><div class="hero-box-label">🧭 Estado de la medición</div><div class="hero-box-content"><span class="hl">87</span> vídeos esta semana en <span class="hl">31</span> canales<br>Etiquetado: <span class="ok">al día</span><br>Historias: <span class="hl">0</span> funcionan, 4 con señal, 6 saturadas<br><span style="color:var(--muted)">Cada vídeo se mide contra su propio canal a la misma edad. Nuestros canales van aparte.</span></div></div></div></div><div class="section alt"><div class="section-header"><span class="section-icon">🎯</span><div><div class="section-title">OPORTUNIDADES EDITORIALES</div><div class="section-subtitle">2 propuestas · el número depende de lo que haya esta semana, no hay cupo</div></div></div><div class="proposals"><div class="proposal"><div class="banner-wrap"><img class="prop-banner" src="https://i.ytimg.com/vi/f6DXfK269QY/maxresdefault.jpg" alt="" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/f6DXfK269QY/hqdefault.jpg'"></div><div class="prop-header"><div class="prop-header-left"><div class="prop-number">P1 · Europa al borde: energía, deuda y crecimiento</div><div class="prop-region"><span class="tag tag-red">UE-OTAN</span><span class="tag tag-orange">INVESTIGAR</span></div><div class="prop-title">Cuando el ajuste de la deuda llega a la calle: Bélgica, Francia e Italia a la vez</div><div class="signal-row"><span class="chip chip-gold">SEÑAL: SEÑAL</span><span class="chip chip-orange">▲ SUBE</span><span class="chip chip-blue">2 CANALES CON SEÑAL</span><span class="chip chip-blue">HAY SENAL SOLO EN CASTELLANO</span></div></div><span class="pot-badge pot-high">POTENCIAL MEDIO</span></div><div class="prop-veredicto-bar">INVESTIGAR — Señal castellana convergente pero débil; falta validar la percha.</div><div class="prop-body"><div class="tesis-box"><b style="color:var(--gold)">Nuestra tesis:</b> El problema no es la deuda de cada país sino que la UE no tiene mecanismo político para repartir el ajuste: la calle es el síntoma de una cuestión de reparto, y el BCE es el árbitro implícito.</div><div class="prop-gran-pregunta"><span class="gp-icon">❓</span><b>La gran pregunta:</b> ¿Quién va a pagar la deuda de Europa y por qué la calle se mueve antes que los mercados?</div><div class="prop-highlight-box highlight-competencia"><div class="highlight-header"><span class="highlight-icon">📡</span>SEÑAL DE COMPETENCIA</div><div class="highlight-body"><p>Marc Vidal (x1.85, 12-24 h) y Rallo (x1.65) sobre crisis de deuda en Francia/Bélgica/Italia. Dos canales castellanos, ambos 'destacado', ninguno OUTLIER.</p><p><b>Qué está contando la competencia:</b> Tesis: la crisis de deuda ya se ve en la calle (protestas) y Francia puede quebrar. Lectura basada en descripción y resumen, no en transcripción: conjetura parcial.</p><p><b>Qué NO está contando:</b> Quién paga el ajuste y por qué estalla ahora; mecanismo concreto (reglas fiscales UE, BCE, spreads) que conecta presupuestos con protestas; qué significa para España y escenarios si el BCE no actúa.</p></div></div><div class="prop-highlight-box highlight-caso"><div class="highlight-header"><span class="highlight-icon">📊</span>POTENCIAL EDITORIAL: MEDIO</div><div class="highlight-body">A favor: dos canales castellanos y tendencia al alza. En contra: ningún outlier, solo destacados, y Rallo/Vidal ya ocupan el hueco; coyuntura de pocos días.</div></div><div class="pfield"><div class="pfield-label">Vídeos que dan la señal</div><div class="pfield-value"><div class="vlist"><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/f6DXfK269QY/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=f6DXfK269QY" target="_blank" rel="noopener">El caos salta de Francia a Bélgica y a Italia: algo está pasando en 3 países a la vez</a><div class="vmeta"><span class="data-pill">Marc Vidal</span><span class="chip chip-blue">espana-economia-agenda</span><span class="data-pill">291.626 visitas</span><span class="data-pill">su canal suele: 157.635</span><span class="data-pill">hace 14 h</span><span class="chip chip-gold">top 25%</span></div></div><div class="vx des">×1,85</div></div><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/68n1MZES-xc/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=68n1MZES-xc" target="_blank" rel="noopener">Francia puede quebrar: hasta Paul Krugman da la alarma</a><div class="vmeta"><span class="data-pill">Juan Ramon Rallo</span><span class="chip chip-blue">espana-economia-agenda</span><span class="data-pill">504.738 visitas</span><span class="data-pill">su canal suele: 305.901</span><span class="data-pill">hace 5 d</span><span class="chip chip-gold">top 25%</span></div></div><div class="vx des">×1,65</div></div></div></div></div><details class="prop-eval-details"><summary>Ver evaluación completa <span class="expand-icon">▼</span></summary><div class="prop-eval-inner"><div class="pfield"><div class="pfield-label">Por qué ahora</div><div class="pfield-value">pendiente de comprobar (plan presupuestario belga a la Comisión esta semana según Marc Vidal; sin verificar en fuente primaria)</div></div><div class="pfield"><div class="pfield-label">Convergencia</div><div class="pfield-value">2 canales, 3 vídeos; sube respecto a la semana anterior (2 vídeos).</div></div><div class="pfield"><div class="pfield-label">Historial VP</div><div class="pfield-value">No consta cobertura reciente de VP sobre este eje en el historial (cubre desde 2026-09-01); antes de esa fecha no se puede afirmar.</div></div><div class="pfield"><div class="pfield-label">Mercado</div><div class="pfield-value">Castellano: señal en economía/agenda; internacional sin señal.</div></div><div class="pfield"><div class="pfield-label">Motor de interés</div><div class="pfield-value">Miedo económico cercano: 'esto puede llegar a mi bolsillo' unido a imágenes de caos.</div></div><div class="pfield"><div class="pfield-label">Profundidad</div><div class="pfield-value"><ul class="lista "><li>Bélgica sin presupuesto y calendario con la Comisión</li><li>Francia: coste de la deuda y papel del BCE</li><li>Qué cambia para España</li></ul></div></div><div class="pfield"><div class="pfield-label">Riesgos</div><div class="pfield-value"><ul class="lista riesgos"><li>Percha de actualidad sin verificar</li><li>Ola puede decaer antes de 7-10 días de producción</li></ul></div></div><div class="pfield"><div class="pfield-label">Qué investigar</div><div class="pfield-value"><ul class="lista "><li>Plan presupuestario belga y respuesta de la Comisión (Reuters/FT)</li><li>Spread francés frente al bund (Bloomberg)</li></ul></div></div><div class="pfield"><div class="pfield-label">Ángulos alternativos</div><div class="pfield-value"><ul class="lista "><li>Francia como caso central: quién compra su deuda</li><li>Generación Z y protestas estudiantiles como factor político</li></ul></div></div></div></details></div></div><div class="proposal"><div class="banner-wrap"><img class="prop-banner" src="https://i.ytimg.com/vi/BCk6WHGWANg/maxresdefault.jpg" alt="" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/BCk6WHGWANg/hqdefault.jpg'"></div><div class="prop-header"><div class="prop-header-left"><div class="prop-number">P2 · Etiopía: la guerra que vuelve</div><div class="prop-region"><span class="tag tag-red">ORIENTE MEDIO</span><span class="tag tag-blue">VIGILAR</span></div><div class="prop-title">Etiopía y Eritrea, la guerra por el mar que Addis Abeba cree que le robaron</div><div class="signal-row"><span class="chip chip-gold">SEÑAL: SEÑAL</span><span class="chip chip-orange">▲ SUBE</span><span class="chip chip-blue">1 CANALES CON SEÑAL</span><span class="chip chip-blue">HAY SENAL FUERA; EN CASTELLANO SE HABLA PERO NO DESTACA</span></div></div><span class="pot-badge pot-low">POTENCIAL BAJO</span></div><div class="prop-veredicto-bar">VIGILAR — Un solo canal con señal y la ola ya tiene 7 días.</div><div class="prop-body"><div class="tesis-box"><b style="color:var(--gold)">Nuestra tesis:</b> Es una guerra por la salida al mar de un país de 120M de habitantes, ligada a la pugna del Golfo por el mar Rojo.</div><div class="prop-gran-pregunta"><span class="gp-icon">❓</span><b>La gran pregunta:</b> ¿Por qué Etiopía necesita un puerto y quién gana si lo consigue por la fuerza?</div><div class="prop-highlight-box highlight-competencia"><div class="highlight-header"><span class="highlight-icon">📡</span>SEÑAL DE COMPETENCIA</div><div class="highlight-body"><p>TLDR News Global x2.27 (OUTLIER, 1,45M views, 7 días) y Memorias de Pez sobre Eritrea/Etiopía. En castellano se habla pero no destaca.</p><p><b>Qué está contando la competencia:</b> Riesgo de invasión etíope sobre Eritrea / tropas eritreas en el norte de Etiopía. Lectura por resumen y descripción.</p><p><b>Qué NO está contando:</b> Acceso al mar Rojo como motor económico, papel de Egipto, Emiratos y Sudán, y conexión con la crisis del mar Rojo.</p></div></div><div class="prop-highlight-box highlight-caso"><div class="highlight-header"><span class="highlight-icon">📊</span>POTENCIAL EDITORIAL: BAJO</div><div class="highlight-body">A favor: outlier real fuera. En contra: un solo canal con señal, castellano sin tirón, ola de 7 días.</div></div><div class="pfield"><div class="pfield-label">Vídeos que dan la señal</div><div class="pfield-value"><div class="vlist"><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/BCk6WHGWANg/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=BCk6WHGWANg" target="_blank" rel="noopener">Why Ethiopia is About to Invade Eritrea</a><div class="vmeta"><span class="data-pill">TLDR News Global</span><span class="chip chip-blue">internacional-formato-vp</span><span class="data-pill">1.452.136 visitas</span><span class="data-pill">su canal suele: 639.707</span><span class="data-pill">hace 7 d</span><span class="chip chip-red">top 10% de su canal</span></div></div><div class="vx out">×2,27</div></div><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/-41ENTL78ew/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=-41ENTL78ew" target="_blank" rel="noopener">✅ ERITREA INVADE ETIOPÍA ¿Qué está pasando?</a><div class="vmeta"><span class="data-pill">Memorias de Pez</span><span class="chip chip-blue">competencia-castellano</span><span class="data-pill">328.796 visitas</span><span class="data-pill">su canal suele: 233.188</span><span class="data-pill">hace 2 d</span></div></div><div class="vx nor">×1,41</div></div></div></div></div><details class="prop-eval-details"><summary>Ver evaluación completa <span class="expand-icon">▼</span></summary><div class="prop-eval-inner"><div class="pfield"><div class="pfield-label">Por qué ahora</div><div class="pfield-value">pendiente de comprobar</div></div><div class="pfield"><div class="pfield-label">Convergencia</div><div class="pfield-value">1 canal con señal; sube (5 vídeos vs 2).</div></div><div class="pfield"><div class="pfield-label">Historial VP</div><div class="pfield-value">No verificable con el historial disponible (desde 2026-09-01).</div></div><div class="pfield"><div class="pfield-label">Mercado</div><div class="pfield-value">Señal fuera; castellano sin tirón.</div></div><div class="pfield"><div class="pfield-label">Motor de interés</div><div class="pfield-value">Misterio geopolítico poco conocido con riesgo de guerra.</div></div><div class="pfield"><div class="pfield-label">Profundidad</div><div class="pfield-value"><ul class="lista "><li>Origen del conflicto y pérdida de costa</li><li>Actores externos</li><li>Escenarios</li></ul></div></div><div class="pfield"><div class="pfield-label">Riesgos</div><div class="pfield-value"><ul class="lista riesgos"><li>Un solo canal no es convergencia</li><li>Ola ya con 7 días</li></ul></div></div><div class="pfield"><div class="pfield-label">Qué investigar</div><div class="pfield-value"><ul class="lista "><li>Estado actual de la frontera (Reuters/AP)</li></ul></div></div><div class="pfield"><div class="pfield-label">Ángulos alternativos</div><div class="pfield-value"><ul class="lista "><li>Etiopía dentro de la competencia por el mar Rojo</li></ul></div></div></div></details></div></div></div></div><div class="section"><div class="section-header"><span class="section-icon">📈</span><div><div class="section-title">QUÉ ESTÁ FUNCIONANDO ESTA SEMANA</div><div class="section-subtitle">Historias con vídeos por encima de lo normal de su propio canal · últimos 7 días</div></div></div><p class="nota"><b>Cómo se decide.</b> Una historia <b>FUNCIONA</b> si tiene al menos un vídeo en el top 10% de su propio canal (de un canal con audiencia suficiente) y señal en dos canales distintos. <b>SEÑAL</b> si hay algo por encima de lo normal pero en un solo canal. No se usan umbrales fijos: el top 10% y el top 25% son los de cada canal, comparando a la misma edad. Una historia agrupa varios asuntos que cuentan la misma narrativa.</p><div class="proposal"><div class="banner-wrap"><img class="prop-banner" src="https://i.ytimg.com/vi/ImCkBlWbcYc/maxresdefault.jpg" alt="" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ImCkBlWbcYc/hqdefault.jpg'"></div><div class="prop-header"><div class="prop-header-left"><div class="prop-region"><span class="tag tag-yellow">SEÑAL</span><span class="tag tag-blue">▼ BAJA</span></div><div class="prop-title">Sánchez convoca elecciones el 29N</div><div class="section-subtitle" style="margin-top:4px">La convocatoria anticipada, las encuestas PP-Vox y la lectura de la prensa internacional sobre un Gobierno en cuestión.</div><div class="signal-row"><span class="chip chip-blue">4 vídeos esta semana · 11 la anterior</span><span class="chip chip-green">2 canales con señal</span><span class="chip chip-orange">hay senal solo en castellano</span><span class="chip chip-blue">Espana</span></div></div><span class="pot-badge pot-high">MEJOR ×1,97</span></div><div class="prop-body"><div class="why-box"><strong>Dentro de esta historia, qué enfoque funcionó:</strong> Actualidad sin angulo (1 de 2 con señal, mejor ×1,97) · No es para tanto (1 de 1 con señal, mejor ×1,41) · La jugada maestra (0 de 1 con señal, mejor ×0,83)</div><div class="pfield"><div class="pfield-label">Asuntos que la forman</div><div class="pfield-value">Convocatoria de elecciones anticipadas en Espana · Encuestas de las elecciones generales del 29-N · Encuestas electorales en España e Israel · Falsa bandera en los balticos y campana electoral espanola · Gobierno zombie de Sanchez segun la prensa internacional · Ley de Nietos y voto exterior</div></div><div class="vlist"><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/ImCkBlWbcYc/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=ImCkBlWbcYc" target="_blank" rel="noopener">¿Pierde Sánchez? Esto dicen las ENCUESTAS de las ELECCIONES en España</a><div class="vmeta"><span class="data-pill">Descifrando la Guerra</span><span class="chip chip-blue">competencia-castellano</span><span class="data-pill">17.457 visitas</span><span class="data-pill">su canal suele: 8.861</span><span class="data-pill">hace 6 d</span><span class="chip chip-gold">top 25%</span><span class="chip chip-orange">canal pequeño</span></div><div class="vres">Repasa los sondeos de las elecciones españolas del 29 de noviembre.</div></div><div class="vx des">×1,97</div></div><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/LnJqaCiE0aQ/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=LnJqaCiE0aQ" target="_blank" rel="noopener">Por qué deberían suspenderse las elecciones del 29-N</a><div class="vmeta"><span class="data-pill">Juan Ramon Rallo</span><span class="chip chip-blue">espana-economia-agenda</span><span class="data-pill">429.212 visitas</span><span class="data-pill">su canal suele: 304.405</span><span class="data-pill">hace 4 d</span><span class="chip chip-gold">top 25%</span></div><div class="vres">Rallo defiende suspender las elecciones por la controversia del voto CERA.</div></div><div class="vx des">×1,41</div></div><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/NJ8O1j3tpgI/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=NJ8O1j3tpgI" target="_blank" rel="noopener">QUÉ DICEN LAS ENCUESTAS EN ESPAÑA | ISRAEL SE ACERCA A SUS ELECCIONES GENERALES</a><div class="vmeta"><span class="data-pill">Descifrando la Guerra</span><span class="chip chip-blue">competencia-castellano</span><span class="data-pill">9.273 visitas</span><span class="data-pill">su canal suele: 8.916</span><span class="data-pill">hace 6 d</span><span class="chip chip-orange">canal pequeño</span></div><div class="vres">Programa de actualidad con encuestas de España e Israel.</div></div><div class="vx nor">×1,04</div></div><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/GI8m4bQ6Af0/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=GI8m4bQ6Af0" target="_blank" rel="noopener">Ley de Nietos: la maniobra de Sánchez para saltarse al Supremo</a><div class="vmeta"><span class="data-pill">Juan Ramon Rallo</span><span class="chip chip-blue">espana-economia-agenda</span><span class="data-pill">205.119 visitas</span><span class="data-pill">su canal suele: 247.131</span><span class="data-pill">hace 2 d</span></div><div class="vres">Rallo analiza la maniobra de Sánchez con la Ley de Nietos para sortear al Supremo sobre el censo.</div></div><div class="vx nor">×0,83</div></div></div><details class="prop-eval-details"><summary>Ver 11 vídeos más (incluida la semana anterior) <span class="expand-icon">▼</span></summary><div class="prop-eval-inner"><div class="vlist"><div class="vrow anterior"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/bW-goVTysLg/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=bW-goVTysLg" target="_blank" rel="noopener">¿Gobernarán PP y VOX? Esto dicen las ENCUESTAS en ESPAÑA</a><div class="vmeta"><span class="data-pill">Descifrando la Guerra</span><span class="chip chip-blue">competencia-castellano</span><span class="data-pill">26.669 visitas</span><span class="data-pill">su canal suele: 9.071</span><span class="data-pill">hace 9 d</span><span class="chip chip-red">top 10% de su canal</span><span class="chip chip-orange">canal pequeño</span><span class="chip chip-blue">semana anterior</span></div><div class="vres">Repaso de encuestas: PP y Vox rondan 200 diputados tras la convocatoria.</div></div><div class="vx out">×2,94</div></div><div class="vrow anterior"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/tlvOJGO1UJ8/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=tlvOJGO1UJ8" target="_blank" rel="noopener">La jugada de Sánchez: por qué convoca elecciones ahora</a><div class="vmeta"><span class="data-pill">Juan Ramon Rallo</span><span class="chip chip-blue">espana-economia-agenda</span><span class="data-pill">879.825 visitas</span><span class="data-pill">su canal suele: 316.483</span><span class="data-pill">hace 10 d</span><span class="chip chip-red">top 10% de su canal</span><span class="chip chip-blue">semana anterior</span></div><div class="vres">Rallo analiza por que Sanchez convoca elecciones el 29N con encuestas adversas.</div></div><div class="vx out">×2,78</div></div><div class="vrow anterior"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/8Y75vXKbhng/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=8Y75vXKbhng" target="_blank" rel="noopener">¡URGENTE! “ELECCIONES GENERALES”: ¿QUÉ ESTÁ PASANDO?</a><div class="vmeta"><span class="data-pill">Ruben Gisbert</span><span class="chip chip-blue">espana-economia-agenda</span><span class="data-pill">177.478 visitas</span><span class="data-pill">su canal suele: 74.885</span><span class="data-pill">hace 10 d</span><span class="chip chip-red">top 10% de su canal</span><span class="chip chip-blue">semana anterior</span></div><div class="vres">Gisbert comenta la convocatoria de elecciones anticipadas del 29N.</div></div><div class="vx out">×2,37</div></div><div class="vrow anterior"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/kweeftwRxzE/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=kweeftwRxzE" target="_blank" rel="noopener">¿Por qué elecciones ahora? El país real vs. el país de la campaña</a><div class="vmeta"><span class="data-pill">Marc Vidal</span><span class="chip chip-blue">espana-economia-agenda</span><span class="data-pill">599.928 visitas</span><span class="data-pill">su canal suele: 365.809</span><span class="data-pill">hace 9 d</span><span class="chip chip-gold">top 25%</span><span class="chip chip-blue">semana anterior</span></div><div class="vres">Analisis de por que Sanchez adelanta elecciones tras perder los decretos de vivienda.</div></div><div class="vx des">×1,64</div></div><div class="vrow anterior"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/32mUo9q3N-w/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=32mUo9q3N-w" target="_blank" rel="noopener">Se PREPARA FALSA BANDERA en EUROPA - EMPIEZA la CAMAPAÑA  de FALACIAS en ESPAÑA</a><div class="vmeta"><span class="data-pill">Ruben Gisbert</span><span class="chip chip-blue">espana-economia-agenda</span><span class="data-pill">108.350 visitas</span><span class="data-pill">su canal suele: 74.724</span><span class="data-pill">hace 8 d</span><span class="chip chip-gold">top 25%</span><span class="chip chip-blue">semana anterior</span></div><div class="vres">Gisbert denuncia una supuesta falsa bandera contra Rusia y la campana electoral.</div></div><div class="vx des">×1,45</div></div><div class="vrow anterior"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/3e6GeQSUpOg/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=3e6GeQSUpOg" target="_blank" rel="noopener">Gobierno zombie: los medios que elogiaban a Sánchez ahora lo dan por muerto</a><div class="vmeta"><span class="data-pill">Juan Ramon Rallo</span><span class="chip chip-blue">espana-economia-agenda</span><span class="data-pill">417.090 visitas</span><span class="data-pill">su canal suele: 315.977</span><span class="data-pill">hace 8 d</span><span class="chip chip-blue">semana anterior</span></div><div class="vres">The Economist y FT pasan de elogiar a cuestionar a Sanchez; crisis de vivienda.</div></div><div class="vx nor">×1,32</div></div><div class="vrow anterior"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/pS6_nWlZmvA/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=pS6_nWlZmvA" target="_blank" rel="noopener">Las tres jugadas sucias de Sánchez para ganar las elecciones</a><div class="vmeta"><span class="data-pill">Juan Ramon Rallo</span><span class="chip chip-blue">espana-economia-agenda</span><span class="data-pill">391.186 visitas</span><span class="data-pill">su canal suele: 315.472</span><span class="data-pill">hace 9 d</span><span class="chip chip-blue">semana anterior</span></div><div class="vres">Tres movimientos de Sanchez (decretos, huelga general, Ley de Nietos) para ganar.</div></div><div class="vx nor">×1,24</div></div><div class="vrow anterior"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/V9wDVXWCpUM/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=V9wDVXWCpUM" target="_blank" rel="noopener">✅ PEDRO SÁNCHEZ lo vuelve a hacer ¿Le saldrá bien esta vez?</a><div class="vmeta"><span class="data-pill">Memorias de Pez</span><span class="chip chip-blue">competencia-castellano</span><span class="data-pill">408.347 visitas</span><span class="data-pill">su canal suele: 352.023</span><span class="data-pill">hace 10 d</span><span class="chip chip-blue">semana anterior</span></div><div class="vres">Sanchez vuelve a mover ficha con las elecciones: que busca y si le saldra bien.</div></div><div class="vx nor">×1,16</div></div><div class="vrow anterior"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/5M53TxSfhnY/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=5M53TxSfhnY" target="_blank" rel="noopener">Elecciones en España: ¿volverá a ganar Sánchez? | Con Miguel Anxo Bastos</a><div class="vmeta"><span class="data-pill">Juan Ramon Rallo</span><span class="chip chip-blue">espana-economia-agenda</span><span class="data-pill">338.550 visitas</span><span class="data-pill">su canal suele: 316.401</span><span class="data-pill">hace 10 d</span><span class="chip chip-blue">semana anterior</span></div><div class="vres">Rallo con Bastos sobre si Sanchez puede volver a ganar.</div></div><div class="vx nor">×1,07</div></div><div class="vrow anterior"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/KJVn99ypbUY/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=KJVn99ypbUY" target="_blank" rel="noopener">La ÚLTIMA JUGADA de SÁNCHEZ - @SoloFonseca</a><div class="vmeta"><span class="data-pill">Solo Fonseca</span><span class="chip chip-blue">competencia-castellano</span><span class="data-pill">636.595 visitas</span><span class="data-pill">su canal suele: 636.595</span><span class="data-pill">hace 8 d</span><span class="chip chip-blue">semana anterior</span></div><div class="vres">Fonseca analiza la ultima jugada de Sanchez al convocar el 29N.</div></div><div class="vx nor">×1,00</div></div><div class="vrow anterior"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/f52skpePm1w/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=f52skpePm1w" target="_blank" rel="noopener">ELECCIONES ANTICIPADAS EN ESPAÑA | ÚLTIMA HORA DE LAS GUERRAS EN YEMEN Y ETIOPÍA</a><div class="vmeta"><span class="data-pill">Descifrando la Guerra</span><span class="chip chip-blue">competencia-castellano</span><span class="data-pill">7.187 visitas</span><span class="data-pill">su canal suele: 9.097</span><span class="data-pill">hace 10 d</span><span class="chip chip-orange">canal pequeño</span><span class="chip chip-blue">semana anterior</span></div><div class="vres">Programa de actualidad: elecciones en Espana y guerras de Yemen y Etiopia.</div></div><div class="vx nor">×0,79</div></div></div></div></details></div></div><div class="proposal"><div class="banner-wrap"><img class="prop-banner" src="https://i.ytimg.com/vi/f6DXfK269QY/maxresdefault.jpg" alt="" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/f6DXfK269QY/hqdefault.jpg'"></div><div class="prop-header"><div class="prop-header-left"><div class="prop-region"><span class="tag tag-yellow">SEÑAL</span><span class="tag tag-orange">▲ SUBE</span></div><div class="prop-title">Europa al borde: energía, deuda y crecimiento</div><div class="section-subtitle" style="margin-top:4px">Crisis energética, deuda francesa y el lastre del crecimiento europeo.</div><div class="signal-row"><span class="chip chip-blue">3 vídeos esta semana · 2 la anterior</span><span class="chip chip-green">2 canales con señal</span><span class="chip chip-orange">hay senal solo en castellano</span><span class="chip chip-blue">Europa (otros), Francia</span></div></div><span class="pot-badge pot-high">MEJOR ×1,85</span></div><div class="prop-body"><div class="why-box"><strong>Dentro de esta historia, qué enfoque funcionó:</strong> La amenaza que se acerca (2 de 2 con señal, mejor ×1,85) · Atrapado sin salida (0 de 1 con señal, mejor ×1,52)</div><div class="pfield"><div class="pfield-label">Asuntos que la forman</div><div class="pfield-value">Crisis de deuda de Francia · Crisis de deuda y protestas en Europa · Crisis del Estado del bienestar europeo · Panico en el mercado de bonos europeo · Protestas y ajuste fiscal en Francia</div></div><div class="vlist"><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/f6DXfK269QY/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=f6DXfK269QY" target="_blank" rel="noopener">El caos salta de Francia a Bélgica y a Italia: algo está pasando en 3 países a la vez</a><div class="vmeta"><span class="data-pill">Marc Vidal</span><span class="chip chip-blue">espana-economia-agenda</span><span class="data-pill">291.626 visitas</span><span class="data-pill">su canal suele: 157.635</span><span class="data-pill">hace 14 h</span><span class="chip chip-gold">top 25%</span></div><div class="vres">Bélgica sin presupuesto y protestas en Bélgica, Italia y Francia por la crisis de deuda europea</div></div><div class="vx des">×1,85</div></div><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/68n1MZES-xc/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=68n1MZES-xc" target="_blank" rel="noopener">Francia puede quebrar: hasta Paul Krugman da la alarma</a><div class="vmeta"><span class="data-pill">Juan Ramon Rallo</span><span class="chip chip-blue">espana-economia-agenda</span><span class="data-pill">504.738 visitas</span><span class="data-pill">su canal suele: 305.901</span><span class="data-pill">hace 5 d</span><span class="chip chip-gold">top 25%</span></div><div class="vres">Rallo analiza si Francia puede quebrar y quién pagaría su deuda.</div></div><div class="vx des">×1,65</div></div><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/tNDG0uU0UaE/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=tNDG0uU0UaE" target="_blank" rel="noopener">Francia fue solo el comienzo: Bélgica, Italia... por qué Europa está en crisis y quién sigue</a><div class="vmeta"><span class="data-pill">Marc Vidal</span><span class="chip chip-blue">espana-economia-agenda</span><span class="data-pill">532.406 visitas</span><span class="data-pill">su canal suele: 350.267</span><span class="data-pill">hace 7 d</span></div><div class="vres">Analiza la sostenibilidad del bienestar europeo con deuda y envejecimiento.</div></div><div class="vx nor">×1,52</div></div></div><details class="prop-eval-details"><summary>Ver 2 vídeos más (incluida la semana anterior) <span class="expand-icon">▼</span></summary><div class="prop-eval-inner"><div class="vlist"><div class="vrow anterior"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/I_d3jllTQhA/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=I_d3jllTQhA" target="_blank" rel="noopener">Francia está en llamas y lo apaga con deuda (nadie quiere ver lo que viene)</a><div class="vmeta"><span class="data-pill">Marc Vidal</span><span class="chip chip-blue">espana-economia-agenda</span><span class="data-pill">933.014 visitas</span><span class="data-pill">su canal suele: 365.887</span><span class="data-pill">hace 13 d</span><span class="chip chip-red">top 10% de su canal</span><span class="chip chip-blue">semana anterior</span></div><div class="vres">Francia en protestas apaga la crisis con mas deuda; el ajuste no resuelve el problema de fondo</div></div><div class="vx out">×2,55</div></div><div class="vrow anterior"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/-IO1QCaLaRw/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=-IO1QCaLaRw" target="_blank" rel="noopener">Algo raro está pasando con los bonos en 3 países a la vez: esto no es casualidad | Análisis</a><div class="vmeta"><span class="data-pill">Marc Vidal</span><span class="chip chip-blue">espana-economia-agenda</span><span class="data-pill">625.593 visitas</span><span class="data-pill">su canal suele: 365.843</span><span class="data-pill">hace 8 d</span><span class="chip chip-gold">top 25%</span><span class="chip chip-blue">semana anterior</span></div><div class="vres">Analiza señales de estrés en los bonos de tres países a la vez.</div></div><div class="vx des">×1,71</div></div></div></div></details></div></div><div class="proposal"><div class="banner-wrap"><img class="prop-banner" src="https://i.ytimg.com/vi/Ng2BAUTBXuQ/maxresdefault.jpg" alt="" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/Ng2BAUTBXuQ/hqdefault.jpg'"></div><div class="prop-header"><div class="prop-header-left"><div class="prop-region"><span class="tag tag-yellow">SEÑAL</span><span class="tag tag-blue">▼ BAJA</span></div><div class="prop-title">Misterios de la geografia</div><div class="signal-row"><span class="chip chip-blue">1 vídeos esta semana · 2 la anterior</span><span class="chip chip-green">1 canales con señal</span><span class="chip chip-orange">hay senal solo en castellano</span><span class="chip chip-blue">Latinoamerica (otros)</span></div></div><span class="pot-badge pot-high">MEJOR ×2,88</span></div><div class="prop-body"><div class="why-box"><strong>Dentro de esta historia, qué enfoque funcionó:</strong> Curiosidad (1 de 1 con señal, mejor ×2,88)</div><div class="pfield"><div class="pfield-label">Asuntos que la forman</div><div class="pfield-value">Cataratas de Sangre en la Antartida · Paisajes de otro planeta · Pocas islas en Sudamerica</div></div><div class="vlist"><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/Ng2BAUTBXuQ/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=Ng2BAUTBXuQ" target="_blank" rel="noopener">¿Por qué casi no hay islas en Sudamérica?</a><div class="vmeta"><span class="data-pill">Un Mundo Inmenso</span><span class="chip chip-blue">competencia-castellano</span><span class="data-pill">680.074 visitas</span><span class="data-pill">su canal suele: 236.136</span><span class="data-pill">hace 3 d</span><span class="chip chip-red">top 10% de su canal</span></div><div class="vres">Explica por qué Sudamérica tiene tan pocas islas frente a otras regiones.</div></div><div class="vx out">×2,88</div></div></div><details class="prop-eval-details"><summary>Ver 2 vídeos más (incluida la semana anterior) <span class="expand-icon">▼</span></summary><div class="prop-eval-inner"><div class="vlist"><div class="vrow anterior"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/zkMjlVa4kEI/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=zkMjlVa4kEI" target="_blank" rel="noopener">Cataratas de Sangre, el gran misterio de la Antártida</a><div class="vmeta"><span class="data-pill">Un Mundo Inmenso</span><span class="chip chip-blue">competencia-castellano</span><span class="data-pill">232.373 visitas</span><span class="data-pill">su canal suele: 232.373</span><span class="data-pill">hace 13 d</span><span class="chip chip-blue">semana anterior</span></div><div class="vres">El misterio resuelto de las Cataratas de Sangre en la Antartida</div></div><div class="vx nor">×1,00</div></div><div class="vrow anterior"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/9mQOlWQp5Wc/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=9mQOlWQp5Wc" target="_blank" rel="noopener">Clásicos UMI Vol. 8: Escenarios de otro planeta</a><div class="vmeta"><span class="data-pill">Un Mundo Inmenso</span><span class="chip chip-blue">competencia-castellano</span><span class="data-pill">68.490 visitas</span><span class="data-pill">su canal suele: 236.172</span><span class="data-pill">hace 10 d</span><span class="chip chip-blue">semana anterior</span></div><div class="vres">Recopilatorio de lugares reales de la Tierra que parecen de otro planeta</div></div><div class="vx nor">×0,29</div></div></div></div></details></div></div><div class="proposal"><div class="banner-wrap"><img class="prop-banner" src="https://i.ytimg.com/vi/BCk6WHGWANg/maxresdefault.jpg" alt="" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/BCk6WHGWANg/hqdefault.jpg'"></div><div class="prop-header"><div class="prop-header-left"><div class="prop-region"><span class="tag tag-yellow">SEÑAL</span><span class="tag tag-orange">▲ SUBE</span></div><div class="prop-title">Etiopía: la guerra que vuelve</div><div class="section-subtitle" style="margin-top:4px">Reinicio del conflicto etíope y la disputa del Nilo con Egipto.</div><div class="signal-row"><span class="chip chip-blue">5 vídeos esta semana · 2 la anterior</span><span class="chip chip-green">1 canales con señal</span><span class="chip chip-orange">hay senal fuera; en castellano se habla pero no destaca</span><span class="chip chip-blue">Etiopia</span></div></div><span class="pot-badge pot-high">MEJOR ×2,27</span></div><div class="prop-body"><div class="why-box"><strong>Dentro de esta historia, qué enfoque funcionó:</strong> La amenaza que se acerca (1 de 1 con señal, mejor ×2,27) · Se abre un frente nuevo (0 de 1 con señal, mejor ×1,41) · Explicacion de fondo (0 de 1 con señal, mejor ×0,96) · Actualidad sin angulo (0 de 1 con señal, mejor ×0,70)</div><div class="pfield"><div class="pfield-label">Asuntos que la forman</div><div class="pfield-value">Guerra de Etiopia · Guerra de Etiopia en Tigray · Tension Etiopia-Eritrea</div></div><div class="vlist"><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/BCk6WHGWANg/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=BCk6WHGWANg" target="_blank" rel="noopener">Why Ethiopia is About to Invade Eritrea</a><div class="vmeta"><span class="data-pill">TLDR News Global</span><span class="chip chip-blue">internacional-formato-vp</span><span class="data-pill">1.452.136 visitas</span><span class="data-pill">su canal suele: 639.707</span><span class="data-pill">hace 7 d</span><span class="chip chip-red">top 10% de su canal</span></div><div class="vres">Analiza el riesgo de que Etiopía invada Eritrea.</div></div><div class="vx out">×2,27</div></div><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/-41ENTL78ew/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=-41ENTL78ew" target="_blank" rel="noopener">✅ ERITREA INVADE ETIOPÍA ¿Qué está pasando?</a><div class="vmeta"><span class="data-pill">Memorias de Pez</span><span class="chip chip-blue">competencia-castellano</span><span class="data-pill">328.796 visitas</span><span class="data-pill">su canal suele: 233.188</span><span class="data-pill">hace 2 d</span></div><div class="vres">Eritrea envía tropas al norte de Etiopía y escala el riesgo de nueva guerra.</div></div><div class="vx nor">×1,41</div></div><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/ItOUwFvLRAE/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=ItOUwFvLRAE" target="_blank" rel="noopener">GUERRA EN ETIOPÍA de la esperanza de África a una guerra devastadora - @SoloFonseca</a><div class="vmeta"><span class="data-pill">Solo Fonseca</span><span class="chip chip-blue">competencia-castellano</span><span class="data-pill">575.867 visitas</span><span class="data-pill">su canal suele: 599.861</span><span class="data-pill">hace 6 d</span></div><div class="vres">Repaso de cómo Etiopía pasó de esperanza africana a guerra devastadora.</div></div><div class="vx nor">×0,96</div></div><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/BAi5z2d2Ew8/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=BAi5z2d2Ew8" target="_blank" rel="noopener">ETIOPÍA Y ERITREA MÁS CERCA DE LA GUERRA | CRISIS POLÍTICA EN PAKISTÁN</a><div class="vmeta"><span class="data-pill">Descifrando la Guerra</span><span class="chip chip-blue">competencia-castellano</span><span class="data-pill">4.417 visitas</span><span class="data-pill">su canal suele: 6.310</span><span class="data-pill">hace 2 d</span><span class="chip chip-orange">canal pequeño</span></div><div class="vres">Programa de dos bloques: tensión Etiopía-Eritrea y crisis política en Pakistán.</div></div><div class="vx nor">×0,70</div></div><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/5KAsu8lUG0M/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=5KAsu8lUG0M" target="_blank" rel="noopener">La GUERRA entre Eritrea y Etiopía está a la vuelta de la esquina...</a><div class="vmeta"><span class="data-pill">Descifrando la Guerra</span><span class="chip chip-blue">competencia-castellano</span><span class="data-pill">3.298 visitas</span><span class="data-pill">su canal suele: 6.342</span><span class="data-pill">hace 1 d</span><span class="chip chip-orange">canal pequeño</span></div><div class="vres">Eritrea y Etiopía rompen relaciones y se acercan a una guerra no vista desde 1998-2000.</div></div><div class="vx nor">×0,52</div></div></div><details class="prop-eval-details"><summary>Ver 2 vídeos más (incluida la semana anterior) <span class="expand-icon">▼</span></summary><div class="prop-eval-inner"><div class="vlist"><div class="vrow anterior"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/oJO6PN1Tutg/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=oJO6PN1Tutg" target="_blank" rel="noopener">El EJÉRCITO de ETIOPÍA toma la capital de Tigray</a><div class="vmeta"><span class="data-pill">Descifrando la Guerra</span><span class="chip chip-blue">competencia-castellano</span><span class="data-pill">12.875 visitas</span><span class="data-pill">su canal suele: 9.066</span><span class="data-pill">hace 8 d</span><span class="chip chip-orange">canal pequeño</span><span class="chip chip-blue">semana anterior</span></div><div class="vres">Informa de la toma de Mekelle por el ejército etíope.</div></div><div class="vx nor">×1,42</div></div><div class="vrow anterior"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/qyFMaunFJYo/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=qyFMaunFJYo" target="_blank" rel="noopener">How Ethiopia Turns Into a Regional Mega-War.</a><div class="vmeta"><span class="data-pill">Warographics</span><span class="chip chip-blue">internacional-formato-vp</span><span class="data-pill">806.890 visitas</span><span class="data-pill">su canal suele: 754.102</span><span class="data-pill">hace 8 d</span><span class="chip chip-blue">semana anterior</span></div><div class="vres">Explica cómo la guerra de Etiopía puede regionalizarse.</div></div><div class="vx nor">×1,07</div></div></div></div></details></div></div></div><div class="section alt"><div class="section-header"><span class="section-icon">👀</span><div><div class="section-title">TEMAS EN VIGILANCIA</div><div class="section-subtitle">Todavía no dan para propuesta, pero pueden despegar</div></div></div><div class="watch-grid"><div class="watch-card"><div class="watch-card-title">Elecciones del 29-N y voto exterior (Ley de Nietos/CERA)</div><div class="watch-card-body">Rallo x1.41 y Descifrando x1.97 (canal pequeño); política de partido, línea editorial limita.</div><div class="watch-trigger">⚡ Qué lo activaría: Ángulo de deterioro institucional con tercer canal</div><div class="watch-source num">2 canales, sin outliers</div></div><div class="watch-card"><div class="watch-card-title">Misterios geográficos (islas en Sudamérica)</div><div class="watch-card-body">Un Mundo Inmenso x2.88 OUTLIER; formato Curiosidad, sin geopolítica.</div><div class="watch-trigger">⚡ Qué lo activaría: Encaje geopolítico claro</div><div class="watch-source num">1 canal</div></div></div></div><div class="section"><div class="section-header"><span class="section-icon">🧊</span><div><div class="section-title">SE HABLA MUCHO, PERO NO FUNCIONA</div><div class="section-subtitle">Mucha oferta y ningún vídeo por encima de lo normal: entrar aquí exige un ángulo muy distinto</div></div></div><div class="watch-grid"><div class="watch-card"><div class="watch-card-title">España se enciende: vivienda, desahucios y un nuevo 15M</div><div class="watch-card-body">5 vídeos en 4 canales esta semana y ninguno se sale de lo normal de su canal (mediana ×1,23). Hay senal solo en castellano.</div><div class="watch-trigger">▼ BAJA</div></div><div class="watch-card"><div class="watch-card-title">La Fed contra Trump y el fin del dinero barato</div><div class="watch-card-body">4 vídeos en 4 canales esta semana y ninguno se sale de lo normal de su canal (mediana ×1,01). Hay senal solo en castellano.</div><div class="watch-trigger">▲ SUBE</div></div><div class="watch-card"><div class="watch-card-title">Crisis del Mar Rojo y el petróleo del Golfo</div><div class="watch-card-body">4 vídeos en 3 canales esta semana y ninguno se sale de lo normal de su canal (mediana ×1,08). Sin senal en ningun mercado.</div><div class="watch-trigger">▼ BAJA</div></div><div class="watch-card"><div class="watch-card-title">El pacto del diésel entre Trump y Putin</div><div class="watch-card-body">3 vídeos en 3 canales esta semana y ninguno se sale de lo normal de su canal (mediana ×0,97). Sin senal en ningun mercado.</div><div class="watch-trigger">🆕 NUEVA ESTA SEMANA</div></div><div class="watch-card"><div class="watch-card-title">Francia en la calle: protestas estudiantiles</div><div class="watch-card-body">3 vídeos en 2 canales esta semana y ninguno se sale de lo normal de su canal (mediana ×0,77). Sin senal en ningun mercado.</div><div class="watch-trigger">■ ESTABLE</div></div><div class="watch-card"><div class="watch-card-title">Educacion financiera basica</div><div class="watch-card-body">3 vídeos en 3 canales esta semana y ninguno se sale de lo normal de su canal (mediana ×0,43). Sin senal en ningun mercado.</div><div class="watch-trigger">🆕 NUEVA ESTA SEMANA</div></div></div></div><div class="section alt"><div class="section-header"><span class="section-icon">⏳</span><div><div class="section-title">YA PASÓ</div><div class="section-subtitle">Funcionaron hace 7-14 días y esta semana nadie ha vuelto a tocarlas</div></div></div><div class="watch-grid"><div class="watch-card"><div class="watch-card-title">Nuevas normas de trafico en Espana</div><div class="watch-card-body">La semana pasada tuvo 1 vídeos con señal; esta semana, ninguno nuevo.</div></div><div class="watch-card"><div class="watch-card-title">La ofensiva ucraniana en Limán</div><div class="watch-card-body">La semana pasada tuvo 1 vídeos con señal; esta semana, ninguno nuevo.</div></div><div class="watch-card"><div class="watch-card-title">Crisis de vivienda en Australia</div><div class="watch-card-body">La semana pasada tuvo 1 vídeos con señal; esta semana, ninguno nuevo.</div></div><div class="watch-card"><div class="watch-card-title">Posible adelanto electoral en Espana</div><div class="watch-card-body">La semana pasada tuvo 1 vídeos con señal; esta semana, ninguno nuevo.</div></div><div class="watch-card"><div class="watch-card-title">La burbuja de la IA</div><div class="watch-card-body">La semana pasada tuvo 1 vídeos con señal; esta semana, ninguno nuevo.</div></div><div class="watch-card"><div class="watch-card-title">El frente ucraniano sobre el terreno</div><div class="watch-card-body">La semana pasada tuvo 1 vídeos con señal; esta semana, ninguno nuevo.</div></div></div></div><div class="section"><div class="section-header"><span class="section-icon">📊</span><div><div class="section-title">TABLA DE LA SEMANA</div><div class="section-subtitle">Todos los vídeos de la competencia en el top 25% de su canal · scroll horizontal en móvil</div></div></div><div class="ranking-wrap"><table class="ranking"><thead><tr><th>#</th><th>Vídeo</th><th>Canal</th><th>Historia</th><th>Rinde</th><th>Visitas</th><th>Edad</th></tr></thead><tbody><tr><td class="num" style="color:var(--muted)">01</td><td><a href="https://www.youtube.com/watch?v=Ct6jlc1d-ug" target="_blank" rel="noopener">EEUU va a fusilar a EN DIRECTO a un preso - ¿Por qué?</a></td><td style="color:var(--muted)">NOTICIAS ILUSTRADAS</td><td style="font-size:11px;color:var(--orange)">Contenido historico y divulgativo</td><td><div class="bar-cell"><span class="num" style="min-width:48px;color:var(--red)">×9,12</span><span class="bar-f" style="width:90px;background:var(--red)"></span></div></td><td class="num">829.240</td><td class="num">hace 4 d</td></tr><tr><td class="num" style="color:var(--muted)">02</td><td><a href="https://www.youtube.com/watch?v=Ng2BAUTBXuQ" target="_blank" rel="noopener">¿Por qué casi no hay islas en Sudamérica?</a></td><td style="color:var(--muted)">Un Mundo Inmenso</td><td style="font-size:11px;color:var(--orange)">Misterios de la geografia</td><td><div class="bar-cell"><span class="num" style="min-width:48px;color:var(--red)">×2,88</span><span class="bar-f" style="width:28px;background:var(--red)"></span></div></td><td class="num">680.074</td><td class="num">hace 3 d</td></tr><tr><td class="num" style="color:var(--muted)">03</td><td><a href="https://www.youtube.com/watch?v=BCk6WHGWANg" target="_blank" rel="noopener">Why Ethiopia is About to Invade Eritrea</a></td><td style="color:var(--muted)">TLDR News Global</td><td style="font-size:11px;color:var(--orange)">Etiopía: la guerra que vuelve</td><td><div class="bar-cell"><span class="num" style="min-width:48px;color:var(--red)">×2,27</span><span class="bar-f" style="width:22px;background:var(--red)"></span></div></td><td class="num">1.452.136</td><td class="num">hace 7 d</td></tr><tr><td class="num" style="color:var(--muted)">04</td><td><a href="https://www.youtube.com/watch?v=9w3-gsdRWGU" target="_blank" rel="noopener">Las 2 nuevas normas para el ALQUILER en ESPAÑA - ¿Suficientes?</a></td><td style="color:var(--muted)">NOTICIAS ILUSTRADAS</td><td style="font-size:11px;color:var(--orange)">España se enciende: vivienda, desahucios y un nuevo 15M</td><td><div class="bar-cell"><span class="num" style="min-width:48px;color:var(--gold)">×3,33</span><span class="bar-f" style="width:33px;background:var(--gold)"></span></div></td><td class="num">299.531</td><td class="num">hace 2 d</td></tr><tr><td class="num" style="color:var(--muted)">05</td><td><a href="https://www.youtube.com/watch?v=ImCkBlWbcYc" target="_blank" rel="noopener">¿Pierde Sánchez? Esto dicen las ENCUESTAS de las ELECCIONES en España</a></td><td style="color:var(--muted)">Descifrando la Guerra</td><td style="font-size:11px;color:var(--orange)">Sánchez convoca elecciones el 29N</td><td><div class="bar-cell"><span class="num" style="min-width:48px;color:var(--gold)">×1,97</span><span class="bar-f" style="width:19px;background:var(--gold)"></span></div></td><td class="num">17.457</td><td class="num">hace 6 d</td></tr><tr><td class="num" style="color:var(--muted)">06</td><td><a href="https://www.youtube.com/watch?v=f6DXfK269QY" target="_blank" rel="noopener">El caos salta de Francia a Bélgica y a Italia: algo está pasando en 3 </a></td><td style="color:var(--muted)">Marc Vidal</td><td style="font-size:11px;color:var(--orange)">Europa al borde: energía, deuda y crecimiento</td><td><div class="bar-cell"><span class="num" style="min-width:48px;color:var(--gold)">×1,85</span><span class="bar-f" style="width:18px;background:var(--gold)"></span></div></td><td class="num">291.626</td><td class="num">hace 14 h</td></tr><tr><td class="num" style="color:var(--muted)">07</td><td><a href="https://www.youtube.com/watch?v=-O5bvjenRTc" target="_blank" rel="noopener">El &quot;tic-tac&quot; de las ELECCIONES en ISRAEL: ¿Qué dicen las encuestas?</a></td><td style="color:var(--muted)">Descifrando la Guerra</td><td style="font-size:11px;color:var(--orange)">Elecciones en Israel</td><td><div class="bar-cell"><span class="num" style="min-width:48px;color:var(--gold)">×1,82</span><span class="bar-f" style="width:18px;background:var(--gold)"></span></div></td><td class="num">15.816</td><td class="num">hace 5 d</td></tr><tr><td class="num" style="color:var(--muted)">08</td><td><a href="https://www.youtube.com/watch?v=kVLiMtiqbBw" target="_blank" rel="noopener">La economía se dirige a algo que no puede parar, explicado con plátano</a></td><td style="color:var(--muted)">Los Ecomonos</td><td style="font-size:11px;color:var(--orange)">La Fed contra Trump y el fin del dinero barato</td><td><div class="bar-cell"><span class="num" style="min-width:48px;color:var(--gold)">×1,80</span><span class="bar-f" style="width:18px;background:var(--gold)"></span></div></td><td class="num">403.203</td><td class="num">hace 4 d</td></tr><tr><td class="num" style="color:var(--muted)">09</td><td><a href="https://www.youtube.com/watch?v=68n1MZES-xc" target="_blank" rel="noopener">Francia puede quebrar: hasta Paul Krugman da la alarma</a></td><td style="color:var(--muted)">Juan Ramon Rallo</td><td style="font-size:11px;color:var(--orange)">Europa al borde: energía, deuda y crecimiento</td><td><div class="bar-cell"><span class="num" style="min-width:48px;color:var(--gold)">×1,65</span><span class="bar-f" style="width:16px;background:var(--gold)"></span></div></td><td class="num">504.738</td><td class="num">hace 5 d</td></tr><tr><td class="num" style="color:var(--muted)">10</td><td><a href="https://www.youtube.com/watch?v=we6SprxumTc" target="_blank" rel="noopener">Why Democrats Are Polling So Well in Red States (But Not in Blue Ones)</a></td><td style="color:var(--muted)">TLDR News Global</td><td style="font-size:11px;color:var(--orange)">La política de EEUU se descompone</td><td><div class="bar-cell"><span class="num" style="min-width:48px;color:var(--gold)">×1,51</span><span class="bar-f" style="width:15px;background:var(--gold)"></span></div></td><td class="num">847.683</td><td class="num">hace 3 d</td></tr><tr><td class="num" style="color:var(--muted)">11</td><td><a href="https://www.youtube.com/watch?v=LnJqaCiE0aQ" target="_blank" rel="noopener">Por qué deberían suspenderse las elecciones del 29-N</a></td><td style="color:var(--muted)">Juan Ramon Rallo</td><td style="font-size:11px;color:var(--orange)">Sánchez convoca elecciones el 29N</td><td><div class="bar-cell"><span class="num" style="min-width:48px;color:var(--gold)">×1,41</span><span class="bar-f" style="width:14px;background:var(--gold)"></span></div></td><td class="num">429.212</td><td class="num">hace 4 d</td></tr><tr><td class="num" style="color:var(--muted)">12</td><td><a href="https://www.youtube.com/watch?v=3x5lITHjP6s" target="_blank" rel="noopener">La oscura historia de la Iglesia de la Cienciología</a></td><td style="color:var(--muted)">Academia Play</td><td style="font-size:11px;color:var(--orange)">Contenido historico y divulgativo</td><td><div class="bar-cell"><span class="num" style="min-width:48px;color:var(--gold)">×1,33</span><span class="bar-f" style="width:13px;background:var(--gold)"></span></div></td><td class="num">78.524</td><td class="num">hace 14 h</td></tr></tbody></table></div></div><div class="section alt"><div class="section-header"><span class="section-icon">📻</span><div><div class="section-title">CANALES ESTA SEMANA</div><div class="section-subtitle">Cuántos vídeos ha publicado cada canal y cuántos se salen de lo normal</div></div></div><div class="ranking-wrap"><table class="ranking"><thead><tr><th>Canal</th><th>Categoría</th><th>Vídeos</th><th>Top 10%</th><th>Top 25%</th><th>Mejor</th><th>Visitas típicas</th></tr></thead><tbody><tr><td>NOTICIAS ILUSTRADAS</td><td style="font-size:11px;color:var(--orange)">competencia-castellano</td><td class="num">8</td><td class="num">1</td><td class="num">1</td><td class="num">×9,12</td><td class="num">90.881</td></tr><tr><td>TLDR News Global</td><td style="font-size:11px;color:var(--orange)">internacional-formato-vp</td><td class="num">5</td><td class="num">1</td><td class="num">1</td><td class="num">×2,27</td><td class="num">640.300</td></tr><tr><td>Un Mundo Inmenso</td><td style="font-size:11px;color:var(--orange)">competencia-castellano</td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num">×2,88</td><td class="num">232.359</td></tr><tr><td>Descifrando la Guerra</td><td style="font-size:11px;color:var(--orange)">competencia-castellano</td><td class="num">12</td><td class="num">0</td><td class="num">2</td><td class="num">×1,97</td><td class="num">8.876</td></tr><tr><td>Juan Ramon Rallo</td><td style="font-size:11px;color:var(--orange)">espana-economia-agenda</td><td class="num">6</td><td class="num">0</td><td class="num">2</td><td class="num">×1,65</td><td class="num">305.028</td></tr><tr><td>Marc Vidal</td><td style="font-size:11px;color:var(--orange)">espana-economia-agenda</td><td class="num">4</td><td class="num">0</td><td class="num">1</td><td class="num">×1,85</td><td class="num">312.139</td></tr><tr><td>Los Ecomonos</td><td style="font-size:11px;color:var(--orange)">competencia-castellano</td><td class="num">2</td><td class="num">0</td><td class="num">1</td><td class="num">×1,80</td><td class="num">236.021</td></tr><tr><td>Academia Play</td><td style="font-size:11px;color:var(--orange)">estructural-historia</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">×1,33</td><td class="num">178.407</td></tr><tr><td>Geopolitical Futures</td><td style="font-size:11px;color:var(--orange)">internacional-formato-vp</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">×1,54</td><td class="num">71.010</td></tr><tr><td>Memorias de Pez</td><td style="font-size:11px;color:var(--orange)">competencia-castellano</td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">×1,41</td><td class="num">322.700</td></tr><tr><td>Inna Afinogenova</td><td style="font-size:11px;color:var(--orange)">espana-economia-agenda</td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">×1,35</td><td class="num">141.148</td></tr><tr><td>Ruben Gisbert</td><td style="font-size:11px;color:var(--orange)">espana-economia-agenda</td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num">×1,23</td><td class="num">73.886</td></tr><tr><td>Warographics</td><td style="font-size:11px;color:var(--orange)">internacional-formato-vp</td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">×1,21</td><td class="num">699.455</td></tr><tr><td>Zeihan on Geopolitics</td><td style="font-size:11px;color:var(--orange)">internacional-formato-vp</td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">×1,06</td><td class="num">260.092</td></tr><tr><td>Solo Fonseca</td><td style="font-size:11px;color:var(--orange)">competencia-castellano</td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">×1,01</td><td class="num">597.476</td></tr><tr><td>Memorias de Tiburon</td><td style="font-size:11px;color:var(--orange)">competencia-castellano</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">×1,00</td><td class="num">96.912</td></tr><tr><td>William Spaniel</td><td style="font-size:11px;color:var(--orange)">internacional-formato-vp</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">×0,97</td><td class="num">326.018</td></tr><tr><td>CaspianReport</td><td style="font-size:11px;color:var(--orange)">internacional-formato-vp</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">×0,81</td><td class="num">477.040</td></tr><tr><td>Perun</td><td style="font-size:11px;color:var(--orange)">internacional-formato-vp</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">×0,69</td><td class="num">595.476</td></tr><tr><td>Cosas Militares</td><td style="font-size:11px;color:var(--orange)">competencia-castellano</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">×0,59</td><td class="num">248.110</td></tr><tr><td>Economics Explained</td><td style="font-size:11px;color:var(--orange)">internacional-formato-vp</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">×0,58</td><td class="num">895.313</td></tr><tr><td>Historia Geopolitica</td><td style="font-size:11px;color:var(--orange)">competencia-castellano</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">—</td><td class="num">aún no se sabe</td></tr><tr><td>Anders Puck Nielsen</td><td style="font-size:11px;color:var(--orange)">internacional-formato-vp</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">—</td><td class="num">aún no se sabe</td></tr><tr><td>Money &amp; Macro</td><td style="font-size:11px;color:var(--orange)">internacional-formato-vp</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">—</td><td class="num">aún no se sabe</td></tr></tbody></table></div></div><div class="covered-bar"><div class="covered-section-header"><span class="covered-section-icon">📺</span><div><div class="covered-section-title">NUESTROS VÍDEOS ESTA SEMANA</div><div class="covered-section-subtitle">VisualPolitik y VisualEconomik, medidos igual que la competencia pero fuera de las señales: no nos medimos contra nosotros mismos</div></div></div><div class="vlist"><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/Ql_ZzTZBtis/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=Ql_ZzTZBtis" target="_blank" rel="noopener">TRUMP rompe con ARABIA SAUDÍ la LÍNEA ROJA nuclear que respetaron sus antecesores @VisualPolitik</a><div class="vmeta"><span class="data-pill">VisualPolitik</span><span class="chip chip-blue">propio</span><span class="data-pill">874.760 visitas</span><span class="data-pill">su canal suele: 571.738</span><span class="data-pill">hace 5 d</span><span class="chip chip-gold">top 25%</span></div></div><div class="vx des">×1,53</div></div><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/_YdzNPfVOM4/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=_YdzNPfVOM4" target="_blank" rel="noopener">TURQUÍA y PAKISTÁN envían de repente tropas a ARABIA SAUDÍ @VisualPolitik</a><div class="vmeta"><span class="data-pill">VisualPolitik</span><span class="chip chip-blue">propio</span><span class="data-pill">496.839 visitas</span><span class="data-pill">su canal suele: 455.815</span><span class="data-pill">hace 2 d</span></div></div><div class="vx nor">×1,09</div></div><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/7FBkb81Nj3s/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=7FBkb81Nj3s" target="_blank" rel="noopener">Venezuela’s Oil Money Has Suddenly Turned Up In Qatar | VisualEconomik EN</a><div class="vmeta"><span class="data-pill">VisualEconomik EN</span><span class="chip chip-blue">propio</span><span class="data-pill">38.701 visitas</span><span class="data-pill">su canal suele: 38.317</span><span class="data-pill">hace 22 h</span></div></div><div class="vx nor">×1,01</div></div><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/xGZPHX9Wvn0/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=xGZPHX9Wvn0" target="_blank" rel="noopener">TRUMP envía de repente 10.000 SOLDADOS y un tercer PORTAAVIONES contra IRÁN @VisualPolitik</a><div class="vmeta"><span class="data-pill">VisualPolitik</span><span class="chip chip-blue">propio</span><span class="data-pill">364.549 visitas</span><span class="data-pill">su canal suele: 375.823</span><span class="data-pill">hace 14 h</span></div></div><div class="vx nor">×0,97</div></div><div class="vrow"><img class="vthumb" loading="lazy" src="https://i.ytimg.com/vi/IVM_znWQgGI/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><div class="vinfo"><a class="vtit" href="https://www.youtube.com/watch?v=IVM_znWQgGI" target="_blank" rel="noopener">El dinero del PETRÓLEO de VENEZUELA aparece de repente en QATAR @VisualEconomik</a><div class="vmeta"><span class="data-pill">VisualEconomik</span><span class="chip chip-blue">propio</span><span class="data-pill">246.668 visitas</span><span class="data-pill">su canal suele: 352.382</span><span class="data-pill">hace 6 d</span></div></div><div class="vx nor">×0,70</div></div></div></div><div class="section"><div class="section-header"><span class="section-icon">✅</span><div><div class="section-title">VERIFICACIÓN</div><div class="section-subtitle">Qué se ha comprobado y qué falta: si algo sale en rojo, el informe está incompleto</div></div></div><div class="verif"><div class="verif-row"><div class="verif-k">Datos de la ventana</div><div class="verif-v">2026-10-15T08:20 (hace 0.0 h)</div></div><div class="verif-row"><div class="verif-k">Etiquetado de la semana</div><div class="verif-v"><span class="ok">al día</span></div></div><div class="verif-row"><div class="verif-k">Asuntos sin historia</div><div class="verif-v"><span class="ok">ninguno</span></div></div><div class="verif-row"><div class="verif-k">Canales propios</div><div class="verif-v">excluidos de todas las señales (5 vídeos esta semana, sección aparte)</div></div><div class="verif-row"><div class="verif-k">Historias excluidas</div><div class="verif-v">Contenido historico y divulgativo, Resúmenes de actualidad (no es un tema), Sobre el propio canal, Sucesos y crónica negra (no es un tema)</div></div><div class="verif-row"><div class="verif-k">Análisis editorial</div><div class="verif-v"><span class="ok">2 propuestas, 2 temas en vigilancia</span></div></div></div></div><footer class="footer"><div class="footer-left">📡 Radar de competencia VP · 15 OCTUBRE 2026</div><div class="footer-right">31 canales · 87 vídeos esta semana · generado 08:22</div></footer></body></html>
